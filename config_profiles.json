@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "profiles": {
+    "current_loader": {
+      "description": "当前 In Falsus Chart Ext（schemaVersion 1）",
+      "configFile": "config.json",
+      "template": {
+        "schemaVersion": "${schema_version}",
+        "id": "${song_id}",
+        "title": "${song_title}",
+        "artist": "${artist}",
+        "chartDesigner": "${chart_designer}",
+        "jacketDesigner": "${jacket_designer}",
+        "audio": "${audio_file}",
+        "previewStart": "${preview_start}",
+        "previewEnd": "${preview_end}",
+        "preview": "${preview}",
+        "background": "${background}",
+        "jacketLarge": "${jacket_large_file}",
+        "jacketSmall": "${jacket_small_file}",
+        "difficulties": "${difficulties}"
+      }
+    },
+    "legacy_collection": {
+      "description": "旧版单 collection / 单 song 配置",
+      "configFile": "config.json",
+      "template": {
+        "enabled": true,
+        "collections": [
+          {
+            "packId": 100,
+            "slug": "custom-charts",
+            "title": "Custom Charts",
+            "stylePackSlug": "act-4",
+            "songs": [
+              {
+                "artist": "${artist}",
+                "audioFile": "${audio_file}",
+                "baseName": "${base_name}",
+                "characterIdentifier": "${character_identifier}",
+                "chartDesigner": "${chart_designer}",
+                "chartId": "${chart_id}",
+                "difficulties": [
+                  "${difficulty_0}",
+                  "${difficulty_1}",
+                  "${difficulty_2}",
+                  "${difficulty_3}"
+                ],
+                "enableLoosePngJackets": true,
+                "enabled": true,
+                "gameplayBackground": "${gameplay_background}",
+                "jacketDesigner": "${jacket_designer}",
+                "jacketLargeFile": "${jacket_large_file}",
+                "jacketSmallFile": "${jacket_small_file}",
+                "previewEndSeconds": "${preview_end}",
+                "previewStartSeconds": "${preview_start}",
+                "songTitle": "${song_title}",
+                "templateSongId": "${template_song_id}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "in_falsus_chart_loader": {
+      "description": "外部兼容：InFalsusChartLoader（if）",
+      "configFile": "if",
+      "template": {
+        "id": "${song_id}",
+        "name": "${song_title}",
+        "composer": "${artist}",
+        "song": "${audio_file}",
+        "illust": "${jacket_designer}",
+        "jacket": "${jacket_small_file}",
+        "background": [
+          "${background_file_0}",
+          "${background_file_1}",
+          "${background_file_2}",
+          "${background_file_3}"
+        ],
+        "preview_seconds": ["${preview_start}", "${preview_end}"],
+        "charter": [
+          "${chart_designer_0}",
+          "${chart_designer_1}",
+          "${chart_designer_2}",
+          "${chart_designer_3}"
+        ],
+        "chart": [
+          "${chart_file_0}",
+          "${chart_file_1}",
+          "${chart_file_2}",
+          "${chart_file_3}"
+        ],
+        "lv": ["${rating_0}", "${rating_1}", "${rating_2}", "${rating_3}"]
+      }
+    },
+    "simple_example": {
+      "description": "最小示例：song + 四档 chart",
+      "configFile": "config.json",
+      "template": {
+        "song": "${audio_file}",
+        "chart": [
+          "${chart_file_0}",
+          "${chart_file_1}",
+          "${chart_file_2}",
+          "${chart_file_3}"
+        ]
+      }
+    }
+  }
+}
