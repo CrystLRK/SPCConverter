@@ -346,7 +346,7 @@ class SongPackageTab(ttk.Frame):
         self.log_text.pack(fill="both", expand=True, pady=(2, 0))
 
         self.vars["output_root"].set(
-            str(executable_dir() / "output" / "CustomCharts")
+            str(executable_dir() / "output" / "Charts")
         )
 
     def _initialize_game_install(self) -> None:
@@ -453,7 +453,7 @@ class SongPackageTab(ttk.Frame):
             return pack
         root = Path(
             self.vars["output_root"].get().strip()
-            or executable_dir() / "output" / "CustomCharts"
+            or executable_dir() / "output" / "Charts"
         )
         try:
             scan = scan_pack_directories(root)
@@ -488,7 +488,7 @@ class SongPackageTab(ttk.Frame):
             )
             output_root = Path(
                 self.vars["output_root"].get().strip()
-                or executable_dir() / "output" / "CustomCharts"
+                or executable_dir() / "output" / "Charts"
             )
             jacket_text = self.vars["pack_jacket"].get().strip()
             pack = create_pack_folder(
@@ -656,7 +656,9 @@ class SongPackageTab(ttk.Frame):
                     slot=slot,
                     chart=Path(text),
                     rating=rating,
-                    level_section_indicator=item["indicator"].get().strip() or "1",
+                    level_section_indicator=(
+                        item["indicator"].get().strip() or str(rating)
+                    ),
                     background=(
                         Path(item["background"].get().strip())
                         if item["background"].get().strip() else None
@@ -687,7 +689,7 @@ class SongPackageTab(ttk.Frame):
         return SongPackageSpec(
             output_root=Path(
                 self.vars["output_root"].get().strip()
-                or executable_dir() / "output" / "CustomCharts"
+                or executable_dir() / "output" / "Charts"
             ),
             pack_folder_name=pack.folder.name if pack else DEFAULT_PACK_FOLDER,
             pack_id=pack.pack_id if pack else DEFAULT_PACK_ID,
@@ -741,7 +743,7 @@ class SongPackageTab(ttk.Frame):
             return
         spec.output_root = Path(
             self.vars["output_root"].get().strip()
-            or executable_dir() / "output" / "CustomCharts"
+            or executable_dir() / "output" / "Charts"
         )
         spec.pack_folder_name = pack.folder.name
         spec.pack_id = pack.pack_id

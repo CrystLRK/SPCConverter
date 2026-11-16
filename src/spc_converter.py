@@ -27,9 +27,12 @@ from spc_json_conv import raw_to_standard, serialize_v0  # noqa: E402
 from spc_semantic import semantic_digest, serialize_v0_semantic  # noqa: E402
 from spc_v0_chart_decoder import read_spc_v0_chart  # noqa: E402
 from showtext_validation import validate_showtext_standard  # noqa: E402
+from lyric_statement import (  # noqa: E402
+    build_showtext_styles,
+)
 
 
-VERSION = "1.2.3"
+VERSION = "1.2.4"
 FormatName = Literal["v0", "v1", "json"]
 TargetFormat = Literal["auto", "v0", "v1", "json"]
 
@@ -254,18 +257,22 @@ def _publish_outputs(
     chart_data: bytes,
     overwrite: bool,
     sidecar_source: Path | None,
+    text_data: bytes | None,
 ) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     sidecar_target = (
         output.with_name(output.stem + ".text.json")
-        if sidecar_source is not None
+        if text_data is not None or sidecar_source is not None
         else None
     )
     if (
         sidecar_target is not None
         and sidecar_target.exists()
         and not overwrite
-        and sidecar_target.resolve() != sidecar_source.resolve()
+        and (
+            sidecar_source is None
+            or sidecar_target.resolve() != sidecar_source.resolve()
+        )
     ):
         raise ConversionError(
             f"showtext 输出文件已存在：{sidecar_target}"
@@ -284,8 +291,13 @@ def _publish_outputs(
         publish: list[tuple[Path, Path]] = [
             (output, staged_chart)
         ]
-        if (
+        if sidecar_target is not None and text_data is not None:
+            staged_sidecar = staging / sidecar_target.name
+            staged_sidecar.write_bytes(text_data)
+            publish.append((sidecar_target, staged_sidecar))
+        elif (
             sidecar_target is not None
+            and sidecar_source is not None
             and sidecar_target.resolve() != sidecar_source.resolve()
         ):
             staged_sidecar = staging / sidecar_target.name
@@ -366,7 +378,6 @@ def convert_file(
 ) -> ConvertResult:
     source = source.resolve()
     chart = read_source(source, source_key)
-    validate_showtext_standard(chart.standard, source)
     actual_target = choose_target_format(chart.kind, target_format)
     if not (chart.kind == "v1" and actual_target == "v1"):
         try:
@@ -387,6 +398,40 @@ def convert_file(
         raise ConversionError(f"输出文件已存在：{output}（勾选“覆盖已有文件”后可继续）")
 
     sidecar_source = _find_sidecar(source) if copy_sidecars else None
+    text_data = None
+    if chart.kind == "v0":
+        generated = build_showtext_styles(source)
+        if generated:
+            styles: list[dict] = []
+            if sidecar_source is not None and sidecar_source.is_file():
+                try:
+                    root = json.loads(
+                        sidecar_source.read_text(encoding="utf-8-sig"))
+                    existing = (
+                        root.get("texts") if isinstance(root, dict) else root
+                    )
+                    if isinstance(existing, list):
+                        styles.extend(
+                            item for item in existing
+                            if isinstance(item, dict)
+                        )
+                except Exception as exc:
+                    raise ConversionError(
+                        f"showtext 配置无法解析：{sidecar_source}：{exc}"
+                    ) from exc
+            generated_ids = {int(item["id"]) for item in generated}
+            styles = [
+                item for item in styles
+                if int(item.get("id", -1)) not in generated_ids
+            ]
+            styles.extend(generated)
+            text_data = json.dumps(
+                {"texts": styles},
+                ensure_ascii=False,
+                indent=2,
+            ).encode("utf-8")
+    if text_data is None:
+        validate_showtext_standard(chart.standard, source)
     warnings: list[str] = []
     target_key_value: str | None = None
     output_data: bytes
@@ -440,6 +485,7 @@ def convert_file(
         output_data,
         overwrite,
         sidecar_source,
+        text_data,
     )
 
     if chart.kind == "v1" and actual_target == "v1" and chart.raw is not None:
@@ -542,11 +588,28 @@ def verify_path(path: Path, key: str | None = None) -> str:
         raw = raw_decode(data, key)
         rebuilt = raw_encode(raw, key)
         diffs = sum(1 for a, b in zip(data, rebuilt) if a != b) + abs(len(data) - len(rebuilt))
+        if diffs:
+            raise ConversionError(
+                f"{path.name}: V1 重编码字节差为 {diffs}"
+            )
+        standard = raw_to_standard(raw)
+        try:
+            validate_standard_chart(standard)
+        except ChartValidationError as exc:
+            raise ConversionError(
+                f"{path.name}: V1 输入域校验失败：{exc}"
+            ) from exc
         return (
             f"{path.name}: V1 校验通过，notes={len(raw['notes'])} events={len(raw['events'])}，"
             f"重编码字节差={diffs}"
         )
     chart = read_source(path, key)
+    try:
+        validate_standard_chart(chart.standard)
+    except ChartValidationError as exc:
+        raise ConversionError(
+            f"{path.name}: 输入域校验失败：{exc}"
+        ) from exc
     return (
         f"{path.name}: {FORMAT_NAMES[kind]} 解析通过，"
         f"notes={len(chart.standard['notes'])} events={len(chart.standard.get('events', []))}"

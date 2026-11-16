@@ -208,7 +208,7 @@ def rating_fields(value: Any) -> tuple[int, str]:
         return 0, text or "?"
     if rating < 0:
         return 0, text
-    return rating, "?"
+    return rating, str(rating)
 
 
 def chart_names(internal_code: str, slots: Iterable[int]) -> dict[int, str]:

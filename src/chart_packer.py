@@ -24,11 +24,11 @@ TYPE_FIELD = 5
 def read_json(file_name: str) -> dict:
     with open(file_name, 'r', encoding='utf-8') as f:
         return json.load(f)
-    
+
 def write_json(file_name: str, obj) -> None:
     with open(file_name, 'w', encoding='utf-8') as f:
         json.dump(obj, f, ensure_ascii=False, indent=4)
-        
+
 def write_spc(file_name: str, data: bytearray) -> None:
     with open(file_name, 'wb') as f:
         f.write(data)
@@ -151,7 +151,7 @@ def encode_event_block(event: dict) -> bytearray:
     ]"""
     event_block_data = struct.pack("<QIIQQ", event_id, time_ms, event_type, value1, value2)
     return event_block_data
-        
+
 def pack_chart(chart_data_json: dict, chart_name: str) -> bytearray:
     try:
         validate_standard_chart(chart_data_json)
@@ -168,7 +168,7 @@ def pack_chart(chart_data_json: dict, chart_name: str) -> bytearray:
         meter = chart_data_json["meter"]
         icp1_chart_data = bytearray(chart_len)
         struct.pack_into('4s', icp1_chart_data, 0x0, b'ICP1')
-        struct.pack_into('<HHHHII', icp1_chart_data, 0x4, 
+        struct.pack_into('<HHHHII', icp1_chart_data, 0x4,
                          chart_data_json["version"],
                          SPC_HEADER_SIZE,
                          SPC_NOTE_SIZE,
@@ -176,8 +176,8 @@ def pack_chart(chart_data_json: dict, chart_name: str) -> bytearray:
                          note_count,
                          event_count
         )
-        struct.pack_into("<ff", icp1_chart_data, 0x14, 
-                         bpm, 
+        struct.pack_into("<ff", icp1_chart_data, 0x14,
+                         bpm,
                          meter
         )
         seed = chart_name #种子为谱面文件全名，包含后缀名（xxx.spc)
@@ -215,9 +215,9 @@ def pack_chart(chart_data_json: dict, chart_name: str) -> bytearray:
             else:
                 icp1_chart_data[pointer_1:pointer_2] = event_block
     return icp1_chart_data
-    
 
-        
+
+
 def main(argv: list[str] | None = None) -> int:
     import argparse
 

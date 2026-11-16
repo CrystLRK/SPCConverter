@@ -1,109 +1,115 @@
 # SPCConverter
 
-**版本：1.2.3**
+**版本：1.2.4**
 
-SPCConverter 是用于 *In Falsus* 自制歌曲的 Windows 图形化导入器、SPC 格式
-转换器和歌曲包打包工具。
+SPCConverter 是用于 *In Falsus* 的 Windows 自制歌曲导入与导出工具。
 
-## 功能
+## 主要功能
 
-- 读取 In Falsus Studio 工程文件夹、`infalsus.studio.json` 或工程 ZIP；
-- 读取 Falsum `.falsum` 歌曲包；
-- 将歌曲和选定难度导入现有游戏曲包；
-- 将单首歌曲导出为独立歌曲文件夹；
-- SPC V0 明文、SPC V1/ICP1 二进制和标准 JSON 互转；
-- 自动识别 Steam 正式版 `CustomCharts` 目录；
-- 支持 OGG、WAV、MP3、独立 preview、图片/视频背景和音频缺失扫描；
-- 导入时按难度原子合并，保留未选难度；
-- 空难度警告并跳过，所有选择难度为空时停止导入；
-- 同难度覆盖使用单一确认框，取消时不写入任何内容。
+- 导入 In Falsus Studio 工程；
+- 导入 Falsum 歌曲包；
+- 将歌曲导入游戏内的现有曲包；
+- 将歌曲导出为独立歌曲文件夹；
+- 自动识别已安装的游戏目录；
+- 选择并编辑歌曲名称、作者、封面、音频、难度和背景；
+- 支持导入单个难度，同时保留歌曲中已有的其他难度；
+- 解析 Studio+ `text(...)` 歌词语句并生成 `<谱面名>.lyrics.json` sidecar；
+- 原样保留 `sp` 自定义难度角标；
+- 遇到同名难度时先确认是否覆盖。
+
+## 使用要求
+
+- Windows 版 *In Falsus* 正式版；不支持 Demo 版；
+- 导入游戏前请完全退出游戏；
+- 游玩带扩展内容的自制谱时，需要安装与游戏版本匹配的
+  InFalsusExtension。
+- **从 SPCConverter 1.2.4 开始，导入结果使用 `Charts/` + `pack.json` +
+  `if` 格式，不兼容 InFalsusExtension 0.2.0 以下的插件版本。**
 
 ## 快速开始
 
-1. 解压发布 ZIP；
+1. 解压 SPCConverter 发行包；
 2. 双击 `SPCConverter.exe`；
-3. 选择 Studio 工程或 Falsum 歌曲包；
-4. 在可编辑界面中检查歌曲、封面、音频、难度和谱面路径；
-5. 点击“导入游戏”，或使用“导出歌曲文件夹”生成独立目录；
-6. 完全退出游戏后重新启动，使新曲目进入游戏曲库。
+3. 选择“导入 InFalsus Studio 工程”或“导入 Falsum 歌曲包”；
+4. 选择工程文件夹、工程文件或歌曲包；
+5. 检查并修改自动填入的歌曲信息；
+6. 选择需要导入的难度和对应背景；
+7. 点击“导入游戏”，或选择“导出歌曲文件夹”；
+8. 完全退出并重新启动游戏。
 
-## In Falsus Studio 工程
+## 可导入的内容
 
-可选择：
+### In Falsus Studio
 
 - Studio 工程文件夹；
 - `infalsus.studio.json`；
-- 由工程文件夹打包出的 ZIP。
+- Studio 工程压缩包；
+- 压缩包外再套一层文件夹的情况。
 
-程序会安全解压 ZIP，并自动搜索唯一的 `infalsus.studio.json`。
+### Falsum
 
-## Falsum 歌曲包
+- `.falsum` 文件；
+- 文件夹中仅包含一个 `.falsum` 文件的情况。
 
-支持 `.falsum` 文件，或只包含一个 `.falsum` 的文件夹。
+## 支持的文件
 
-## 背景、封面和音频
+歌曲主音频和独立试听音频：
 
-背景支持：
+- OGG；
+- WAV；
+- MP3。
 
-- PNG/JPG/JPEG/WEBP；
+背景：
+
+- PNG；
+- JPG / JPEG；
+- WEBP；
 - MP4。
 
+封面缺失时，工具会尝试使用可用的图片自动生成游戏所需封面。
 
-歌曲主音频和独立 preview 支持：
-- OGG、WAV、MP3。
+## 导入行为
 
-## 游戏目录
-游戏读取的曲包结构：
+- 会自动尝试定位 Steam 正式版中的自制谱目录；
+- 导入到游戏的 `Charts/` 目录，曲包使用 `pack.json`，歌曲使用 `if`；
+- 也可以手动创建或选择曲包；
+- 只导入本次勾选的难度；
+- 未填写“难度角标”时默认使用该难度的 Rating 数字；
+- 歌曲中已有但本次未勾选的难度会保留；
+- 同名难度会弹出覆盖确认；
+- 缺少谱面文件或没有音符的难度会提示并跳过；
+- 所有选中难度都为空时会停止导入。
 
-```text
-CustomCharts/
-  PackName/
-    pack_config.json
-    pack_jacket.png
-    SongName/
-      config.json
-      audio.ogg
-      preview.mp3
-      jacketLarge.png
-      jacketSmall.png
-      chart.spc
-      chart.text.json
-```
+## 导出歌曲
 
-## SPC 格式互转
+可以选择导出到游戏中的指定曲包，也可以导出为独立歌曲文件夹，便于备份、
+分享或后续重新导入。
 
-支持：
+## 常见问题
 
-- SPC V0 明文；
-- SPC V1/ICP1 二进制；
-- 标准 JSON。
+### 导入后游戏里没有歌曲
 
-自动模式：
+- 确认导入到了当前正在游玩的游戏目录；
+- 完全退出并重新启动游戏；
+- 确认没有选择空难度。
 
-- V1 → V0；
-- V0/JSON → V1。
+### 歌曲没有声音
 
-SPC V1 使用完整文件名（包含 `.spc` 和大小写）作为滚动加密种子。打包器会
-按最终输出文件名重新加密；不要手动重命名已生成的 V1 文件。
+- 确认音频文件存在且可正常播放；
+- 使用 OGG、WAV 或 MP3 格式；
+- 重新选择音频后再次导入。
 
-## CLI
+### 背景没有显示
 
-```powershell
-SPCConverterCLI.exe --help
-SPCConverterCLI.exe --version
-SPCConverterCLI.exe --to v1 input.spc --output output\input.spc
-SPCConverterCLI.exe --to json input.spc
-SPCConverterCLI.exe --verify input.spc
-SPCConverterCLI.exe --interactive
-```
+- 确认歌曲或难度已选择背景；
+- 使用 PNG、JPG、JPEG、WEBP 或 MP4；
+- 重新导入并重启游戏。
 
-## 从源码运行
+### 导入时提示覆盖
 
-```powershell
-python src\spc_converter.py --gui
-python src\spc_converter.py --interactive
-```
+目标曲包中已经存在同名难度。确认需要替换时选择覆盖；取消不会写入本次
+导入内容。
 
-## 开源与许可
+## 许可证
 
 本项目使用 **GNU General Public License v3.0（GPL-3.0）**。

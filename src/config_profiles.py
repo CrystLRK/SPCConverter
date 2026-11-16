@@ -10,7 +10,7 @@ from typing import Any
 
 
 PROFILE_FILENAME = "config_profiles.json"
-CURRENT_CONFIG_FILE = "config.json"
+CURRENT_CONFIG_FILE = "if"
 PLACEHOLDER = re.compile(r"\$\{([A-Za-z0-9_]+)\}")
 _DROP = object()
 _last_error: str | None = None
@@ -37,19 +37,23 @@ def _current_template() -> dict[str, Any]:
 
 def _if_template() -> dict[str, Any]:
     return {
+        "schemaVersion": 1,
         "id": "${song_id}",
         "name": "${song_title}",
         "composer": "${artist}",
-        "song": "${audio_file}",
         "illust": "${jacket_designer}",
-        "jacket": "${jacket_small_file}",
+        "song": "${audio_file}",
+        "preview_audio": "${preview_audio_file}",
+        "preview_seconds": ["${preview_start}", "${preview_end}"],
+        "jacket": "${jacket_large_file}",
+        "jacket_large": "${jacket_large_file}",
+        "jacket_small": "${jacket_small_file}",
         "background": [
             "${background_file_0}",
             "${background_file_1}",
             "${background_file_2}",
             "${background_file_3}",
         ],
-        "preview_seconds": ["${preview_start}", "${preview_end}"],
         "charter": [
             "${chart_designer_0}",
             "${chart_designer_1}",
@@ -63,6 +67,12 @@ def _if_template() -> dict[str, Any]:
             "${chart_file_3}",
         ],
         "lv": ["${rating_0}", "${rating_1}", "${rating_2}", "${rating_3}"],
+        "sp": [
+            "${section_0}",
+            "${section_1}",
+            "${section_2}",
+            "${section_3}",
+        ],
     }
 
 
@@ -71,9 +81,9 @@ def builtin_profiles() -> dict[str, "ProfileDefinition"]:
     return {
         "current_loader": ProfileDefinition(
             "current_loader",
-            "当前 In Falsus Chart Ext（schemaVersion 1）",
+            "当前 In Falsus Chart Ext（Charts + if）",
             CURRENT_CONFIG_FILE,
-            current,
+            _if_template(),
         ),
         "legacy_collection": ProfileDefinition(
             "legacy_collection",
@@ -92,7 +102,7 @@ def builtin_profiles() -> dict[str, "ProfileDefinition"]:
         ),
         "in_falsus_chart_loader": ProfileDefinition(
             "in_falsus_chart_loader",
-            "外部兼容：InFalsusChartLoader（if）",
+            "外部兼容别名：InFalsusChartLoader（if）",
             "if",
             _if_template(),
         ),

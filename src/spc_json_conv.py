@@ -364,7 +364,9 @@ def main() -> None:
         key = sys.argv[3]
         dst = Path(sys.argv[4]) if len(sys.argv) > 4 else src.with_suffix(".json")
         raw = raw_decode(src.read_bytes(), key)
-        _write_json(dst, raw_to_standard(raw))
+        standard = raw_to_standard(raw)
+        validate_standard_chart(standard)
+        _write_json(dst, standard)
         print(f"v1bin2json: {src} -> {dst}  (key='{key}', notes={len(raw['notes'])}, events={len(raw['events'])})")
     elif cmd == "roundtrip":
         src = Path(sys.argv[2])

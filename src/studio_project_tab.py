@@ -175,7 +175,7 @@ class StudioProjectTab(SongPackageTab):
         )
         self.game_combo.bind("<<ComboboxSelected>>", self._game_install_changed)
 
-        ttk.Label(destination, text="游戏 CustomCharts").grid(
+        ttk.Label(destination, text="游戏 Charts").grid(
             row=1, column=0, sticky="w", padx=(0, 6), pady=4
         )
         ttk.Entry(
@@ -219,7 +219,7 @@ class StudioProjectTab(SongPackageTab):
         ).grid(row=3, column=3, padx=(6, 0), pady=4)
         destination.columnconfigure(1, weight=1)
         self.vars["output_root"].set(
-            str(executable_dir() / "output" / "CustomCharts")
+            str(executable_dir() / "output" / "Charts")
         )
         self.vars["standalone_root"].set(
             str(executable_dir() / "output" / self.standalone_folder_name)
@@ -605,7 +605,7 @@ class StudioProjectTab(SongPackageTab):
             difficulty.chart = Path(chart_text) if chart_text else None
             difficulty.rating = rating
             difficulty.level_section_indicator = (
-                row["indicator"].get().strip() or "?"
+                row["indicator"].get().strip() or str(rating)
             )
             difficulty_background = row["background"].get().strip()
             difficulty.background = (
@@ -629,7 +629,7 @@ class StudioProjectTab(SongPackageTab):
                 if pack is None:
                     root = Path(
                         self.vars["output_root"].get().strip()
-                        or executable_dir() / "output" / "CustomCharts"
+                        or executable_dir() / "output" / "Charts"
                     ).resolve()
                     pack = PackDirectory(
                         root / DEFAULT_PACK_FOLDER,

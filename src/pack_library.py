@@ -147,7 +147,7 @@ def _install_from_library(library_root: Path) -> GameInstall | None:
     return GameInstall(
         GAME_APP_ID,
         install_dir,
-        install_dir / "CustomCharts",
+        install_dir / "Charts",
     )
 
 
@@ -224,23 +224,27 @@ def save_preferred_game_root(
 
 def read_pack_directory(folder: Path) -> PackDirectory:
     folder = folder.resolve()
-    path = folder / "pack_config.json"
+    path = folder / "pack.json"
+    if not path.is_file():
+        legacy = folder / "pack_config.json"
+        if legacy.is_file():
+            path = legacy
     try:
         root = json.loads(path.read_text(encoding="utf-8-sig"))
     except FileNotFoundError as exc:
-        raise ValueError(f"缺少 pack_config.json：{folder}") from exc
+        raise ValueError(f"缺少 pack.json：{folder}") from exc
     except Exception as exc:
-        raise ValueError(f"pack_config.json 无法解析：{path}：{exc}") from exc
+        raise ValueError(f"pack.json 无法解析：{path}：{exc}") from exc
     if not isinstance(root, dict):
-        raise ValueError(f"pack_config.json 根节点必须是对象：{path}")
+        raise ValueError(f"pack.json 根节点必须是对象：{path}")
     if root.get("schemaVersion") != 1:
         raise ValueError(f"pack schemaVersion 必须为 1：{path}")
     pack_id = root.get("id")
-    title = root.get("title")
+    title = _pack_title(root.get("name", root.get("title")))
     if not isinstance(pack_id, str) or not pack_id.strip():
         raise ValueError(f"pack id 不能为空：{path}")
-    if not isinstance(title, str) or not title.strip():
-        raise ValueError(f"pack title 不能为空：{path}")
+    if not title:
+        raise ValueError(f"pack name 不能为空：{path}")
     style = root.get("stylePackSlug")
     if not isinstance(style, str) or not style.strip():
         style = DEFAULT_PACK_STYLE
@@ -251,12 +255,30 @@ def read_pack_directory(folder: Path) -> PackDirectory:
     return PackDirectory(
         folder=folder,
         pack_id=pack_id.strip(),
-        title=title.strip(),
+        title=title,
         artist=str(root.get("artist") or ""),
         description=str(root.get("description") or ""),
         style_pack_slug=style.strip(),
         sort_order=sort_order,
     )
+
+
+def _pack_title(value: Any) -> str:
+    if isinstance(value, str):
+        return value.strip()
+    if isinstance(value, list):
+        for item in value:
+            if isinstance(item, str) and item.strip():
+                return item.strip()
+    if isinstance(value, dict):
+        for key in ("en", "english", "zh", "zh-CN", "zh-Hans"):
+            item = value.get(key)
+            if isinstance(item, str) and item.strip():
+                return item.strip()
+        for item in value.values():
+            if isinstance(item, str) and item.strip():
+                return item.strip()
+    return ""
 
 
 def scan_pack_directories(root: Path) -> PackScan:
@@ -266,6 +288,8 @@ def scan_pack_directories(root: Path) -> PackScan:
     if root.is_dir():
         for folder in sorted(root.iterdir(), key=lambda item: item.name.casefold()):
             if not folder.is_dir():
+                continue
+            if folder.name.startswith("."):
                 continue
             try:
                 parsed.append(read_pack_directory(folder))
