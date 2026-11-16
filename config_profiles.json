@@ -2,23 +2,40 @@
   "version": 1,
   "profiles": {
     "current_loader": {
-      "description": "当前 In Falsus Chart Ext（schemaVersion 1）",
-      "configFile": "config.json",
+      "description": "当前 In Falsus Chart Ext（Charts + if）",
+      "configFile": "if",
       "template": {
-        "schemaVersion": "${schema_version}",
+        "schemaVersion": 1,
         "id": "${song_id}",
-        "title": "${song_title}",
-        "artist": "${artist}",
-        "chartDesigner": "${chart_designer}",
-        "jacketDesigner": "${jacket_designer}",
-        "audio": "${audio_file}",
-        "previewStart": "${preview_start}",
-        "previewEnd": "${preview_end}",
-        "preview": "${preview}",
-        "background": "${background}",
-        "jacketLarge": "${jacket_large_file}",
-        "jacketSmall": "${jacket_small_file}",
-        "difficulties": "${difficulties}"
+        "name": "${song_title}",
+        "composer": "${artist}",
+        "illust": "${jacket_designer}",
+        "song": "${audio_file}",
+        "preview_audio": "${preview_audio_file}",
+        "preview_seconds": ["${preview_start}", "${preview_end}"],
+        "jacket": "${jacket_large_file}",
+        "jacket_large": "${jacket_large_file}",
+        "jacket_small": "${jacket_small_file}",
+        "background": [
+          "${background_file_0}",
+          "${background_file_1}",
+          "${background_file_2}",
+          "${background_file_3}"
+        ],
+        "charter": [
+          "${chart_designer_0}",
+          "${chart_designer_1}",
+          "${chart_designer_2}",
+          "${chart_designer_3}"
+        ],
+        "chart": [
+          "${chart_file_0}",
+          "${chart_file_1}",
+          "${chart_file_2}",
+          "${chart_file_3}"
+        ],
+        "lv": ["${rating_0}", "${rating_1}", "${rating_2}", "${rating_3}"],
+        "sp": ["${section_0}", "${section_1}", "${section_2}", "${section_3}"]
       }
     },
     "legacy_collection": {
@@ -63,22 +80,26 @@
       }
     },
     "in_falsus_chart_loader": {
-      "description": "外部兼容：InFalsusChartLoader（if）",
+      "description": "外部兼容别名：InFalsusChartLoader（if）",
       "configFile": "if",
       "template": {
+        "schemaVersion": 1,
         "id": "${song_id}",
         "name": "${song_title}",
         "composer": "${artist}",
-        "song": "${audio_file}",
         "illust": "${jacket_designer}",
-        "jacket": "${jacket_small_file}",
+        "song": "${audio_file}",
+        "preview_audio": "${preview_audio_file}",
+        "preview_seconds": ["${preview_start}", "${preview_end}"],
+        "jacket": "${jacket_large_file}",
+        "jacket_large": "${jacket_large_file}",
+        "jacket_small": "${jacket_small_file}",
         "background": [
           "${background_file_0}",
           "${background_file_1}",
           "${background_file_2}",
           "${background_file_3}"
         ],
-        "preview_seconds": ["${preview_start}", "${preview_end}"],
         "charter": [
           "${chart_designer_0}",
           "${chart_designer_1}",
@@ -91,7 +112,8 @@
           "${chart_file_2}",
           "${chart_file_3}"
         ],
-        "lv": ["${rating_0}", "${rating_1}", "${rating_2}", "${rating_3}"]
+        "lv": ["${rating_0}", "${rating_1}", "${rating_2}", "${rating_3}"],
+        "sp": ["${section_0}", "${section_1}", "${section_2}", "${section_3}"]
       }
     },
     "simple_example": {

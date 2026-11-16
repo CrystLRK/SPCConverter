@@ -5,6 +5,11 @@ from dataclasses import dataclass
 from enum import IntEnum
 
 from chart_validation import ChartValidationError, validate_standard_chart
+from lyric_statement import (
+    TEXT_SHOWTEXT_ID_BASE,
+    parse_statement,
+    strip_comment,
+)
 
 
 class NoteType(IntEnum):
@@ -13,16 +18,16 @@ class NoteType(IntEnum):
     TRACKMOVE = 3
     FLICK = 4
     SKYAREA = 5
-    
+
 class FlickDirection(IntEnum):
     LEFT = 16
     RIGHT = 4
-    
+
 class SkyAreaEase(IntEnum):
     LINEAR = 0
     SINE_OUT = 1
     SINE_IN = 2
-    
+
 class EventType(IntEnum):
     TRACK = 0
     BPM = 1              # bpm 语句 mode=0：区段型（重置小节相位，携带每小节拍数）
@@ -128,7 +133,7 @@ class Event:
             event_block["value"] = float(self.noinput_group)
 
         return event_block
-    
+
 
 
 def read_file(file_path):
@@ -146,7 +151,7 @@ def read_file(file_path):
         f"无法以 UTF-8 或 GB18030 读取谱面：{file_path}；" +
         "；".join(failures)
     )
-    
+
 def write_json(file_name: str, obj) -> None:
     with open(file_name, 'w', encoding='utf-8') as f:
         json.dump(obj, f, ensure_ascii=False, indent=4)
@@ -182,15 +187,16 @@ def read_spc_v0_chart(file_path):
     source_order = 0
     audiooffset_seen = False
     next_auto_skyarea_group = 0
+    text_index = 0
     last_v1_skyarea_end: int | None = None
     last_v1_skyarea_group: int | None = None
 
     # 新式 timinggroup 的块级规则要求能区分空行/注释和真正的第一条语句。
     def active_line(raw: str) -> str:
-        text = raw.strip()
+        text = strip_comment(raw).strip()
         if not text or text.startswith("#") or text.startswith("//"):
             return ""
-        return text.split("//", 1)[0].strip()
+        return text
 
     def container_note(time_ms: int, group_id: int, end_ms: int,
                        flags: int, fractions=None) -> Note:
@@ -251,6 +257,34 @@ def read_spc_v0_chart(file_path):
     for line_no, raw_line in enumerate(content.splitlines(), 1):
         line = active_line(raw_line)
         if not line:
+            continue
+        # text(...) is a standalone lyric statement persisted in a
+        # <chart>.lyrics.json sidecar. It never becomes a gameplay note and
+        # must not be rejected as an unknown statement by the note parser.
+        statement_head = re.split(r"[\(\uFF08]", line, maxsplit=1)[0]
+        if statement_head.strip().lower() == "text":
+            statement = parse_statement(raw_line, text_index)
+            if statement is not None:
+                size_override = int(round(
+                    statement.option_number("size", 0.0)))
+                note = Note(
+                    index=note_count,
+                    group_id=TEXT_SHOWTEXT_ID_BASE + text_index,
+                    note_type=NoteType.TRACKMOVE,
+                    track_id=4,
+                    time_ms=round_ms(statement.time_ms),
+                    end_ms=round_ms(statement.time_ms),
+                    fractions=[
+                        [max(0, size_override), 1],
+                        [0, 1],
+                        [0, 1],
+                        [0, 1],
+                    ],
+                    flags=SHOWTEXT_MAGIC << 8,
+                )
+                note_count += 1
+                parsed_notes.append(note)
+            text_index += 1
             continue
         if line in ("}", "groupend()", "groupend ()"):
             if block_group is None:
@@ -952,4 +986,3 @@ def read_spc_v0_chart(file_path):
 if __name__ == "__main__":
     chart = read_spc_v0_chart("./bird.spc")
     write_json("test.json", chart)
-        

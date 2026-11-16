@@ -56,7 +56,7 @@ class DifficultyInput:
     slot: int
     chart: Path | None = None
     rating: int = 1
-    level_section_indicator: str = "1"
+    level_section_indicator: str = ""
     chart_designer: str = ""
     jacket_designer: str = ""
     background: Path | None = None
@@ -245,7 +245,7 @@ def _song_schema_values(
             "chart": chart_stems[item.slot] + ".spc",
             "rating": int(item.rating),
             "levelSectionIndicator": str(
-                item.level_section_indicator or "?"
+                item.level_section_indicator or item.rating
             ),
             "background": background,
         }
@@ -298,7 +298,7 @@ def _pack_config(
     return {
         "schemaVersion": 1,
         "id": pack_id.strip(),
-        "title": title.strip(),
+        "name": title.strip(),
         "artist": artist,
         "description": description,
         "stylePackSlug": style_pack_slug.strip() or DEFAULT_PACK_STYLE,
@@ -356,6 +356,32 @@ def _profile_context(
             preview_end,
         )
     )
+    fallback_title = _safe_stem(
+        spec.song_title or spec.folder_name or spec.chart_id,
+        "Untitled",
+    )
+    context["song_title"] = spec.song_title.strip() or fallback_title
+    context["artist"] = spec.artist.strip() or "Unknown"
+    context["chart_designer"] = (
+        spec.chart_designer.strip() or "Unknown"
+    )
+    context["jacket_designer"] = (
+        spec.jacket_designer.strip() or "Unknown"
+    )
+    context["preview_audio_file"] = (
+        "preview" + _audio_suffix(spec.preview_audio)
+        if spec.preview_audio is not None
+        else None
+    )
+    if spec.preview_audio_start is not None:
+        context["preview_start"] = float(
+            spec.preview_audio_start
+        )
+    if spec.preview_audio_end is not None:
+        context["preview_end"] = max(
+            float(spec.preview_audio_end),
+            float(context["preview_start"]) + 0.1,
+        )
     context["chart_id"] = chart_id
     by_slot = {item.slot: item for item in spec.difficulties if item.chart is not None}
     first_present = next((by_slot[s] for s in range(4) if s in by_slot), None)
@@ -383,12 +409,17 @@ def _profile_context(
             f"chart_file_{slot}": chart_file,
             f"chart_stem_{slot}": chart_stem,
             f"rating_{slot}": int(item.rating) if item else None,
-            f"section_{slot}": str(item.level_section_indicator) if item else None,
+            f"section_{slot}": (
+                str(item.level_section_indicator or item.rating)
+                if item else None
+            ),
             f"chart_designer_{slot}": (
-                item.chart_designer or spec.chart_designer if item else None
+                (item.chart_designer or spec.chart_designer or "Unknown")
+                if item else None
             ),
             f"jacket_designer_{slot}": (
-                item.jacket_designer or spec.jacket_designer if item else None
+                (item.jacket_designer or spec.jacket_designer or "Unknown")
+                if item else None
             ),
             f"background_{slot}": background_file,
             f"background_file_{slot}": background_file,
@@ -465,12 +496,17 @@ def create_pack_folder(
     )
     temp = Path(tempfile.mkdtemp(prefix=".spc-pack-", dir=root))
     try:
-        (temp / "pack_config.json").write_text(
+        if jacket is not None:
+            jacket_name = "pack_songSelect.png"
+            _copy_jacket(jacket, temp / jacket_name, 512, 512)
+            config["visuals"] = {
+                "songSelect": jacket_name,
+                "selected": jacket_name,
+            }
+        (temp / "pack.json").write_text(
             json.dumps(config, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
-        if jacket is not None:
-            _copy_jacket(jacket, temp / "pack_jacket.png", 512, 512)
         os.replace(temp, target)
     except Exception:
         shutil.rmtree(temp, ignore_errors=True)
@@ -808,7 +844,7 @@ def _export_song(
         return ExportResult(
             pack_folder=pack_folder,
             pack_config=(
-                pack_folder / "pack_config.json"
+                pack_folder / "pack.json"
                 if pack_folder is not None
                 else None
             ),
@@ -836,6 +872,8 @@ _DIFFICULTY_ARRAY_KEYS = {
     "level",
     "lv",
     "rating",
+    "sp",
+    "level_section_indicator",
 }
 
 

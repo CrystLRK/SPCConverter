@@ -1,0 +1,177 @@
+In Falsus SPC 转换器 / 歌曲文件夹打包器
+=========================================
+
+这个工具解决四件事：
+  1. 读取 InFalsus Studio 工程并直接导入或导出歌曲文件夹。
+  2. 读取 Falsum `.falsum` 歌曲包并执行同样的导入/导出。
+  3. SPC V0 明文、SPC V1(ICP1) 二进制、标准 JSON 的互转。
+  4. 把谱面和音乐打包成可以直接放进游戏 Charts 的歌曲文件夹。
+
+版本兼容：
+  从 SPCConverter 1.2.4 开始，导入结果使用 Charts + pack.json + if，
+  不兼容 InFalsusExtension 0.2.0 以下的插件版本。
+
+最简用法
+--------
+双击 SPCConverter.exe，打开图形界面。
+
+导入 InFalsus Studio 工程
+--------------------------
+1. 选择包含 infalsus.studio.json 的工程文件夹、直接选择该 JSON，
+   或选择由该工程文件夹打包出的 ZIP。
+2. 工具自动读取歌曲信息、音频、封面、预览时间、非空难度、Rating、
+   难度角标、谱师和曲绘作者。
+3. 所有数据都会填入可编辑文本框，确认或修改后再执行操作。
+4. “导入游戏”写入当前选择的已有曲包；没有曲包时询问并创建默认曲包。
+5. “导出歌曲文件夹”只生成歌曲自身目录，不生成 pack.json。
+6. 点击“导入游戏”后会再次显示当前内部代号、目标曲包和歌曲目录；
+   取消后不会写入游戏目录。“导出歌曲文件夹”不显示此确认框。
+
+内部代号：
+  - 歌曲名只包含 ASCII 字母和数字时自动转小写；
+  - 包含空格、标点、中文或其他字符时留空，必须手动填写；
+  - 用于歌曲文件夹、config id/baseName 和谱面文件名；
+  - 游戏内显示标题仍使用作者填写的原始歌曲名。
+
+示例：内部代号 testify 的非空难度为 MIN/ULT/FBD 时，输出：
+  testify/
+    testify0.spc
+    testify2.spc
+    testify3.spc
+
+空难度自动取消勾选并跳过。
+Studio 的 skyarea(...,-1) 在转换时按自动分组处理，源文件不会被修改。
+不读取 chart-notes.json，也不应用 Studio 音频偏移；Studio 导出的音频
+应按 0 偏移准备。
+
+如果 manifest 里的 working 路径不存在，工具会在所选工程目录内递归查找
+同文件名谱面；只有唯一匹配时才使用，发现多个同名文件会停止并列出候选。
+
+如果配置中的歌曲音频不存在，Studio 和 Falsum 页都会在当前工程/歌曲
+目录内递归查找文件头有效的 OGG/WAV/MP3：
+  - 只找到一个时自动使用，并弹窗显示实际路径；
+  - 找到多个时弹窗列出候选，由用户选择；
+  - 没有候选或用户取消时停止导入，不静默猜测。
+
+Studio ZIP 会在临时目录中安全解包，并自动在整个压缩包内查找唯一的
+infalsus.studio.json。压缩包根部额外套一层或多层文件夹也能识别，
+例如 swansong/swansong/infalsus.studio.json。切换工程或关闭 GUI 时
+会清理临时目录，源 ZIP 不会被修改。
+
+导入 Falsum 歌曲包
+------------------
+1. 选择 `.falsum` 文件，或选择只包含一个 `.falsum` 的文件夹。
+2. 工具把 ZIP 安全解压到临时目录，读取 song.json、音频、封面和可用难度。
+3. 内部代号优先使用 Falsum 的 songId。
+4. available=false 的难度自动跳过。
+5. Falsum 背景名如果找不到对应的包内文件，会留空并提示手动选择。
+6. 离开该工程或关闭 GUI 时会清理临时解压目录，源 .falsum 不修改。
+
+背景选择
+--------
+Studio 和 Falsum 页都可以选择：
+  - 歌曲默认背景；
+  - 每个难度的覆盖背景。
+支持 PNG/JPG/JPEG/WEBP/MP4。难度背景留空时回退歌曲默认背景。
+
+歌曲封面按文件内容识别。真正的内容为 PNG 时原样复制；内容实际是
+JPEG 等图像、即使文件名写成 .png，也会在导出时转换为真正的 PNG。
+
+导出游戏歌曲
+------------
+1. 填写歌曲标题、艺术家、谱师等。
+2. 选择歌曲音频（必填）。
+3. 选择“配置结构”。默认 current_loader 使用 if / schemaVersion 1。
+4. 在“曲包目录”中选择 Steam 正式版和已有曲包。
+   - 只导入歌曲时，直接选择已有曲包后导出；
+   - 需要新曲包时，在“创建曲包文件夹”中填写参数并点创建；
+   - 当前工具不会在歌曲导出时修改已有曲包的配置或封面。
+5. 为需要的难度选择谱面文件；Rating 和 Section 可分别填写。
+6. 点“导出歌曲到所选曲包”。
+
+Steam 自动定位：
+  - 只识别 AppID 3971950 的正式版，不扫描或支持 Demo；
+  - 有多个正式版时在界面选择，程序会记住上次选择；
+  - 没有检测到正式版时，手动选择 Charts 输出目录。
+
+封面大图/小图可以不选，程序会自动生成占位 PNG。
+音频支持 ogg、wav、mp3；可另选独立 preview 音频。
+每档可以额外选择游戏内背景，支持 PNG/JPG/WEBP 和 MP4。
+
+歌曲输出结构：
+  PackName/
+    pack.json
+    SongName/
+      if
+      audio.ogg（或原始音频扩展名）
+      preview.mp3（如果选择独立预览）
+      jacketLarge.png
+      jacketSmall.png
+      谱面名.spc
+      谱面名.text.json（如果源谱面存在）
+
+如果没有检测到合法曲包，程序会弹窗提示并创建默认曲包：
+  User Charts / user-charts / act-4 / 排序 0
+
+曲包目录冲突、pack.json 损坏或曲包 ID 重复时会弹窗报错并停止，
+不会覆盖目录，也不会自动改名。
+
+配置切换：
+  - current_loader：当前 In Falsus Chart Ext 使用的 if 文件；
+  - in_falsus_chart_loader：同一 if 格式的外部兼容别名；
+  - “打开配置映射”编辑 config_profiles.json；
+  - “重载映射”无需重启即可重新读取。
+  当前 Mod（0.2.0+）读取 Charts + pack.json + if。
+
+曲包配置格式
+------------
+歌曲 if 使用 schemaVersion=1，四档难度用 chart/lv/sp 数组表示。
+曲包目录必须包含 pack.json；曲包 ID 在所有曲包中必须唯一。
+详细字段见同目录的“配置文件说明.md”。
+
+SPC 格式互转
+------------
+在“SPC 格式互转”标签页添加 .spc 或 .json：
+  - 自动模式：二进制 → 明文；明文/JSON → 二进制
+  - 也可以明确选择 V1、V0、JSON
+
+V1 文件名规则（非常重要）
+--------------------------
+SPC V1 使用完整文件名（含 .spc，大小写敏感）作为加密种子。
+例如输出为 MySong.spc，游戏内文件名也必须是 MySong.spc。
+打包器会自动按最终文件名重新加密；不要手动改名。
+
+同组天域自动合并
+----------------
+转换器保留作者写入的 SkyArea 几何、时间、时长和 group_id，不再执行
+转谱期 pack、2ms 扩写或 group_id 重排。
+
+相连 SkyArea 的视觉与判定 block 由游戏运行期按时间和空间几何隐式分类。
+空间断开的分支不会被错误合并；空间重叠但不相连的 SkyArea 也不会被合并。
+正常天域、timinggroup(...,noinput=true) 和 timinggroup(...,noclip=true)
+均遵循同一规则。
+
+手动 skyareapack(...) 与 packpiece(...) 已永久停用；转换器会明确报错，
+不会静默忽略或改写谱面。
+
+命令行
+------
+带图形界面的机器可以直接双击 SPCConverter.exe。
+
+命令行版本：
+  SPCConverterCLI.exe --help
+  SPCConverterCLI.exe --to v1 input.spc --output output\input.spc
+  SPCConverterCLI.exe --to json input.spc
+  SPCConverterCLI.exe --verify input.spc
+
+源码运行：
+  python src\spc_converter.py --gui
+  python src\spc_converter.py --interactive
+
+说明
+----
+发行版包含两个 EXE：
+  SPCConverter.exe       图形界面
+  SPCConverterCLI.exe    命令行
+
+源码也一起打包；不依赖游戏工程或编辑器。
