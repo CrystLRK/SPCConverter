@@ -32,7 +32,7 @@ from lyric_statement import (  # noqa: E402
 )
 
 
-VERSION = "1.2.4"
+VERSION = "1.2.4-patch1"
 FormatName = Literal["v0", "v1", "json"]
 TargetFormat = Literal["auto", "v0", "v1", "json"]
 

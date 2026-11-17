@@ -295,15 +295,20 @@ def _pack_config(
         raise ConversionError("曲包 id 不能为空")
     if not title.strip():
         raise ConversionError("曲包 title 不能为空")
-    return {
+    config: dict[str, Any] = {
         "schemaVersion": 1,
         "id": pack_id.strip(),
         "name": title.strip(),
-        "artist": artist,
-        "description": description,
         "stylePackSlug": style_pack_slug.strip() or DEFAULT_PACK_STYLE,
         "sortOrder": int(sort_order),
     }
+    artist_text = artist.strip()
+    if artist_text:
+        config["artist"] = artist_text
+    description_text = description.strip()
+    if description_text:
+        config["description"] = description_text
+    return config
 
 
 def _audio_duration(source: Path) -> float | None:

@@ -1,6 +1,6 @@
 # SPCConverter
 
-**版本：1.2.4**
+**版本：1.2.4-patch1**
 
 SPCConverter 是用于 *In Falsus* 的 Windows 自制歌曲导入与导出工具。
 
