@@ -3,9 +3,12 @@
 ------
 
 **当前 main 分支版本：1.2.4-patch1**
+
 **当前 dev 分支版本：1.2.4-patch1**
 
+
 **[InFalsusExtension](https://github.com/CrystLRK/InFalsusExtension) 当前 main 分支版本：0.2.0-patch1，最低兼容版本：1.2.4-patch1**
+
 **[InFalsusExtension](https://github.com/CrystLRK/InFalsusExtension) 当前 dev 分支版本：0.2.0-patch1，最低兼容版本：1.2.4-patch1**
 
 ------
