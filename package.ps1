@@ -6,9 +6,10 @@ param(
 $ErrorActionPreference = 'Stop'
 $env:PYTHONDONTWRITEBYTECODE = '1'
 $project = $PSScriptRoot
+$workspace = Split-Path -Parent $project
 $src = Join-Path $project 'src'
-$build = Join-Path $project 'build'
-$release = Join-Path $project 'release\SPCConverter'
+$build = Join-Path $workspace 'build\SPCConverter'
+$release = Join-Path $build 'release\SPCConverter'
 $version = (python -c "import sys; sys.path.insert(0, r'$src'); from spc_converter import VERSION; print(VERSION)").Trim()
 
 python -m unittest discover -s (Join-Path $project 'tests') -v
@@ -38,7 +39,7 @@ if (-not $SourceOnly) {
     Copy-Item -LiteralPath (Join-Path $distCli 'SPCConverterCLI.exe') -Destination $release -Force
 }
 
-$zipPath = Join-Path $project "release\SPCConverter-windows-$version.zip"
+$zipPath = Join-Path $build "release\SPCConverter-windows-$version.zip"
 if ($Zip) {
     Compress-Archive -Path (Join-Path $release '*') -DestinationPath $zipPath -Force
     Write-Host "Windows package: $zipPath"

@@ -9,7 +9,6 @@ build-*/
 release/
 input/
 output/
-tests/
 
 *.log
 *.tmp
