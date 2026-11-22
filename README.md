@@ -2,14 +2,14 @@
 
 ------
 
-**当前 main 分支版本：1.2.4-patch1**
+**当前 main 分支版本：1.2.4-patch2**
 
-**当前 dev 分支版本：1.2.4-patch1**
+**当前 dev 分支版本：1.2.4-patch2**
 
 
-**[InFalsusExtension](https://github.com/CrystLRK/InFalsusExtension) 当前 main 分支版本：0.2.0-patch1，最低兼容版本：1.2.4-patch1**
+**[InFalsusExtension](https://github.com/CrystLRK/InFalsusExtension) 当前 main 分支版本：0.3.0，最低兼容版本：1.2.4-patch2**
 
-**[InFalsusExtension](https://github.com/CrystLRK/InFalsusExtension) 当前 dev 分支版本：0.2.0-patch1，最低兼容版本：1.2.4-patch1**
+**[InFalsusExtension](https://github.com/CrystLRK/InFalsusExtension) 当前 dev 分支版本：0.3.0，最低兼容版本：1.2.4-patch2**
 
 ------
 
@@ -30,7 +30,8 @@ SPCConverter 是用于 *In Falsus* 的 Windows 自制歌曲导入与导出工具
 - 游玩带扩展内容的自制谱时，需要安装与游戏版本匹配的
   InFalsusExtension。
 - **从 SPCConverter 1.2.4 开始，导入结果使用 `Charts/` + `pack.json` +
-  `if` 格式，不兼容 InFalsusExtension 0.2.0 以下的插件版本。**
+  `if` 格式，不兼容 InFalsusExtension 0.2.0 以下的插件版本；推荐使用
+  InFalsusExtension 0.3.0。**
 
 ## 快速开始
 

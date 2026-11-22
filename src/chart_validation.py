@@ -169,7 +169,7 @@ def _validate_event(event: Any, index: int) -> None:
         _finite(event.get("value"), f"{path}.value")
     elif event_type in (1, 2):
         bpm = _finite(event.get("bpm"), f"{path}.bpm")
-        if bpm <= 0:
+        if bpm == 0:
             _fail(f"{path}.bpm", "必须大于 0")
         _finite(event.get("speed", 0.0), f"{path}.speed")
     elif event_type == 3:

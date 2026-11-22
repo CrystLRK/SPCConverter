@@ -111,6 +111,8 @@ class Event:
     lane_status_flag: int | None = None
     noinput_group: int | None = None
     speed_group: int | None = None    # timinggroup 组内变速（type5）的组号
+    group_bpm: float | None = None    # type5 高 32 位：组 BPM（0 表示未指定）
+    scope_group: int = 0              # 创建该事件时所在的 timinggroup（0=全局）
 
     def to_dict(self) -> dict:
         event_block = {
@@ -122,6 +124,8 @@ class Event:
             event_block["value"] = self.speed_multiplier
         if self.event_type == 5 and self.speed_group is not None:
             event_block["speed"] = float(self.speed_group)
+        if self.event_type == 5 and self.group_bpm is not None:
+            event_block["groupBpm"] = float(self.group_bpm)
         if self.bpm is not None:
             # type1 区段 / type2 过渡（BpmChangeV3）：bpm + 拍数（文档里的 speed 字段）
             event_block["bpm"] = self.bpm
@@ -157,7 +161,10 @@ def write_json(file_name: str, obj) -> None:
         json.dump(obj, f, ensure_ascii=False, indent=4)
 
 
-def read_spc_v0_chart(file_path):
+def read_spc_v0_chart(file_path, warn=None):
+    def _warn(message):
+        if warn is not None:
+            warn(message)
     content = read_file(file_path)
     pattern = re.compile(r"(\w+)\(([^)]*)\)")
     chart_json = {
@@ -825,8 +832,12 @@ def read_spc_v0_chart(file_path):
                     bpm_value = float(note_arguments_list[1])
                     beat_unit = float(note_arguments_list[2]) if len(note_arguments_list) > 2 else 4.0
                     mode = int(float(note_arguments_list[3])) if len(note_arguments_list) > 3 else 0
-                    if bpm_value <= 0:
+                    # 全局 bpm 必须为正；timinggroup 内允许负值（演出），
+                    # 由 Mod 在密度侧取绝对值处理。
+                    if current_group == 0 and bpm_value == 0:
                         raise ValueError("bpm 数值必须大于 0")
+                    if current_group != 0 and bpm_value == 0:
+                        raise ValueError("timinggroup 内 bpm 不能为 0")
                     if current_group != 0:
                         # 组内 BPM 是该组的基础视觉流速：相对 chart() 的头部 BPM
                         # 计算基础倍率。它不进入全局 BPM 事件，因此不影响小节线。
@@ -840,7 +851,8 @@ def read_spc_v0_chart(file_path):
                             event_type = (EventType.BPM if mode == 0 else EventType.BPM_TRANSITION),
                             time_ms = time_ms,
                             bpm = bpm_value,
-                            beat_amount = beat_unit
+                            beat_amount = beat_unit,
+                            scope_group = current_group,
                         )
                         event_count += 1
                         parsed_events.append(event)
@@ -863,7 +875,8 @@ def read_spc_v0_chart(file_path):
                             index = event_count,
                             event_type = EventType.TRACK,
                             time_ms = round_ms(note_arguments_list[0]),
-                            speed_multiplier = float(note_arguments_list[1])
+                            speed_multiplier = float(note_arguments_list[1]),
+                            scope_group = current_group,
                         )
                     if event is not None:
                         event_count += 1
@@ -885,28 +898,84 @@ def read_spc_v0_chart(file_path):
         closer = "groupend()" if block_end_token == "groupend()" else "}"
         raise ValueError(f"timinggroup({block_group}) 缺少闭合的 {closer}")
 
+    # L1 硬校验：timinggroup 内的 track()/bpm() 只允许产生 type5，
+    # 任何落到全局 type0/1/2 的事件都是越界，直接报错。
+    for event in parsed_events:
+        if event.event_type in (0, 1, 2) and event.scope_group != 0:
+            raise ValueError(
+                f"timinggroup({event.scope_group}) 的语句产生了全局事件 "
+                f"type={int(event.event_type)} time={event.time_ms}ms"
+            )
+
     # timinggroup 的组内 bpm 与 track 最终合成为现有的 type5 GroupSpeed 事件。
     # 底层 C# 运行期仍只需消费“某一时刻之后的组有效流速”，无需新增事件类型。
     chart_base_bpm = float(chart_json["bpm"] or 0.0)
     if group_timeline_inputs and chart_base_bpm <= 0:
         raise ValueError("timinggroup 使用 bpm 时，chart() 头部 BPM 必须大于 0")
-    # A block without its own bpm uses the chart's initial bpm as its baseline.
-    for group_id in sorted(declared_block_groups - block_bpm_groups):
-        group_timeline_inputs.append(
-            (0, group_id, "base", chart_base_bpm, -1)
+    # 组基线规则（用户定义）：
+    # - 组内有 track 语句：时间顺序上的第一条 track 就是该组的起点，
+    #   在该时刻之前不允许出现任何音符；出现即报错；
+    # - 组内没有 track 语句：t=0 基线流速 1.0，并给出警告。
+    first_track: dict[int, int] = {}
+    for time_ms, group_id, kind, _value, _order in group_timeline_inputs:
+        if kind != "track":
+            continue
+        if group_id not in first_track or time_ms < first_track[group_id]:
+            first_track[group_id] = time_ms
+    for group_id in sorted(declared_block_groups):
+        if group_id in first_track:
+            continue
+        if group_id in block_bpm_groups:
+            # 组内有 bpm 语句：组时间线已有首个事件，不需要基线。
+            continue
+        first_note_ms = 0
+        for note in parsed_notes:
+            if note.timing_group is None:
+                continue
+            if (note.timing_group & TIMINGGROUP_ID_MASK) != group_id:
+                continue
+            if first_note_ms == 0 or note.time_ms < first_note_ms:
+                first_note_ms = note.time_ms
+        _warn(
+            f"timinggroup({group_id}) 没有任何 track/bpm 语句，"
+            f"按首个音符时间 {first_note_ms}ms 流速 1.0 处理"
         )
+        group_timeline_inputs.append(
+            (first_note_ms, group_id, "base", chart_base_bpm, -1)
+        )
+    for note in parsed_notes:
+        if note.timing_group is None:
+            continue
+        group_id = note.timing_group & TIMINGGROUP_ID_MASK
+        if group_id == 0:
+            continue
+        first = first_track.get(group_id)
+        if first is not None and note.time_ms < first:
+            raise ValueError(
+                f"timinggroup({group_id}) 的第一条 track 在 {first}ms，"
+                f"但音符出现在 {note.time_ms}ms；"
+                f"该时刻之前不允许出现音符"
+            )
     base_by_group: dict[int, float] = {}
     track_by_group: dict[int, float] = {}
+    bpm_by_group: dict[int, float] = {}
     effective_group_speeds: dict[tuple[int, int], float] = {}
+    group_bpm_at: dict[tuple[int, int], float] = {}
     for time_ms, group_id, kind, value, _ in sorted(
         group_timeline_inputs, key=lambda item: (item[0], item[4])
     ):
         if kind == "base":
-            base_by_group[group_id] = value / chart_base_bpm
+            # 原版语义：组内 bpm 只影响小节线/密度，不参与组流速。
+            # 组视觉速度完全由 track() 决定。
+            base_by_group[group_id] = 1.0
+            bpm_by_group[group_id] = value
         else:
             track_by_group[group_id] = value
         effective = base_by_group.get(group_id, 1.0) * track_by_group.get(group_id, 1.0)
-        effective_group_speeds[(group_id, time_ms)] = effective
+        key = (group_id, time_ms)
+        effective_group_speeds[key] = effective
+        # 组 BPM 只用于长音符 record 密度；缺省写 0，运行期回落到 chart BPM。
+        group_bpm_at[key] = bpm_by_group.get(group_id, 0.0)
     for (group_id, time_ms), effective in effective_group_speeds.items():
         parsed_events.append(
             Event(
@@ -915,6 +984,7 @@ def read_spc_v0_chart(file_path):
                 time_ms=time_ms,
                 speed_multiplier=effective,
                 speed_group=group_id,
+                group_bpm=group_bpm_at.get((group_id, time_ms), 0.0),
             )
         )
         event_count += 1
