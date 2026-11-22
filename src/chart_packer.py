@@ -141,6 +141,12 @@ def encode_event_block(event: dict) -> bytearray:
         value2 = struct.unpack("<I", struct.pack("<f", tmp_tuple))[0]
     else:
         value2 = 0
+    if "groupBpm" in event:
+        # type5 高 32 位：timinggroup 组 BPM（float）。低 32 位仍是组号。
+        value2 |= (
+            struct.unpack("<I", struct.pack("<f", event["groupBpm"]))[0]
+            << 32
+        )
     event_block_data: bytearray = bytearray(SPC_EVENT_SIZE)
     """event_block_data = [
         event_id.to_bytes(8, 'little'),

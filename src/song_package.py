@@ -721,7 +721,10 @@ def _export_song(
         )
 
         chart_stems: dict[int, str] = {}
-        background_names: dict[int, str | None] = {}
+        # 歌曲级背景参与 if.background 的四个槽位；分难度背景再覆盖。
+        background_names: dict[int, str | None] = {
+            slot: song_background_name for slot in range(4)
+        }
         chart_paths: list[Path] = []
         for item in sorted(selected, key=lambda d: d.slot):
             stem = _safe_stem(f"{folder_name}{item.slot}", f"{folder_name}{item.slot}")

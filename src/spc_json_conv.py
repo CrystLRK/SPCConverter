@@ -284,9 +284,14 @@ def raw_to_standard(raw: dict) -> dict:
             item["speed"] = _f32(e["value2"] & 0xFFFFFFFF)
         elif t == 3:       # 轨道开关
             item["flags"] = int(e["value1"])
-        elif t == 5:       # timinggroup 组内有效流速；value2 低 32 位是组号
+        elif t == 5:
+            # timinggroup 组内有效流速；value2 低 32 位是组号，
+            # 高 32 位是组 BPM（float，0 表示未指定）。
             item["value"] = _f64(e["value1"])
             item["speed"] = _f32(e["value2"] & 0xFFFFFFFF)
+            item["groupBpm"] = _f32(
+                (int(e["value2"]) >> 32) & 0xFFFFFFFF
+            )
         else:
             item["value"] = _f64(e["value1"])
         events_out.append(item)
