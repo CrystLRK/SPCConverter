@@ -1,0 +1,6424 @@
+{
+  "schemaVersion": 1,
+  "target": {
+    "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+    "catalogVersion": "infalsus-107-scene-1"
+  },
+  "status": "partial-not-runtime-validated",
+  "branches": [
+    {
+      "id": "native_chronophobia",
+      "songId": "chronophobia",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 20
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Chronophobia/ChronophobiaSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_Be",
+            "frameEntry": "0x1805fe3a0",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "native_codeleviathan",
+      "songId": "codeleviathan",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 8
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/CodeLeviathan/CodeLeviathanSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_de",
+            "frameEntry": "0x180605080",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "native_coldsea",
+      "songId": "coldsea",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 9
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/ColdSea/ColdSeaSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_Fe",
+            "frameEntry": "0x180610570",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "native_enigma",
+      "songId": "enigma",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 7
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Enigma/EnigmaSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_ke",
+            "frameEntry": "0x180618820",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "native_kiretsu",
+      "songId": "kiretsu",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 17
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Kiretsu/KiretsuSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_pe",
+            "frameEntry": "0x180621750",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "native_latentduality",
+      "songId": "latentduality",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 6
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/LatentDuality/LatentDualitySpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {
+          "pp": {
+            "kind": "material",
+            "resource": "ppMaterial",
+            "rendererBackend": "GraphPass",
+            "initial": {
+              "material": "ppMaterial",
+              "visible": false
+            },
+            "order": 0,
+            "renderContract": "native107.LatentDuality.PP"
+          }
+        },
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {
+          "scanline": {
+            "valueType": "float32",
+            "unit": "scalar",
+            "nodes": [
+              {
+                "id": "chartMs",
+                "op": "signal",
+                "valueType": "float64",
+                "signalId": "time"
+              },
+              {
+                "id": "thousand",
+                "op": "const",
+                "valueType": "float64",
+                "value": 1000.0
+              },
+              {
+                "id": "seconds64",
+                "op": "divide",
+                "valueType": "float64",
+                "inputs": [
+                  "chartMs",
+                  "thousand"
+                ]
+              },
+              {
+                "id": "seconds",
+                "op": "kernel",
+                "valueType": "float32",
+                "kernel": "cast.float32",
+                "inputs": [
+                  "seconds64"
+                ]
+              },
+              {
+                "id": "beatLength",
+                "op": "const",
+                "valueType": "float32",
+                "value": 0.35294119
+              },
+              {
+                "id": "beat",
+                "op": "divide",
+                "valueType": "float32",
+                "inputs": [
+                  "seconds",
+                  "beatLength"
+                ]
+              },
+              {
+                "id": "zero",
+                "op": "const",
+                "valueType": "float32",
+                "value": 0.0
+              },
+              {
+                "id": "one",
+                "op": "const",
+                "valueType": "float32",
+                "value": 1.0
+              },
+              {
+                "id": "enterStart",
+                "op": "const",
+                "valueType": "float32",
+                "value": 34.0
+              },
+              {
+                "id": "enterLength",
+                "op": "const",
+                "valueType": "float32",
+                "value": 2.0
+              },
+              {
+                "id": "enterDelta",
+                "op": "subtract",
+                "valueType": "float32",
+                "inputs": [
+                  "beat",
+                  "enterStart"
+                ]
+              },
+              {
+                "id": "enterU",
+                "op": "divide",
+                "valueType": "float32",
+                "inputs": [
+                  "enterDelta",
+                  "enterLength"
+                ]
+              },
+              {
+                "id": "enterClamp",
+                "op": "clamp",
+                "valueType": "float32",
+                "inputs": [
+                  "enterU",
+                  "zero",
+                  "one"
+                ]
+              },
+              {
+                "id": "enterSmooth",
+                "op": "kernel",
+                "valueType": "float32",
+                "kernel": "native107.smoothstep",
+                "inputs": [
+                  "enterClamp"
+                ]
+              },
+              {
+                "id": "leaveStart",
+                "op": "const",
+                "valueType": "float32",
+                "value": 64.0
+              },
+              {
+                "id": "leaveLength",
+                "op": "const",
+                "valueType": "float32",
+                "value": 4.0
+              },
+              {
+                "id": "leaveDelta",
+                "op": "subtract",
+                "valueType": "float32",
+                "inputs": [
+                  "beat",
+                  "leaveStart"
+                ]
+              },
+              {
+                "id": "leaveU",
+                "op": "divide",
+                "valueType": "float32",
+                "inputs": [
+                  "leaveDelta",
+                  "leaveLength"
+                ]
+              },
+              {
+                "id": "leaveClamp",
+                "op": "clamp",
+                "valueType": "float32",
+                "inputs": [
+                  "leaveU",
+                  "zero",
+                  "one"
+                ]
+              },
+              {
+                "id": "leaveSmooth",
+                "op": "kernel",
+                "valueType": "float32",
+                "kernel": "native107.smoothstep",
+                "inputs": [
+                  "leaveClamp"
+                ]
+              },
+              {
+                "id": "beforeLeave",
+                "op": "compare",
+                "valueType": "bool",
+                "params": {
+                  "operator": "lt"
+                },
+                "inputs": [
+                  "beat",
+                  "leaveStart"
+                ]
+              },
+              {
+                "id": "leaveValue",
+                "op": "subtract",
+                "valueType": "float32",
+                "inputs": [
+                  "one",
+                  "leaveSmooth"
+                ]
+              },
+              {
+                "id": "scanline",
+                "op": "select",
+                "valueType": "float32",
+                "inputs": [
+                  "beforeLeave",
+                  "enterSmooth",
+                  "leaveValue"
+                ]
+              }
+            ],
+            "output": "scanline",
+            "kind": "expression",
+            "before": "hold",
+            "after": "hold",
+            "clock": "chart.timeMs"
+          },
+          "seconds": {
+            "valueType": "float32",
+            "unit": "seconds",
+            "nodes": [
+              {
+                "id": "chartMs",
+                "op": "signal",
+                "valueType": "float64",
+                "signalId": "time"
+              },
+              {
+                "id": "thousand",
+                "op": "const",
+                "valueType": "float64",
+                "value": 1000.0
+              },
+              {
+                "id": "seconds64",
+                "op": "divide",
+                "valueType": "float64",
+                "inputs": [
+                  "chartMs",
+                  "thousand"
+                ]
+              },
+              {
+                "id": "seconds",
+                "op": "kernel",
+                "valueType": "float32",
+                "kernel": "cast.float32",
+                "inputs": [
+                  "seconds64"
+                ]
+              }
+            ],
+            "output": "seconds",
+            "kind": "expression",
+            "before": "hold",
+            "after": "hold",
+            "clock": "chart.timeMs"
+          },
+          "frame": {
+            "valueType": "int32",
+            "unit": "frame",
+            "nodes": [
+              {
+                "id": "frame",
+                "op": "signal",
+                "valueType": "int32",
+                "signalId": "frame"
+              }
+            ],
+            "output": "frame",
+            "kind": "expression",
+            "before": "hold",
+            "after": "hold",
+            "clock": "chart.timeMs"
+          },
+          "r2": {
+            "valueType": "vec4",
+            "unit": "scalar",
+            "nodes": [
+              {
+                "id": "frame",
+                "op": "signal",
+                "valueType": "int32",
+                "signalId": "frame"
+              },
+              {
+                "id": "r2",
+                "op": "kernel",
+                "valueType": "vec4",
+                "kernel": "native107.r2",
+                "inputs": [
+                  "frame"
+                ]
+              }
+            ],
+            "output": "r2",
+            "kind": "expression",
+            "before": "hold",
+            "after": "hold",
+            "clock": "chart.timeMs"
+          }
+        },
+        "signals": {
+          "time": {
+            "source": "chart.timeMs",
+            "valueType": "float64",
+            "unit": "milliseconds"
+          },
+          "frame": {
+            "source": "engine.frameCount",
+            "valueType": "int32",
+            "unit": "frame"
+          }
+        },
+        "rules": {
+          "scanlineOn": {
+            "trigger": "rise",
+            "condition": {
+              "valueType": "bool",
+              "unit": "boolean",
+              "nodes": [
+                {
+                  "id": "chartMs",
+                  "op": "signal",
+                  "valueType": "float64",
+                  "signalId": "time"
+                },
+                {
+                  "id": "thousand",
+                  "op": "const",
+                  "valueType": "float64",
+                  "value": 1000.0
+                },
+                {
+                  "id": "seconds64",
+                  "op": "divide",
+                  "valueType": "float64",
+                  "inputs": [
+                    "chartMs",
+                    "thousand"
+                  ]
+                },
+                {
+                  "id": "seconds",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "cast.float32",
+                  "inputs": [
+                    "seconds64"
+                  ]
+                },
+                {
+                  "id": "beatLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.35294119
+                },
+                {
+                  "id": "beat",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "seconds",
+                    "beatLength"
+                  ]
+                },
+                {
+                  "id": "zero",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.0
+                },
+                {
+                  "id": "one",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 1.0
+                },
+                {
+                  "id": "enterStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 34.0
+                },
+                {
+                  "id": "enterLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 2.0
+                },
+                {
+                  "id": "enterDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "enterStart"
+                  ]
+                },
+                {
+                  "id": "enterU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterDelta",
+                    "enterLength"
+                  ]
+                },
+                {
+                  "id": "enterClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "enterSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "enterClamp"
+                  ]
+                },
+                {
+                  "id": "leaveStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 64.0
+                },
+                {
+                  "id": "leaveLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 4.0
+                },
+                {
+                  "id": "leaveDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveDelta",
+                    "leaveLength"
+                  ]
+                },
+                {
+                  "id": "leaveClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "leaveSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "leaveClamp"
+                  ]
+                },
+                {
+                  "id": "beforeLeave",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "lt"
+                  },
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveValue",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "one",
+                    "leaveSmooth"
+                  ]
+                },
+                {
+                  "id": "scanline",
+                  "op": "select",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beforeLeave",
+                    "enterSmooth",
+                    "leaveValue"
+                  ]
+                },
+                {
+                  "id": "positive",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "gt"
+                  },
+                  "inputs": [
+                    "scanline",
+                    "zero"
+                  ]
+                }
+              ],
+              "output": "positive"
+            },
+            "priority": 0,
+            "actions": [
+              {
+                "delayMs": 0.0,
+                "domain": "material",
+                "operation": "keyword",
+                "args": [
+                  "pp",
+                  "USE_SCANLINE",
+                  1
+                ]
+              },
+              {
+                "delayMs": 0.0,
+                "domain": "object",
+                "operation": "visible",
+                "args": [
+                  "pp",
+                  1
+                ]
+              }
+            ]
+          },
+          "scanlineOff": {
+            "trigger": "fall",
+            "condition": {
+              "valueType": "bool",
+              "unit": "boolean",
+              "nodes": [
+                {
+                  "id": "chartMs",
+                  "op": "signal",
+                  "valueType": "float64",
+                  "signalId": "time"
+                },
+                {
+                  "id": "thousand",
+                  "op": "const",
+                  "valueType": "float64",
+                  "value": 1000.0
+                },
+                {
+                  "id": "seconds64",
+                  "op": "divide",
+                  "valueType": "float64",
+                  "inputs": [
+                    "chartMs",
+                    "thousand"
+                  ]
+                },
+                {
+                  "id": "seconds",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "cast.float32",
+                  "inputs": [
+                    "seconds64"
+                  ]
+                },
+                {
+                  "id": "beatLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.35294119
+                },
+                {
+                  "id": "beat",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "seconds",
+                    "beatLength"
+                  ]
+                },
+                {
+                  "id": "zero",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.0
+                },
+                {
+                  "id": "one",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 1.0
+                },
+                {
+                  "id": "enterStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 34.0
+                },
+                {
+                  "id": "enterLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 2.0
+                },
+                {
+                  "id": "enterDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "enterStart"
+                  ]
+                },
+                {
+                  "id": "enterU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterDelta",
+                    "enterLength"
+                  ]
+                },
+                {
+                  "id": "enterClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "enterSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "enterClamp"
+                  ]
+                },
+                {
+                  "id": "leaveStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 64.0
+                },
+                {
+                  "id": "leaveLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 4.0
+                },
+                {
+                  "id": "leaveDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveDelta",
+                    "leaveLength"
+                  ]
+                },
+                {
+                  "id": "leaveClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "leaveSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "leaveClamp"
+                  ]
+                },
+                {
+                  "id": "beforeLeave",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "lt"
+                  },
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveValue",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "one",
+                    "leaveSmooth"
+                  ]
+                },
+                {
+                  "id": "scanline",
+                  "op": "select",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beforeLeave",
+                    "enterSmooth",
+                    "leaveValue"
+                  ]
+                },
+                {
+                  "id": "positive",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "gt"
+                  },
+                  "inputs": [
+                    "scanline",
+                    "zero"
+                  ]
+                }
+              ],
+              "output": "positive"
+            },
+            "priority": 0,
+            "actions": [
+              {
+                "delayMs": 0.0,
+                "domain": "material",
+                "operation": "keyword",
+                "args": [
+                  "pp",
+                  "USE_SCANLINE",
+                  0
+                ]
+              },
+              {
+                "delayMs": 0.0,
+                "domain": "object",
+                "operation": "visible",
+                "args": [
+                  "pp",
+                  0
+                ]
+              }
+            ]
+          },
+          "endVerified": {
+            "trigger": "onceWhenTrue",
+            "condition": {
+              "valueType": "bool",
+              "unit": "boolean",
+              "nodes": [
+                {
+                  "id": "chartMs",
+                  "op": "signal",
+                  "valueType": "float64",
+                  "signalId": "time"
+                },
+                {
+                  "id": "thousand",
+                  "op": "const",
+                  "valueType": "float64",
+                  "value": 1000.0
+                },
+                {
+                  "id": "seconds64",
+                  "op": "divide",
+                  "valueType": "float64",
+                  "inputs": [
+                    "chartMs",
+                    "thousand"
+                  ]
+                },
+                {
+                  "id": "seconds",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "cast.float32",
+                  "inputs": [
+                    "seconds64"
+                  ]
+                },
+                {
+                  "id": "beatLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.35294119
+                },
+                {
+                  "id": "beat",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "seconds",
+                    "beatLength"
+                  ]
+                },
+                {
+                  "id": "zero",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.0
+                },
+                {
+                  "id": "one",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 1.0
+                },
+                {
+                  "id": "enterStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 34.0
+                },
+                {
+                  "id": "enterLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 2.0
+                },
+                {
+                  "id": "enterDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "enterStart"
+                  ]
+                },
+                {
+                  "id": "enterU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterDelta",
+                    "enterLength"
+                  ]
+                },
+                {
+                  "id": "enterClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "enterSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "enterClamp"
+                  ]
+                },
+                {
+                  "id": "leaveStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 64.0
+                },
+                {
+                  "id": "leaveLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 4.0
+                },
+                {
+                  "id": "leaveDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveDelta",
+                    "leaveLength"
+                  ]
+                },
+                {
+                  "id": "leaveClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "leaveSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "leaveClamp"
+                  ]
+                },
+                {
+                  "id": "beforeLeave",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "lt"
+                  },
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveValue",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "one",
+                    "leaveSmooth"
+                  ]
+                },
+                {
+                  "id": "scanline",
+                  "op": "select",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beforeLeave",
+                    "enterSmooth",
+                    "leaveValue"
+                  ]
+                },
+                {
+                  "id": "positive",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "gt"
+                  },
+                  "inputs": [
+                    "scanline",
+                    "zero"
+                  ]
+                },
+                {
+                  "id": "endVerified",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 316.0
+                },
+                {
+                  "id": "end",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "ge"
+                  },
+                  "inputs": [
+                    "beat",
+                    "endVerified"
+                  ]
+                }
+              ],
+              "output": "end"
+            },
+            "priority": 1,
+            "actions": [
+              {
+                "delayMs": 0.0,
+                "domain": "instance",
+                "operation": "release",
+                "args": [
+                  "pp"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "actions": [
+        {
+          "id": 1,
+          "timeMs": 0.0,
+          "sourceOrder": 0,
+          "domain": "instance",
+          "operation": "prepare",
+          "args": [
+            "pp"
+          ]
+        },
+        {
+          "id": 2,
+          "timeMs": 0.0,
+          "sourceOrder": 1,
+          "domain": "material",
+          "operation": "bind",
+          "args": [
+            "pp",
+            "ppMaterial"
+          ]
+        },
+        {
+          "id": 3,
+          "timeMs": 0.0,
+          "sourceOrder": 2,
+          "domain": "material",
+          "operation": "curve",
+          "args": [
+            "pp",
+            "_CurrentTime",
+            "seconds"
+          ]
+        },
+        {
+          "id": 4,
+          "timeMs": 0.0,
+          "sourceOrder": 3,
+          "domain": "material",
+          "operation": "curve",
+          "args": [
+            "pp",
+            "_FrameCount",
+            "frame"
+          ]
+        },
+        {
+          "id": 5,
+          "timeMs": 0.0,
+          "sourceOrder": 4,
+          "domain": "material",
+          "operation": "curve",
+          "args": [
+            "pp",
+            "_R2",
+            "r2"
+          ]
+        },
+        {
+          "id": 6,
+          "timeMs": 0.0,
+          "sourceOrder": 5,
+          "domain": "material",
+          "operation": "curve",
+          "args": [
+            "pp",
+            "_ScanlineAmount",
+            "scanline"
+          ]
+        },
+        {
+          "id": 7,
+          "timeMs": 0.0,
+          "sourceOrder": 6,
+          "domain": "rule",
+          "operation": "enable",
+          "args": [
+            "scanlineOn"
+          ]
+        },
+        {
+          "id": 8,
+          "timeMs": 0.0,
+          "sourceOrder": 7,
+          "domain": "rule",
+          "operation": "enable",
+          "args": [
+            "scanlineOff"
+          ]
+        },
+        {
+          "id": 9,
+          "timeMs": 0.0,
+          "sourceOrder": 8,
+          "domain": "rule",
+          "operation": "enable",
+          "args": [
+            "endVerified"
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_se",
+            "frameEntry": "0x1806527b0",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "native.scanline.verified-fragment",
+          "status": "exported",
+          "source": {
+            "controller": "_se",
+            "addresses": [
+              "0x180650c21",
+              "0x18065138c",
+              "0x180653027",
+              "0x180652048"
+            ],
+            "slotOffset": "0x88",
+            "property": "_ScanlineAmount",
+            "phase": "gameplay"
+          },
+          "actionIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "reason": "0ms动作只建立独立绑定/规则，原效果由原始float节拍DAG驱动；34—36平滑进入、64—68平滑退出；316节拍前为已证实片段，随后release，不伪造后段。",
+          "verifiedRange": {
+            "clock": "float32(float32(logicalSeconds)/float32(0.35294119))",
+            "beforeBeat": 316.0
+          },
+          "bindingTimeRole": "programInitialization",
+          "fragmentBoundaryRole": "exportCoverageEndNotNativeRelease",
+          "notFullPerformance": true
+        }
+      ]
+    },
+    {
+      "id": "native_memoire",
+      "songId": "memoire",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 15
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Memoire/MemoireSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_Te",
+            "frameEntry": "0x18064d160",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "native_phylaxron",
+      "songId": "phylaxron",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 16
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Phylaxron/PhylaxronSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_Xe",
+            "frameEntry": "0x1806579e0",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "native_tactom",
+      "songId": "tactom",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 19
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Tactom/TactomSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_ze",
+            "frameEntry": "0x180667750",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "native_tokonagi",
+      "songId": "tokonagi",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 14
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Tokonagi/TokonagiSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_bE",
+            "frameEntry": "0x18065e480",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "native_zetta",
+      "songId": "zetta",
+      "origin": {
+        "kind": "nativeMapping",
+        "enumValue": 18
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Zetta/ZettaSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_CE",
+            "frameEntry": "0x18067ada0",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "native_controller13",
+      "songId": null,
+      "origin": {
+        "kind": "unmappedNativeController",
+        "enumValue": 13
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Kuukaku/KuukakuSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_Qe",
+            "frameEntry": "0x18064a5a0",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        }
+      ]
+    },
+    {
+      "id": "story_417402880_0_7db3d6f79497",
+      "songId": "zfc",
+      "origin": {
+        "storyU": 417402880,
+        "songId": "zfc",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28C-2_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28C-2_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28C-2_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.d5585d094b5a7d6cd6abccb495c570be2518a4a77e088564a18cbf7dfbb74a53",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28C-2_Ni.sps",
+            "guid": "e5f8c3cc962fabd43a44325a20404dff",
+            "sha256": "d5585d094b5a7d6cd6abccb495c570be2518a4a77e088564a18cbf7dfbb74a53"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417402880,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_417404944_1_d33b1738b821",
+      "songId": "wonderroom",
+      "origin": {
+        "storyU": 417404944,
+        "songId": "wonderroom",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ay.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ni.sps"
+        ],
+        "character": 2,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ay.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ay.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.fd4b13a52815ac14c9da08710489619755e4c39a3e76adb7c53a73a5bca26ad2",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ay.sps",
+            "guid": "0c98b6cbdd304324e825e206d700471c",
+            "sha256": "fd4b13a52815ac14c9da08710489619755e4c39a3e76adb7c53a73a5bca26ad2"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417404944,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_417404944_1_fbbfdf3a308f",
+      "songId": "wonderroom",
+      "origin": {
+        "storyU": 417404944,
+        "songId": "wonderroom",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ay.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ni.sps"
+        ],
+        "character": 2,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ay.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ni.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.61d2b261550e1e60cad34a268974a91aca9b52e2763087fb003ff5a42deaba39",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ni.sps",
+            "guid": "ae9ba792f48bd9b408331ceb35783780",
+            "sha256": "61d2b261550e1e60cad34a268974a91aca9b52e2763087fb003ff5a42deaba39"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417404944,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_417433600_2_5c9fb21a5731",
+      "songId": "newvision",
+      "origin": {
+        "storyU": 417433600,
+        "songId": "newvision",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.ddb3b94fb7fb960aa2c64d6b64a162d961d2603edbd2a83e82f445cb31baf842",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+            "guid": "01fac0a4a415822449b7822470533581",
+            "sha256": "ddb3b94fb7fb960aa2c64d6b64a162d961d2603edbd2a83e82f445cb31baf842"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417433600,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_417433600_2_8d84c88acacc",
+      "songId": "newvision",
+      "origin": {
+        "storyU": 417433600,
+        "songId": "newvision",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.8678e2caaf45e2da1044303c662622b8915317d404560d9d2f88d512c85f104f",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+            "guid": "48313f8b02f53864f9b2b34a50b9e143",
+            "sha256": "8678e2caaf45e2da1044303c662622b8915317d404560d9d2f88d512c85f104f"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417433600,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_417433600_2_3ea1bc8d3b70",
+      "songId": "newvision",
+      "origin": {
+        "storyU": 417433600,
+        "songId": "newvision",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.61298fd4a1cef95dd7073d03e0acdd64600cc5068761d72f0806978a2f79b3af",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps",
+            "guid": "592cdd89c672ab142bb1d3861abad3cd",
+            "sha256": "61298fd4a1cef95dd7073d03e0acdd64600cc5068761d72f0806978a2f79b3af"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417433600,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_417433624_3_5c9fb21a5731",
+      "songId": "deepintothevibe",
+      "origin": {
+        "storyU": 417433624,
+        "songId": "deepintothevibe",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps"
+        ],
+        "character": 3,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.ddb3b94fb7fb960aa2c64d6b64a162d961d2603edbd2a83e82f445cb31baf842",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+            "guid": "01fac0a4a415822449b7822470533581",
+            "sha256": "ddb3b94fb7fb960aa2c64d6b64a162d961d2603edbd2a83e82f445cb31baf842"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417433624,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_417433624_3_8d84c88acacc",
+      "songId": "deepintothevibe",
+      "origin": {
+        "storyU": 417433624,
+        "songId": "deepintothevibe",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps"
+        ],
+        "character": 3,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.8678e2caaf45e2da1044303c662622b8915317d404560d9d2f88d512c85f104f",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+            "guid": "48313f8b02f53864f9b2b34a50b9e143",
+            "sha256": "8678e2caaf45e2da1044303c662622b8915317d404560d9d2f88d512c85f104f"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417433624,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_417433624_3_3ea1bc8d3b70",
+      "songId": "deepintothevibe",
+      "origin": {
+        "storyU": 417433624,
+        "songId": "deepintothevibe",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps"
+        ],
+        "character": 3,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.61298fd4a1cef95dd7073d03e0acdd64600cc5068761d72f0806978a2f79b3af",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps",
+            "guid": "592cdd89c672ab142bb1d3861abad3cd",
+            "sha256": "61298fd4a1cef95dd7073d03e0acdd64600cc5068761d72f0806978a2f79b3af"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417433624,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_417564704_4_a130d23d147c",
+      "songId": "fochaos",
+      "origin": {
+        "storyU": 417564704,
+        "songId": "fochaos",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28H-1_Ni.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28H-1_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28H-1_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28H-1_Ni.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.f423b9358c6e239d3e4c036f93204c46e7139055ea0ab834a52fb252d71773d6",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28H-1_Ni.sps",
+            "guid": "1928d9ba57023eb45a64f6a86b799b41",
+            "sha256": "f423b9358c6e239d3e4c036f93204c46e7139055ea0ab834a52fb252d71773d6"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417564704,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_417564704_4_2f890206ec6e",
+      "songId": "fochaos",
+      "origin": {
+        "storyU": 417564704,
+        "songId": "fochaos",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-8-28H-1_Ni.sps",
+          "scenario_wip/scenario_Y1-1/Y1-8-28H-1_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-1/Y1-8-28H-1_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-8-28H-1_St.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.5a56c52d7d997133ab87815398424eff464388f9280ae6954bebbf0d36ec129e",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-8-28H-1_St.sps",
+            "guid": "567192a50a7b5234bb94dadf1aac0c38",
+            "sha256": "5a56c52d7d997133ab87815398424eff464388f9280ae6954bebbf0d36ec129e"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 417564704,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_420646920_5_3bd9034532d3",
+      "songId": "sunanokioku",
+      "origin": {
+        "storyU": 420646920,
+        "songId": "sunanokioku",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-9-2F-2_Me.sps"
+        ],
+        "character": 1,
+        "script": "scenario_wip/scenario_Y1-1/Y1-9-2F-2_Me.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-9-2F-2_Me.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.1ccdd74eb4e3dcc277ef7fe3841a547715df48d80eaac7af645a75ec8db71078",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-9-2F-2_Me.sps",
+            "guid": "00b3c4a94acdd6643a31cf2e72a6196f",
+            "sha256": "1ccdd74eb4e3dcc277ef7fe3841a547715df48d80eaac7af645a75ec8db71078"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 420646920,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_421136384_6_56334930f75b",
+      "songId": "alterededge",
+      "origin": {
+        "storyU": 421136384,
+        "songId": "alterededge",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-9-3E-1_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-1/Y1-9-3E-1_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-9-3E-1_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.1add5ad5b67731a02ce88c2108754943d59defc7ad2704b7364ebb5b2b726c4e",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-9-3E-1_Ni.sps",
+            "guid": "ac9a6995829b7dd4c93c092c8cf82cc0",
+            "sha256": "1add5ad5b67731a02ce88c2108754943d59defc7ad2704b7364ebb5b2b726c4e"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 421136384,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_421660672_7_ed32486f32e8",
+      "songId": "transparency",
+      "origin": {
+        "storyU": 421660672,
+        "songId": "transparency",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-9-4E-1_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-1/Y1-9-4E-1_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-9-4E-1_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.aa103d74999ad27160638176cc12d43c519199e1aef8326ef37a41b7e6049527",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-9-4E-1_Ni.sps",
+            "guid": "148c1a02e047a7a46bd4099c769b7e24",
+            "sha256": "aa103d74999ad27160638176cc12d43c519199e1aef8326ef37a41b7e6049527"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 421660672,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_421668872_8_f06fd32b7fe1",
+      "songId": "latentduality",
+      "origin": {
+        "storyU": 421668872,
+        "songId": "latentduality",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-1/Y1-9-4E-5_Me.sps"
+        ],
+        "character": 1,
+        "script": "scenario_wip/scenario_Y1-1/Y1-9-4E-5_Me.sps",
+        "candidate": "scenario_wip/scenario_Y1-1/Y1-9-4E-5_Me.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/LatentDuality/LatentDualitySpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {
+          "pp": {
+            "kind": "material",
+            "resource": "ppMaterial",
+            "rendererBackend": "GraphPass",
+            "initial": {
+              "material": "ppMaterial",
+              "visible": false
+            },
+            "order": 0,
+            "renderContract": "native107.LatentDuality.PP"
+          }
+        },
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {
+          "scanline": {
+            "valueType": "float32",
+            "unit": "scalar",
+            "nodes": [
+              {
+                "id": "chartMs",
+                "op": "signal",
+                "valueType": "float64",
+                "signalId": "time"
+              },
+              {
+                "id": "thousand",
+                "op": "const",
+                "valueType": "float64",
+                "value": 1000.0
+              },
+              {
+                "id": "seconds64",
+                "op": "divide",
+                "valueType": "float64",
+                "inputs": [
+                  "chartMs",
+                  "thousand"
+                ]
+              },
+              {
+                "id": "seconds",
+                "op": "kernel",
+                "valueType": "float32",
+                "kernel": "cast.float32",
+                "inputs": [
+                  "seconds64"
+                ]
+              },
+              {
+                "id": "beatLength",
+                "op": "const",
+                "valueType": "float32",
+                "value": 0.35294119
+              },
+              {
+                "id": "beat",
+                "op": "divide",
+                "valueType": "float32",
+                "inputs": [
+                  "seconds",
+                  "beatLength"
+                ]
+              },
+              {
+                "id": "zero",
+                "op": "const",
+                "valueType": "float32",
+                "value": 0.0
+              },
+              {
+                "id": "one",
+                "op": "const",
+                "valueType": "float32",
+                "value": 1.0
+              },
+              {
+                "id": "enterStart",
+                "op": "const",
+                "valueType": "float32",
+                "value": 34.0
+              },
+              {
+                "id": "enterLength",
+                "op": "const",
+                "valueType": "float32",
+                "value": 2.0
+              },
+              {
+                "id": "enterDelta",
+                "op": "subtract",
+                "valueType": "float32",
+                "inputs": [
+                  "beat",
+                  "enterStart"
+                ]
+              },
+              {
+                "id": "enterU",
+                "op": "divide",
+                "valueType": "float32",
+                "inputs": [
+                  "enterDelta",
+                  "enterLength"
+                ]
+              },
+              {
+                "id": "enterClamp",
+                "op": "clamp",
+                "valueType": "float32",
+                "inputs": [
+                  "enterU",
+                  "zero",
+                  "one"
+                ]
+              },
+              {
+                "id": "enterSmooth",
+                "op": "kernel",
+                "valueType": "float32",
+                "kernel": "native107.smoothstep",
+                "inputs": [
+                  "enterClamp"
+                ]
+              },
+              {
+                "id": "leaveStart",
+                "op": "const",
+                "valueType": "float32",
+                "value": 64.0
+              },
+              {
+                "id": "leaveLength",
+                "op": "const",
+                "valueType": "float32",
+                "value": 4.0
+              },
+              {
+                "id": "leaveDelta",
+                "op": "subtract",
+                "valueType": "float32",
+                "inputs": [
+                  "beat",
+                  "leaveStart"
+                ]
+              },
+              {
+                "id": "leaveU",
+                "op": "divide",
+                "valueType": "float32",
+                "inputs": [
+                  "leaveDelta",
+                  "leaveLength"
+                ]
+              },
+              {
+                "id": "leaveClamp",
+                "op": "clamp",
+                "valueType": "float32",
+                "inputs": [
+                  "leaveU",
+                  "zero",
+                  "one"
+                ]
+              },
+              {
+                "id": "leaveSmooth",
+                "op": "kernel",
+                "valueType": "float32",
+                "kernel": "native107.smoothstep",
+                "inputs": [
+                  "leaveClamp"
+                ]
+              },
+              {
+                "id": "beforeLeave",
+                "op": "compare",
+                "valueType": "bool",
+                "params": {
+                  "operator": "lt"
+                },
+                "inputs": [
+                  "beat",
+                  "leaveStart"
+                ]
+              },
+              {
+                "id": "leaveValue",
+                "op": "subtract",
+                "valueType": "float32",
+                "inputs": [
+                  "one",
+                  "leaveSmooth"
+                ]
+              },
+              {
+                "id": "scanline",
+                "op": "select",
+                "valueType": "float32",
+                "inputs": [
+                  "beforeLeave",
+                  "enterSmooth",
+                  "leaveValue"
+                ]
+              }
+            ],
+            "output": "scanline",
+            "kind": "expression",
+            "before": "hold",
+            "after": "hold",
+            "clock": "chart.timeMs"
+          },
+          "seconds": {
+            "valueType": "float32",
+            "unit": "seconds",
+            "nodes": [
+              {
+                "id": "chartMs",
+                "op": "signal",
+                "valueType": "float64",
+                "signalId": "time"
+              },
+              {
+                "id": "thousand",
+                "op": "const",
+                "valueType": "float64",
+                "value": 1000.0
+              },
+              {
+                "id": "seconds64",
+                "op": "divide",
+                "valueType": "float64",
+                "inputs": [
+                  "chartMs",
+                  "thousand"
+                ]
+              },
+              {
+                "id": "seconds",
+                "op": "kernel",
+                "valueType": "float32",
+                "kernel": "cast.float32",
+                "inputs": [
+                  "seconds64"
+                ]
+              }
+            ],
+            "output": "seconds",
+            "kind": "expression",
+            "before": "hold",
+            "after": "hold",
+            "clock": "chart.timeMs"
+          },
+          "frame": {
+            "valueType": "int32",
+            "unit": "frame",
+            "nodes": [
+              {
+                "id": "frame",
+                "op": "signal",
+                "valueType": "int32",
+                "signalId": "frame"
+              }
+            ],
+            "output": "frame",
+            "kind": "expression",
+            "before": "hold",
+            "after": "hold",
+            "clock": "chart.timeMs"
+          },
+          "r2": {
+            "valueType": "vec4",
+            "unit": "scalar",
+            "nodes": [
+              {
+                "id": "frame",
+                "op": "signal",
+                "valueType": "int32",
+                "signalId": "frame"
+              },
+              {
+                "id": "r2",
+                "op": "kernel",
+                "valueType": "vec4",
+                "kernel": "native107.r2",
+                "inputs": [
+                  "frame"
+                ]
+              }
+            ],
+            "output": "r2",
+            "kind": "expression",
+            "before": "hold",
+            "after": "hold",
+            "clock": "chart.timeMs"
+          }
+        },
+        "signals": {
+          "time": {
+            "source": "chart.timeMs",
+            "valueType": "float64",
+            "unit": "milliseconds"
+          },
+          "frame": {
+            "source": "engine.frameCount",
+            "valueType": "int32",
+            "unit": "frame"
+          }
+        },
+        "rules": {
+          "scanlineOn": {
+            "trigger": "rise",
+            "condition": {
+              "valueType": "bool",
+              "unit": "boolean",
+              "nodes": [
+                {
+                  "id": "chartMs",
+                  "op": "signal",
+                  "valueType": "float64",
+                  "signalId": "time"
+                },
+                {
+                  "id": "thousand",
+                  "op": "const",
+                  "valueType": "float64",
+                  "value": 1000.0
+                },
+                {
+                  "id": "seconds64",
+                  "op": "divide",
+                  "valueType": "float64",
+                  "inputs": [
+                    "chartMs",
+                    "thousand"
+                  ]
+                },
+                {
+                  "id": "seconds",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "cast.float32",
+                  "inputs": [
+                    "seconds64"
+                  ]
+                },
+                {
+                  "id": "beatLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.35294119
+                },
+                {
+                  "id": "beat",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "seconds",
+                    "beatLength"
+                  ]
+                },
+                {
+                  "id": "zero",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.0
+                },
+                {
+                  "id": "one",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 1.0
+                },
+                {
+                  "id": "enterStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 34.0
+                },
+                {
+                  "id": "enterLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 2.0
+                },
+                {
+                  "id": "enterDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "enterStart"
+                  ]
+                },
+                {
+                  "id": "enterU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterDelta",
+                    "enterLength"
+                  ]
+                },
+                {
+                  "id": "enterClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "enterSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "enterClamp"
+                  ]
+                },
+                {
+                  "id": "leaveStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 64.0
+                },
+                {
+                  "id": "leaveLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 4.0
+                },
+                {
+                  "id": "leaveDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveDelta",
+                    "leaveLength"
+                  ]
+                },
+                {
+                  "id": "leaveClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "leaveSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "leaveClamp"
+                  ]
+                },
+                {
+                  "id": "beforeLeave",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "lt"
+                  },
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveValue",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "one",
+                    "leaveSmooth"
+                  ]
+                },
+                {
+                  "id": "scanline",
+                  "op": "select",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beforeLeave",
+                    "enterSmooth",
+                    "leaveValue"
+                  ]
+                },
+                {
+                  "id": "positive",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "gt"
+                  },
+                  "inputs": [
+                    "scanline",
+                    "zero"
+                  ]
+                }
+              ],
+              "output": "positive"
+            },
+            "priority": 0,
+            "actions": [
+              {
+                "delayMs": 0.0,
+                "domain": "material",
+                "operation": "keyword",
+                "args": [
+                  "pp",
+                  "USE_SCANLINE",
+                  1
+                ]
+              },
+              {
+                "delayMs": 0.0,
+                "domain": "object",
+                "operation": "visible",
+                "args": [
+                  "pp",
+                  1
+                ]
+              }
+            ]
+          },
+          "scanlineOff": {
+            "trigger": "fall",
+            "condition": {
+              "valueType": "bool",
+              "unit": "boolean",
+              "nodes": [
+                {
+                  "id": "chartMs",
+                  "op": "signal",
+                  "valueType": "float64",
+                  "signalId": "time"
+                },
+                {
+                  "id": "thousand",
+                  "op": "const",
+                  "valueType": "float64",
+                  "value": 1000.0
+                },
+                {
+                  "id": "seconds64",
+                  "op": "divide",
+                  "valueType": "float64",
+                  "inputs": [
+                    "chartMs",
+                    "thousand"
+                  ]
+                },
+                {
+                  "id": "seconds",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "cast.float32",
+                  "inputs": [
+                    "seconds64"
+                  ]
+                },
+                {
+                  "id": "beatLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.35294119
+                },
+                {
+                  "id": "beat",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "seconds",
+                    "beatLength"
+                  ]
+                },
+                {
+                  "id": "zero",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.0
+                },
+                {
+                  "id": "one",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 1.0
+                },
+                {
+                  "id": "enterStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 34.0
+                },
+                {
+                  "id": "enterLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 2.0
+                },
+                {
+                  "id": "enterDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "enterStart"
+                  ]
+                },
+                {
+                  "id": "enterU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterDelta",
+                    "enterLength"
+                  ]
+                },
+                {
+                  "id": "enterClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "enterSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "enterClamp"
+                  ]
+                },
+                {
+                  "id": "leaveStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 64.0
+                },
+                {
+                  "id": "leaveLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 4.0
+                },
+                {
+                  "id": "leaveDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveDelta",
+                    "leaveLength"
+                  ]
+                },
+                {
+                  "id": "leaveClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "leaveSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "leaveClamp"
+                  ]
+                },
+                {
+                  "id": "beforeLeave",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "lt"
+                  },
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveValue",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "one",
+                    "leaveSmooth"
+                  ]
+                },
+                {
+                  "id": "scanline",
+                  "op": "select",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beforeLeave",
+                    "enterSmooth",
+                    "leaveValue"
+                  ]
+                },
+                {
+                  "id": "positive",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "gt"
+                  },
+                  "inputs": [
+                    "scanline",
+                    "zero"
+                  ]
+                }
+              ],
+              "output": "positive"
+            },
+            "priority": 0,
+            "actions": [
+              {
+                "delayMs": 0.0,
+                "domain": "material",
+                "operation": "keyword",
+                "args": [
+                  "pp",
+                  "USE_SCANLINE",
+                  0
+                ]
+              },
+              {
+                "delayMs": 0.0,
+                "domain": "object",
+                "operation": "visible",
+                "args": [
+                  "pp",
+                  0
+                ]
+              }
+            ]
+          },
+          "endVerified": {
+            "trigger": "onceWhenTrue",
+            "condition": {
+              "valueType": "bool",
+              "unit": "boolean",
+              "nodes": [
+                {
+                  "id": "chartMs",
+                  "op": "signal",
+                  "valueType": "float64",
+                  "signalId": "time"
+                },
+                {
+                  "id": "thousand",
+                  "op": "const",
+                  "valueType": "float64",
+                  "value": 1000.0
+                },
+                {
+                  "id": "seconds64",
+                  "op": "divide",
+                  "valueType": "float64",
+                  "inputs": [
+                    "chartMs",
+                    "thousand"
+                  ]
+                },
+                {
+                  "id": "seconds",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "cast.float32",
+                  "inputs": [
+                    "seconds64"
+                  ]
+                },
+                {
+                  "id": "beatLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.35294119
+                },
+                {
+                  "id": "beat",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "seconds",
+                    "beatLength"
+                  ]
+                },
+                {
+                  "id": "zero",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 0.0
+                },
+                {
+                  "id": "one",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 1.0
+                },
+                {
+                  "id": "enterStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 34.0
+                },
+                {
+                  "id": "enterLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 2.0
+                },
+                {
+                  "id": "enterDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "enterStart"
+                  ]
+                },
+                {
+                  "id": "enterU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterDelta",
+                    "enterLength"
+                  ]
+                },
+                {
+                  "id": "enterClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "enterU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "enterSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "enterClamp"
+                  ]
+                },
+                {
+                  "id": "leaveStart",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 64.0
+                },
+                {
+                  "id": "leaveLength",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 4.0
+                },
+                {
+                  "id": "leaveDelta",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveU",
+                  "op": "divide",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveDelta",
+                    "leaveLength"
+                  ]
+                },
+                {
+                  "id": "leaveClamp",
+                  "op": "clamp",
+                  "valueType": "float32",
+                  "inputs": [
+                    "leaveU",
+                    "zero",
+                    "one"
+                  ]
+                },
+                {
+                  "id": "leaveSmooth",
+                  "op": "kernel",
+                  "valueType": "float32",
+                  "kernel": "native107.smoothstep",
+                  "inputs": [
+                    "leaveClamp"
+                  ]
+                },
+                {
+                  "id": "beforeLeave",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "lt"
+                  },
+                  "inputs": [
+                    "beat",
+                    "leaveStart"
+                  ]
+                },
+                {
+                  "id": "leaveValue",
+                  "op": "subtract",
+                  "valueType": "float32",
+                  "inputs": [
+                    "one",
+                    "leaveSmooth"
+                  ]
+                },
+                {
+                  "id": "scanline",
+                  "op": "select",
+                  "valueType": "float32",
+                  "inputs": [
+                    "beforeLeave",
+                    "enterSmooth",
+                    "leaveValue"
+                  ]
+                },
+                {
+                  "id": "positive",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "gt"
+                  },
+                  "inputs": [
+                    "scanline",
+                    "zero"
+                  ]
+                },
+                {
+                  "id": "endVerified",
+                  "op": "const",
+                  "valueType": "float32",
+                  "value": 316.0
+                },
+                {
+                  "id": "end",
+                  "op": "compare",
+                  "valueType": "bool",
+                  "params": {
+                    "operator": "ge"
+                  },
+                  "inputs": [
+                    "beat",
+                    "endVerified"
+                  ]
+                }
+              ],
+              "output": "end"
+            },
+            "priority": 1,
+            "actions": [
+              {
+                "delayMs": 0.0,
+                "domain": "instance",
+                "operation": "release",
+                "args": [
+                  "pp"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "actions": [
+        {
+          "id": 1,
+          "timeMs": 0.0,
+          "sourceOrder": 0,
+          "domain": "instance",
+          "operation": "prepare",
+          "args": [
+            "pp"
+          ]
+        },
+        {
+          "id": 2,
+          "timeMs": 0.0,
+          "sourceOrder": 1,
+          "domain": "material",
+          "operation": "bind",
+          "args": [
+            "pp",
+            "ppMaterial"
+          ]
+        },
+        {
+          "id": 3,
+          "timeMs": 0.0,
+          "sourceOrder": 2,
+          "domain": "material",
+          "operation": "curve",
+          "args": [
+            "pp",
+            "_CurrentTime",
+            "seconds"
+          ]
+        },
+        {
+          "id": 4,
+          "timeMs": 0.0,
+          "sourceOrder": 3,
+          "domain": "material",
+          "operation": "curve",
+          "args": [
+            "pp",
+            "_FrameCount",
+            "frame"
+          ]
+        },
+        {
+          "id": 5,
+          "timeMs": 0.0,
+          "sourceOrder": 4,
+          "domain": "material",
+          "operation": "curve",
+          "args": [
+            "pp",
+            "_R2",
+            "r2"
+          ]
+        },
+        {
+          "id": 6,
+          "timeMs": 0.0,
+          "sourceOrder": 5,
+          "domain": "material",
+          "operation": "curve",
+          "args": [
+            "pp",
+            "_ScanlineAmount",
+            "scanline"
+          ]
+        },
+        {
+          "id": 7,
+          "timeMs": 0.0,
+          "sourceOrder": 6,
+          "domain": "rule",
+          "operation": "enable",
+          "args": [
+            "scanlineOn"
+          ]
+        },
+        {
+          "id": 8,
+          "timeMs": 0.0,
+          "sourceOrder": 7,
+          "domain": "rule",
+          "operation": "enable",
+          "args": [
+            "scanlineOff"
+          ]
+        },
+        {
+          "id": 9,
+          "timeMs": 0.0,
+          "sourceOrder": 8,
+          "domain": "rule",
+          "operation": "enable",
+          "args": [
+            "endVerified"
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_se",
+            "frameEntry": "0x1806527b0",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "native.scanline.verified-fragment",
+          "status": "exported",
+          "source": {
+            "controller": "_se",
+            "addresses": [
+              "0x180650c21",
+              "0x18065138c",
+              "0x180653027",
+              "0x180652048"
+            ],
+            "slotOffset": "0x88",
+            "property": "_ScanlineAmount",
+            "phase": "gameplay"
+          },
+          "actionIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "reason": "0ms动作只建立独立绑定/规则，原效果由原始float节拍DAG驱动；34—36平滑进入、64—68平滑退出；316节拍前为已证实片段，随后release，不伪造后段。",
+          "verifiedRange": {
+            "clock": "float32(float32(logicalSeconds)/float32(0.35294119))",
+            "beforeBeat": 316.0
+          },
+          "bindingTimeRole": "programInitialization",
+          "fragmentBoundaryRole": "exportCoverageEndNotNativeRelease",
+          "notFullPerformance": true
+        },
+        {
+          "sourceId": "script.a4b38bb1635c26ebf6e75f16f107ace24c6ecc5bef65667c86440787c14909d6",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-1/Y1-9-4E-5_Me.sps",
+            "guid": "a85f68db474680a4588bb6c207c5be0d",
+            "sha256": "a4b38bb1635c26ebf6e75f16f107ace24c6ecc5bef65667c86440787c14909d6"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 421668872,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_424151048_9_7ccc39da6f1b",
+      "songId": "withtruth",
+      "origin": {
+        "storyU": 424151048,
+        "songId": "withtruth",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2/Y1-9-9A-1_Me.sps"
+        ],
+        "character": 1,
+        "script": "scenario_wip/scenario_Y1-2/Y1-9-9A-1_Me.sps",
+        "candidate": "scenario_wip/scenario_Y1-2/Y1-9-9A-1_Me.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.19ae2300a8fdc15d8e9a806d20cf7427432602408fbcbef020051dc2f5458e92",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2/Y1-9-9A-1_Me.sps",
+            "guid": "ea59740a2a0b6c24d83e65042f55c127",
+            "sha256": "19ae2300a8fdc15d8e9a806d20cf7427432602408fbcbef020051dc2f5458e92"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 424151048,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_424249344_10_9540aa914588",
+      "songId": "greyscalecity",
+      "origin": {
+        "storyU": 424249344,
+        "songId": "greyscalecity",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+          "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.36506da2c68889a894784867431583294e2cd4ab9da612ed109c6855569650c7",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+            "guid": "6a6f4b227a59b3d4fa793a72054ece25",
+            "sha256": "36506da2c68889a894784867431583294e2cd4ab9da612ed109c6855569650c7"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 424249344,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_424249344_10_02430787bd0e",
+      "songId": "greyscalecity",
+      "origin": {
+        "storyU": 424249344,
+        "songId": "greyscalecity",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+          "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.deda9413d987e5b1a23f57f0e98c1371b7a95312e8ce017c540a908b4ef89cdc",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps",
+            "guid": "1d1860f280b4973439323311e7a06614",
+            "sha256": "deda9413d987e5b1a23f57f0e98c1371b7a95312e8ce017c540a908b4ef89cdc"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 424249344,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_424249376_11_9540aa914588",
+      "songId": "init",
+      "origin": {
+        "storyU": 424249376,
+        "songId": "init",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+          "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.36506da2c68889a894784867431583294e2cd4ab9da612ed109c6855569650c7",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+            "guid": "6a6f4b227a59b3d4fa793a72054ece25",
+            "sha256": "36506da2c68889a894784867431583294e2cd4ab9da612ed109c6855569650c7"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 424249376,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_424249376_11_02430787bd0e",
+      "songId": "init",
+      "origin": {
+        "storyU": 424249376,
+        "songId": "init",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+          "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.deda9413d987e5b1a23f57f0e98c1371b7a95312e8ce017c540a908b4ef89cdc",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps",
+            "guid": "1d1860f280b4973439323311e7a06614",
+            "sha256": "deda9413d987e5b1a23f57f0e98c1371b7a95312e8ce017c540a908b4ef89cdc"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 424249376,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_427952144_12_129305dcfe17",
+      "songId": "moondiver",
+      "origin": {
+        "storyU": 427952144,
+        "songId": "moondiver",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2/Y1-9-16E-1_Ay.sps"
+        ],
+        "character": 2,
+        "script": "scenario_wip/scenario_Y1-2/Y1-9-16E-1_Ay.sps",
+        "candidate": "scenario_wip/scenario_Y1-2/Y1-9-16E-1_Ay.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.b419509a65007266f6a60ff2ba53ce91ce8257c23d3e0bb40652852014494444",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2/Y1-9-16E-1_Ay.sps",
+            "guid": "0e1a76993ac443a4491d52c478456a9d",
+            "sha256": "b419509a65007266f6a60ff2ba53ce91ce8257c23d3e0bb40652852014494444"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 427952144,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_428509216_13_e52a600a4eeb",
+      "songId": "minerva",
+      "origin": {
+        "storyU": 428509216,
+        "songId": "minerva",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2/Y1-9-17F-1_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-2/Y1-9-17F-1_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-2/Y1-9-17F-1_St.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.4a68f47a4a046acac2be9e2ca3b780488bc567f78f2c1fe88bb897c20778e227",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2/Y1-9-17F-1_St.sps",
+            "guid": "fedb8e682c545f34d8653069d1b410da",
+            "sha256": "4a68f47a4a046acac2be9e2ca3b780488bc567f78f2c1fe88bb897c20778e227"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 428509216,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_430049296_14_a8e04156b805",
+      "songId": "sinutopia",
+      "origin": {
+        "storyU": 430049296,
+        "songId": "sinutopia",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2/Y1-9-20E-1_Ay.sps"
+        ],
+        "character": 2,
+        "script": "scenario_wip/scenario_Y1-2/Y1-9-20E-1_Ay.sps",
+        "candidate": "scenario_wip/scenario_Y1-2/Y1-9-20E-1_Ay.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.25b53109b3e05681b101953366bab982e1b1a606aac3197ed56b93f96570630c",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2/Y1-9-20E-1_Ay.sps",
+            "guid": "74dcde091487a7440a5598450ebb60ba",
+            "sha256": "25b53109b3e05681b101953366bab982e1b1a606aac3197ed56b93f96570630c"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 430049296,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_430477336_15_596a94e81af9",
+      "songId": "enigma",
+      "origin": {
+        "storyU": 430477336,
+        "songId": "enigma",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2/Y1-9-21B-2_Ir.sps"
+        ],
+        "character": 3,
+        "script": "scenario_wip/scenario_Y1-2/Y1-9-21B-2_Ir.sps",
+        "candidate": "scenario_wip/scenario_Y1-2/Y1-9-21B-2_Ir.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Enigma/EnigmaSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_ke",
+            "frameEntry": "0x180618820",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "script.deb87959a315e2f4b1dd2b72a7354aeac21625508b308294169858d4d9ce3a06",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2/Y1-9-21B-2_Ir.sps",
+            "guid": "db6e239b4b528364dbb18c958e775d34",
+            "sha256": "deb87959a315e2f4b1dd2b72a7354aeac21625508b308294169858d4d9ce3a06"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 430477336,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_433721368_16_3b93609c48fd",
+      "songId": "thingsitreasure",
+      "origin": {
+        "storyU": 433721368,
+        "songId": "thingsitreasure",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2_5/Y1-9-27E-2_Ir.sps"
+        ],
+        "character": 3,
+        "script": "scenario_wip/scenario_Y1-2_5/Y1-9-27E-2_Ir.sps",
+        "candidate": "scenario_wip/scenario_Y1-2_5/Y1-9-27E-2_Ir.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.50a5d0f1e87e62dc03c5ad4b4bb1a1dd401ce1763d4b1be15ad875b3dabd8ec4",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2_5/Y1-9-27E-2_Ir.sps",
+            "guid": "c5fffcc3f48da354cbd39f4b38788784",
+            "sha256": "50a5d0f1e87e62dc03c5ad4b4bb1a1dd401ce1763d4b1be15ad875b3dabd8ec4"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 433721368,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_434210832_17_76e17c5d542e",
+      "songId": "everything",
+      "origin": {
+        "storyU": 434210832,
+        "songId": "everything",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2_5/Y1-9-28D-1_Ay.sps"
+        ],
+        "character": 2,
+        "script": "scenario_wip/scenario_Y1-2_5/Y1-9-28D-1_Ay.sps",
+        "candidate": "scenario_wip/scenario_Y1-2_5/Y1-9-28D-1_Ay.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.b42d6e1226c217a3415bb430ca75c81ac06a85a4c9a5ca6ab650c774dcd448d3",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2_5/Y1-9-28D-1_Ay.sps",
+            "guid": "57c06157f9daf904699361bef0deed1a",
+            "sha256": "b42d6e1226c217a3415bb430ca75c81ac06a85a4c9a5ca6ab650c774dcd448d3"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 434210832,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_445810704_18_a84dd4afca9d",
+      "songId": "memoire",
+      "origin": {
+        "storyU": 445810704,
+        "songId": "memoire",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2_5/Y1-10-18F-1_Ay.sps"
+        ],
+        "character": 2,
+        "script": "scenario_wip/scenario_Y1-2_5/Y1-10-18F-1_Ay.sps",
+        "candidate": "scenario_wip/scenario_Y1-2_5/Y1-10-18F-1_Ay.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Memoire/MemoireSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_Te",
+            "frameEntry": "0x18064d160",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "script.40528dbdcfc9ff3fc5b22d841fb7e4ad4826161370464236d42c4e4ae9d6865f",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2_5/Y1-10-18F-1_Ay.sps",
+            "guid": "56700d94780f26f419209dccbd235166",
+            "sha256": "40528dbdcfc9ff3fc5b22d841fb7e4ad4826161370464236d42c4e4ae9d6865f"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 445810704,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_446760968_19_ce794105837c",
+      "songId": "lightsout",
+      "origin": {
+        "storyU": 446760968,
+        "songId": "lightsout",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2_5/Y1-10-20C-1_Me.sps"
+        ],
+        "character": 1,
+        "script": "scenario_wip/scenario_Y1-2_5/Y1-10-20C-1_Me.sps",
+        "candidate": "scenario_wip/scenario_Y1-2_5/Y1-10-20C-1_Me.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.2e0dba2de4fd5371a5aeb84ddcb09b94a1b3b8814d56ab8041e0b78b53e8eccb",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2_5/Y1-10-20C-1_Me.sps",
+            "guid": "757e56482cca71b4b9dcdf47678005ce",
+            "sha256": "2e0dba2de4fd5371a5aeb84ddcb09b94a1b3b8814d56ab8041e0b78b53e8eccb"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 446760968,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_450562048_20_7202ca796d9c",
+      "songId": "neonvision",
+      "origin": {
+        "storyU": 450562048,
+        "songId": "neonvision",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2_5/Y1-10-27G-1_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-2_5/Y1-10-27G-1_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-2_5/Y1-10-27G-1_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.9cc23af38c214a1c2211fbd82626cd2bc0a13632c882f014769544bf5c8a99f8",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2_5/Y1-10-27G-1_Ni.sps",
+            "guid": "f76a477ee2cc2654094fbee021fd7315",
+            "sha256": "9cc23af38c214a1c2211fbd82626cd2bc0a13632c882f014769544bf5c8a99f8"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 450562048,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_454166560_21_31977bb33dda",
+      "songId": "cylin",
+      "origin": {
+        "storyU": 454166560,
+        "songId": "cylin",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_Ir.sps",
+          "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_Ir.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.4d858a591595cd0122ce76ef893b3da3a220eed1f964829ecbe917859d245a0b",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_Ir.sps",
+            "guid": "89850e8c56b6e114abaadf7bc457af83",
+            "sha256": "4d858a591595cd0122ce76ef893b3da3a220eed1f964829ecbe917859d245a0b"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 454166560,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_454166560_21_8797c8020209",
+      "songId": "cylin",
+      "origin": {
+        "storyU": 454166560,
+        "songId": "cylin",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_Ir.sps",
+          "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_St.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.ba9dce204de473c7bd438733403830cc67e25293e272ba14ba12f3f60c767f25",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_St.sps",
+            "guid": "5944b950daeadef42a9fde06469eec65",
+            "sha256": "ba9dce204de473c7bd438733403830cc67e25293e272ba14ba12f3f60c767f25"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 454166560,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_454725640_22_4764e463509d",
+      "songId": "reconnect",
+      "origin": {
+        "storyU": 454725640,
+        "songId": "reconnect",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-3/Y1-11-3F-2_Me.sps"
+        ],
+        "character": 1,
+        "script": "scenario_wip/scenario_Y1-3/Y1-11-3F-2_Me.sps",
+        "candidate": "scenario_wip/scenario_Y1-3/Y1-11-3F-2_Me.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.d7a81c18d952474e6d22d57ffe848762c83b083e9fe549fbed6b508b73ac7b82",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-3/Y1-11-3F-2_Me.sps",
+            "guid": "e9ec3645cdc502044b3c1e1105d1844a",
+            "sha256": "d7a81c18d952474e6d22d57ffe848762c83b083e9fe549fbed6b508b73ac7b82"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 454725640,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_455706640_23_31b8dd1d545d",
+      "songId": "reflection",
+      "origin": {
+        "storyU": 455706640,
+        "songId": "reflection",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-3/Y1-11-5D-1_Ay.sps"
+        ],
+        "character": 2,
+        "script": "scenario_wip/scenario_Y1-3/Y1-11-5D-1_Ay.sps",
+        "candidate": "scenario_wip/scenario_Y1-3/Y1-11-5D-1_Ay.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.8d680d81742bd040fd0182daeebfe1f47b3c0816fd3cf2263f5188b9d6d59e09",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-3/Y1-11-5D-1_Ay.sps",
+            "guid": "9cf5d9a1d843d7b429bfef159679f8a3",
+            "sha256": "8d680d81742bd040fd0182daeebfe1f47b3c0816fd3cf2263f5188b9d6d59e09"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 455706640,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_455710744_24_f2d7bd141101",
+      "songId": "yggthrasir",
+      "origin": {
+        "storyU": 455710744,
+        "songId": "yggthrasir",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-3/Y1-11-5D-3_Ir.sps"
+        ],
+        "character": 3,
+        "script": "scenario_wip/scenario_Y1-3/Y1-11-5D-3_Ir.sps",
+        "candidate": "scenario_wip/scenario_Y1-3/Y1-11-5D-3_Ir.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.6f8672f305359034189e3f2548c85bf97dfb0c43c671fca8b0e4549b00337afe",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-3/Y1-11-5D-3_Ir.sps",
+            "guid": "0981b311fa87e4c4c83320ec49dcee45",
+            "sha256": "6f8672f305359034189e3f2548c85bf97dfb0c43c671fca8b0e4549b00337afe"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 455710744,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_455712776_25_311bf069bd8d",
+      "songId": "selfconfrontation",
+      "origin": {
+        "storyU": 455712776,
+        "songId": "selfconfrontation",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-3/Y1-11-5D-4_Me.sps"
+        ],
+        "character": 1,
+        "script": "scenario_wip/scenario_Y1-3/Y1-11-5D-4_Me.sps",
+        "candidate": "scenario_wip/scenario_Y1-3/Y1-11-5D-4_Me.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.d18c1816fce63a65cd05e6bfe6decf0c342161eae3d9a7db67e012aec70bd9f5",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-3/Y1-11-5D-4_Me.sps",
+            "guid": "b0724b9116519cd429ef2b1ef4b915e6",
+            "sha256": "d18c1816fce63a65cd05e6bfe6decf0c342161eae3d9a7db67e012aec70bd9f5"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 455712776,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_455772184_26_90076aaec6a0",
+      "songId": "chaoticismlegacy",
+      "origin": {
+        "storyU": 455772184,
+        "songId": "chaoticismlegacy",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-3/Y1-11-5F-1_Ir.sps",
+          "scenario_wip/scenario_Y1-3/Y1-11-5F-1_St.sps"
+        ],
+        "character": 3,
+        "script": "scenario_wip/scenario_Y1-3/Y1-11-5F-1_Ir.sps",
+        "candidate": "scenario_wip/scenario_Y1-3/Y1-11-5F-1_Ir.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.59900c22418758206d9f9026ae6d2b8606f3f338e3ae0641bff46c9902b2e8ab",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-3/Y1-11-5F-1_Ir.sps",
+            "guid": "e489c049c475aa14585bb09acad393be",
+            "sha256": "59900c22418758206d9f9026ae6d2b8606f3f338e3ae0641bff46c9902b2e8ab"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 455772184,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_455772184_26_c8d9a8f94712",
+      "songId": "chaoticismlegacy",
+      "origin": {
+        "storyU": 455772184,
+        "songId": "chaoticismlegacy",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-3/Y1-11-5F-1_Ir.sps",
+          "scenario_wip/scenario_Y1-3/Y1-11-5F-1_St.sps"
+        ],
+        "character": 3,
+        "script": "scenario_wip/scenario_Y1-3/Y1-11-5F-1_Ir.sps",
+        "candidate": "scenario_wip/scenario_Y1-3/Y1-11-5F-1_St.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.effb23e30ae55c98c4b29e5dfafbf76467699d6215ae4666744c8ead31645b81",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-3/Y1-11-5F-1_St.sps",
+            "guid": "7373b1438b3761340ba4af1bfe24f23b",
+            "sha256": "effb23e30ae55c98c4b29e5dfafbf76467699d6215ae4666744c8ead31645b81"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 455772184,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_455774240_27_0fbd3a0487f0",
+      "songId": "vesper",
+      "origin": {
+        "storyU": 455774240,
+        "songId": "vesper",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-3/Y1-11-5F-2_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-3/Y1-11-5F-2_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-3/Y1-11-5F-2_St.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.5b016c08579cc061bf4dff8471193779b01e72b2c31823909eca43c30cfe7d15",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-3/Y1-11-5F-2_St.sps",
+            "guid": "86c6ec239bb6d2047aa6aee56773b8a7",
+            "sha256": "5b016c08579cc061bf4dff8471193779b01e72b2c31823909eca43c30cfe7d15"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 455774240,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_456265728_28_4fe44275113c",
+      "songId": "shouldhavebeen",
+      "origin": {
+        "storyU": 456265728,
+        "songId": "shouldhavebeen",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-3/Y1-11-6E-2_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-3/Y1-11-6E-2_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-3/Y1-11-6E-2_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.b607414691eb7fb7b1d281d0e873e0f977017f097ebf37e81caf5f055ef5d9ba",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-2_Ni.sps",
+            "guid": "86a5c49553204864a9473ec49ccc53a1",
+            "sha256": "b607414691eb7fb7b1d281d0e873e0f977017f097ebf37e81caf5f055ef5d9ba"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 456265728,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_456267776_29_fb14423fe7b6",
+      "songId": "coldsea",
+      "origin": {
+        "storyU": 456267776,
+        "songId": "coldsea",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-3/Y1-11-6E-3_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-3/Y1-11-6E-3_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-3/Y1-11-6E-3_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/ColdSea/ColdSeaSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_Fe",
+            "frameEntry": "0x180610570",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "script.512b2972a8e8707704e3292dbef11162570160db63da072ab0f1827eb64b801b",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-3_Ni.sps",
+            "guid": "c39b032b10802a9448766eca76957016",
+            "sha256": "512b2972a8e8707704e3292dbef11162570160db63da072ab0f1827eb64b801b"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 456267776,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_456271872_30_97c9eb4fac03",
+      "songId": "codeleviathan",
+      "origin": {
+        "storyU": 456271872,
+        "songId": "codeleviathan",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-3/Y1-11-6E-5_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-3/Y1-11-6E-5_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-3/Y1-11-6E-5_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/CodeLeviathan/CodeLeviathanSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_de",
+            "frameEntry": "0x180605080",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "script.5352adb7964b6baecdbe019551cb0df98c57b3940572600409ed8f2761108b49",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-5_Ni.sps",
+            "guid": "4aa1be8133dc50041b0390aa57ae8fde",
+            "sha256": "5352adb7964b6baecdbe019551cb0df98c57b3940572600409ed8f2761108b49"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 456271872,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_459999264_31_30a61626a5c6",
+      "songId": "kuukaku",
+      "origin": {
+        "storyU": 459999264,
+        "songId": "kuukaku",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y1-11-13G-1_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-4/Y1-11-13G-1_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y1-11-13G-1_St.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.600b4d0268679e4044d71843391ee9100e5fb31cf19a24f357fd2fa01d692b12",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y1-11-13G-1_St.sps",
+            "guid": "70fd8020c42c8d24fa16c27a914939a2",
+            "sha256": "600b4d0268679e4044d71843391ee9100e5fb31cf19a24f357fd2fa01d692b12"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 459999264,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_460034048_32_5ab11de0f26b",
+      "songId": "shadowsofunknown",
+      "origin": {
+        "storyU": 460034048,
+        "songId": "shadowsofunknown",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y1-11-13H-2_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-4/Y1-11-13H-2_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y1-11-13H-2_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.efe760fd382ae83a5ccdc631228a3c214bff20857ce637ab900291ec2db8861c",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y1-11-13H-2_Ni.sps",
+            "guid": "53b0d844eaa9785468d52159038ec4da",
+            "sha256": "efe760fd382ae83a5ccdc631228a3c214bff20857ce637ab900291ec2db8861c"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 460034048,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_467800080_33_36caabe83630",
+      "songId": "falsequre",
+      "origin": {
+        "storyU": 467800080,
+        "songId": "falsequre",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y1-11-28E-2_Ay.sps"
+        ],
+        "character": 2,
+        "script": "scenario_wip/scenario_Y1-4/Y1-11-28E-2_Ay.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y1-11-28E-2_Ay.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.f85dce90915bd21bbef8bd51fb00681c303dfdc627abe0062c4f2f045fc1bd53",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y1-11-28E-2_Ay.sps",
+            "guid": "61c360b9a9f50b44aa9ca3fd6c11cfd8",
+            "sha256": "f85dce90915bd21bbef8bd51fb00681c303dfdc627abe0062c4f2f045fc1bd53"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 467800080,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_471500832_34_d815e29d038c",
+      "songId": "noctidea",
+      "origin": {
+        "storyU": 471500832,
+        "songId": "noctidea",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y1-12-3F-1_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-4/Y1-12-3F-1_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y1-12-3F-1_St.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.562316039df9a6e2900e6db5d7e599a055cfc37378fcb90b4000cac513aa3aba",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y1-12-3F-1_St.sps",
+            "guid": "3c2e933bdf7e27c46a41ed0c7ab8d2ac",
+            "sha256": "562316039df9a6e2900e6db5d7e599a055cfc37378fcb90b4000cac513aa3aba"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 471500832,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_477235208_35_e64956f3fdd3",
+      "songId": "outerjustice",
+      "origin": {
+        "storyU": 477235208,
+        "songId": "outerjustice",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Me.sps",
+          "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Ni.sps"
+        ],
+        "character": 1,
+        "script": "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Me.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Me.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.7f1981186b71e930aef0dcbc5484d367b8e8fc122a1c7a34717283538bb6fdd2",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Me.sps",
+            "guid": "43632368f5887f94d8e6861e06ef54b5",
+            "sha256": "7f1981186b71e930aef0dcbc5484d367b8e8fc122a1c7a34717283538bb6fdd2"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 477235208,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_477235208_35_4a4286bf196c",
+      "songId": "outerjustice",
+      "origin": {
+        "storyU": 477235208,
+        "songId": "outerjustice",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Me.sps",
+          "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Ni.sps"
+        ],
+        "character": 1,
+        "script": "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Me.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Ni.sps",
+        "candidateConfirmed": false
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.7a8d7433901fc84f37022885a0aaa40038565882d989d22536ac8763b64a9828",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Ni.sps",
+            "guid": "37cbe15366d45d94bb8e182dbfcb7678",
+            "sha256": "7a8d7433901fc84f37022885a0aaa40038565882d989d22536ac8763b64a9828"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 477235208,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_477237248_36_49f26b625ccc",
+      "songId": "toccatafunebre",
+      "origin": {
+        "storyU": 477237248,
+        "songId": "toccatafunebre",
+        "playType": 1,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y1-12-14E-2_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-4/Y1-12-14E-2_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y1-12-14E-2_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.ddedc3d4bd731c27412e3b94438080fe1cca82b12de44053fd5edd92f1f15171",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y1-12-14E-2_Ni.sps",
+            "guid": "d37160bb81c12bc4983cfb2e78a634fc",
+            "sha256": "ddedc3d4bd731c27412e3b94438080fe1cca82b12de44053fd5edd92f1f15171"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 477237248,
+            "playType": 1
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_484706320_37_6cd226bb0963",
+      "songId": "kiretsu",
+      "origin": {
+        "storyU": 484706320,
+        "songId": "kiretsu",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y1-12-28I-1_Ay.sps"
+        ],
+        "character": 2,
+        "script": "scenario_wip/scenario_Y1-4/Y1-12-28I-1_Ay.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y1-12-28I-1_Ay.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Kiretsu/KiretsuSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_pe",
+            "frameEntry": "0x180621750",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "script.febff6dfdea61dfe6eea2d7d4bdd0b2912808f0a9e7c26cae41d01c02e3a87ab",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y1-12-28I-1_Ay.sps",
+            "guid": "af29c88661c851a4ea50363ef133d60d",
+            "sha256": "febff6dfdea61dfe6eea2d7d4bdd0b2912808f0a9e7c26cae41d01c02e3a87ab"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 484706320,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_556927088_38_e8a801ee3c8f",
+      "songId": "moonsliders",
+      "origin": {
+        "storyU": 556927088,
+        "songId": "moonsliders",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y2-1-6E-1_Xt.sps"
+        ],
+        "character": 14,
+        "script": "scenario_wip/scenario_Y1-4/Y2-1-6E-1_Xt.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y2-1-6E-1_Xt.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {},
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "script.82b3fcdd8cbebca01c2e2410445eeeda6d7f982d9a3b634a2a01451e79ee8183",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y2-1-6E-1_Xt.sps",
+            "guid": "fd2934181db75ba46b546d0b432978d7",
+            "sha256": "82b3fcdd8cbebca01c2e2410445eeeda6d7f982d9a3b634a2a01451e79ee8183"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 556927088,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_556931096_39_569b56077473",
+      "songId": "tactom",
+      "origin": {
+        "storyU": 556931096,
+        "songId": "tactom",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y2-1-6E-3_Ir.sps"
+        ],
+        "character": 3,
+        "script": "scenario_wip/scenario_Y1-4/Y2-1-6E-3_Ir.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y2-1-6E-3_Ir.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Tactom/TactomSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_ze",
+            "frameEntry": "0x180667750",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "script.0ef1fd66e17436fce12cc8e922cd6076929221d9eaefbd5cba1feb95a0dff1de",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y2-1-6E-3_Ir.sps",
+            "guid": "35784f6db2457a949aff7cb07d914315",
+            "sha256": "0ef1fd66e17436fce12cc8e922cd6076929221d9eaefbd5cba1feb95a0dff1de"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 556931096,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_556935176_40_379b986a7346",
+      "songId": "zetta",
+      "origin": {
+        "storyU": 556935176,
+        "songId": "zetta",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y2-1-6E-5_Me.sps"
+        ],
+        "character": 1,
+        "script": "scenario_wip/scenario_Y1-4/Y2-1-6E-5_Me.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y2-1-6E-5_Me.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Zetta/ZettaSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_CE",
+            "frameEntry": "0x18067ada0",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "script.ead3d28048212e9ce429f905f7cd49a7e430900d12aafae34b4a376a07b9e7af",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y2-1-6E-5_Me.sps",
+            "guid": "374c78f1e5fcc2745bb8f21707b79234",
+            "sha256": "ead3d28048212e9ce429f905f7cd49a7e430900d12aafae34b4a376a07b9e7af"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 556935176,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_556959776_41_f1a0e81b3c77",
+      "songId": "chronophobia",
+      "origin": {
+        "storyU": 556959776,
+        "songId": "chronophobia",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y2-1-6F-1_St.sps"
+        ],
+        "character": 4,
+        "script": "scenario_wip/scenario_Y1-4/Y2-1-6F-1_St.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y2-1-6F-1_St.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Chronophobia/ChronophobiaSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_Be",
+            "frameEntry": "0x1805fe3a0",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "script.29ac147d8924b5f572242acb740acf2cdc557552dcf4671cea687efc9f9ddef5",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y2-1-6F-1_St.sps",
+            "guid": "076377477cbe1cb4d83c549ea882e1b1",
+            "sha256": "29ac147d8924b5f572242acb740acf2cdc557552dcf4671cea687efc9f9ddef5"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 556959776,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_556961792_42_0d7763c1a9b1",
+      "songId": "phylaxron",
+      "origin": {
+        "storyU": 556961792,
+        "songId": "phylaxron",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y2-1-6F-2_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-4/Y2-1-6F-2_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y2-1-6F-2_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Phylaxron/PhylaxronSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_Xe",
+            "frameEntry": "0x1806579e0",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "script.7858c1565ec4ee88fe09b8e12dce592b22a3f4ce3b4467e6f5f4f3ef3f7eb7b1",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y2-1-6F-2_Ni.sps",
+            "guid": "406c9fbc7e409954d969ba9952e83c58",
+            "sha256": "7858c1565ec4ee88fe09b8e12dce592b22a3f4ce3b4467e6f5f4f3ef3f7eb7b1"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 556961792,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    },
+    {
+      "id": "story_556967936_43_f5426dda8712",
+      "songId": "tokonagi",
+      "origin": {
+        "storyU": 556967936,
+        "songId": "tokonagi",
+        "playType": 2,
+        "scriptCandidates": [
+          "scenario_wip/scenario_Y1-4/Y2-1-6F-5_Ni.sps"
+        ],
+        "character": 0,
+        "script": "scenario_wip/scenario_Y1-4/Y2-1-6F-5_Ni.sps",
+        "candidate": "scenario_wip/scenario_Y1-4/Y2-1-6F-5_Ni.sps",
+        "candidateConfirmed": true
+      },
+      "definitions": {
+        "schemaVersion": 1,
+        "kind": "source",
+        "target": {
+          "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+          "catalogVersion": "infalsus-107-scene-1"
+        },
+        "resources": {
+          "sceneAssets": {
+            "kind": "nativeAsset",
+            "lookup": {
+              "addressablesKey": "Assets/SpecialSceneAssets/Tokonagi/TokonagiSpecialSceneAssets.asset"
+            }
+          },
+          "bgMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "BGMaterial"
+            }
+          },
+          "ppMaterial": {
+            "kind": "materialMember",
+            "lookup": {
+              "container": "sceneAssets",
+              "member": "PPMaterial"
+            }
+          }
+        },
+        "instances": {},
+        "poses": {},
+        "cameraPoses": {},
+        "curves": {},
+        "signals": {},
+        "rules": {}
+      },
+      "actions": [],
+      "coverage": [
+        {
+          "sourceId": "native.controller.remaining",
+          "status": "unsupported",
+          "timeMs": null,
+          "source": {
+            "controller": "_bE",
+            "frameEntry": "0x18065e480",
+            "phase": "gameplay"
+          },
+          "reason": "原剩余曲线/门禁/完整独立绘制尚未恢复，不以材质属性目录冒充完整演出。"
+        },
+        {
+          "sourceId": "script.4dd5ca891e4dd20c4ae5362d91919aaae9df7616db266d5a2385923bdfc75acc",
+          "status": "unresolvedTime",
+          "timeMs": null,
+          "source": {
+            "path": "scenario_wip/scenario_Y1-4/Y2-1-6F-5_Ni.sps",
+            "guid": "4c4195da860e1da419bd8480fc3661dd",
+            "sha256": "4dd5ca891e4dd20c4ae5362d91919aaae9df7616db266d5a2385923bdfc75acc"
+          },
+          "sourcePhase": "story",
+          "reason": "剧情阅读/wait/并行链与歌曲逻辑轴未校准，不将首行或固定delay强移为0ms。"
+        },
+        {
+          "sourceId": "gameplay.story-state",
+          "status": "excludedGameplay",
+          "source": {
+            "storyU": 556967936,
+            "playType": 2
+          },
+          "reason": "原卡牌/养成/挑战状态不导出为视觉动作，不调用原剧情或控制器。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "path": "output/analysis/scenecontrol_full_inventory_20261126/inventory.json",
+      "sha256": "CE161CDA2E81DE97513820A84D80EF546D659E984CE9553629DDEFE869C5C384"
+    },
+    {
+      "path": "output/analysis/scenecontrol_full_inventory_20261126/song_special_enum_map.json",
+      "sha256": "324318D40D619E4318467234B360B2D0F45B3F7F49D53881AEF9670F91B4387A"
+    },
+    {
+      "path": "output/analysis/scenecontrol_full_inventory_20261126/scripts_decoded.json",
+      "sha256": "074E4EA9DBB4EAFC759B587A3B8CA5FEDDB9D54A201A44E7D2E65D6BA0CB9C51"
+    },
+    {
+      "path": "output/candidates/20261126_scenecontrol_export/native-evidence/se_JYA_typed.json",
+      "sha256": "A1D613A9FA05C75C9DE1F5C806F18EDDCBEEFA3BADE59D2EEF14804BA2E0B5AD"
+    },
+    {
+      "path": "output/candidates/20261126_scenecontrol_export/native-evidence/se_SetupTimeline_typed_v2.json",
+      "sha256": "7A41A7CFCCBA89E494BCE235C5D1C82B93E956B093612C3BF06CA4170F6E659A"
+    },
+    {
+      "path": "output/candidates/20261126_scenecontrol_export/native-evidence/se_SetupTimeline_typed_v2_tail.json",
+      "sha256": "A5AF17FF96FD0D1B6090BC0F78E470AD3A5E2A9F45F9BA7B59E9D5CD085AE7DD"
+    },
+    {
+      "path": "output/candidates/20261126_scenecontrol_export/native-evidence/R2_typed.json",
+      "sha256": "4DE8F39C23A4596C1DD79840FE674B3C42AB305AE4B0A893F2A01EDCF7E72C7B"
+    },
+    {
+      "path": "output/analysis/scenecontrol_semantic_plan_20261126/Latent_material_loader.json",
+      "sha256": "04989B02D5C2A99BC0FCA87A933524E5EADEC0DA9BDD4795DE93FD876A435B55"
+    }
+  ],
+  "unresolved": [
+    "十二模板与独立绘制尚未完成；本数据不代表游戏显示通过",
+    "无歌曲映射的控制器不按资产名猜曲名",
+    "视频保留素材目录，原播放时刻缺对齐证据，不造play动作"
+  ]
+}

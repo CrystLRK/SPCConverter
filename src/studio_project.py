@@ -5,8 +5,9 @@ import re
 import shutil
 import stat
 import tempfile
+import threading
 import zipfile
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from pathlib import PurePosixPath
 from typing import Any, Iterable
@@ -166,8 +167,38 @@ class StudioProjectSession:
     project: StudioProject
     _temporary: tempfile.TemporaryDirectory[str]
 
+    _lease_lock: Any = field(default_factory=threading.Lock, init=False, repr=False)
+    _leases: int = field(default=0, init=False)
+    _closing: bool = field(default=False, init=False)
+    _closed: bool = field(default=False, init=False)
+
+    def retain(self) -> None:
+        with self._lease_lock:
+            if self._closing or self._closed:
+                raise ConversionError("工程解压会话已关闭，不能开始新导出")
+            self._leases += 1
+
+    def release(self) -> None:
+        cleanup = False
+        with self._lease_lock:
+            if self._leases <= 0:
+                raise RuntimeError("工程解压会话没有活动任务")
+            self._leases -= 1
+            if self._closing and self._leases == 0 and not self._closed:
+                self._closed = True
+                cleanup = True
+        if cleanup:
+            self._temporary.cleanup()
+
     def close(self) -> None:
-        self._temporary.cleanup()
+        cleanup = False
+        with self._lease_lock:
+            self._closing = True
+            if self._leases == 0 and not self._closed:
+                self._closed = True
+                cleanup = True
+        if cleanup:
+            self._temporary.cleanup()
 
 
 def locate_manifest(path: Path) -> Path:
@@ -197,7 +228,7 @@ def validate_internal_code(value: str) -> str:
         raise ConversionError(
             "内部代号只能包含 ASCII 字母、数字、下划线和连字符"
         )
-    return code
+    return code.lower()
 
 
 def rating_fields(value: Any) -> tuple[int, str]:
@@ -497,14 +528,15 @@ def _resolve_project_path(
     if target.is_file():
         return target
     if search_fallback:
-        matches = sorted(
-            (
-                candidate.resolve()
-                for candidate in root.rglob(relative.name)
-                if candidate.is_file()
-            ),
-            key=lambda item: str(item).casefold(),
-        )
+        matches = []
+        normalized_root = root.resolve()
+        for candidate in root.rglob(relative.name):
+            resolved = candidate.resolve()
+            if not resolved.is_relative_to(normalized_root):
+                raise ConversionError(f"{label}自动候选不能逃逸工程目录：{candidate}")
+            if resolved.is_file():
+                matches.append(resolved)
+        matches = sorted(set(matches), key=lambda item: str(item).casefold())
         if len(matches) == 1:
             return matches[0]
         if len(matches) > 1:

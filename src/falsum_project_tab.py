@@ -30,6 +30,5 @@ class FalsumProjectTab(StudioProjectTab):
         super()._apply_project(project)
         if project.background is None:
             self.log(
-                "[提示] Falsum 背景字段没有对应的包内文件，"
-                "已留空，请手动选择歌曲或难度背景。"
+                '[INFO] No packaged file matches the Falsum background; select a song or difficulty background manually.'
             )

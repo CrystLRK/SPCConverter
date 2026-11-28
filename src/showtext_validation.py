@@ -166,10 +166,23 @@ def _validate_showtext_ids(referenced: list[int], chart_path: Path) -> None:
             f"showtext 配置不是有效 JSON：{found} ({exc})"
         ) from exc
 
+    validate_showtext_model({"notes": [
+        {"type": 3, "flags": SHOWTEXT_MAGIC << 8, "line": text_id}
+        for text_id in referenced]}, root, str(found))
+
+
+def validate_showtext_model(chart: dict[str, Any], root: Any, where: str = "merged texts") -> None:
+    """Validate the final in-memory sidecar before any publication."""
+    referenced = showtext_ids_from_standard(chart)
     styles = _style_entries(root)
-    defined = {_validate_style(style) for style in styles}
+    defined: set[int] = set()
+    for style in styles:
+        text_id = _validate_style(style)
+        if text_id in defined:
+            raise ShowTextValidationError(f"showtext 样式 id 重复：{text_id} ({where})")
+        defined.add(text_id)
     missing = sorted(set(referenced) - defined)
     if missing:
         raise ShowTextValidationError(
-            f"showtext 配置缺少谱面引用的 id：{missing} ({found})"
+            f"showtext 配置缺少谱面引用的 id：{missing} ({where})"
         )

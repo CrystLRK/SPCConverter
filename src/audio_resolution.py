@@ -16,11 +16,14 @@ def discover_audio_files(root: Path) -> tuple[Path, ...]:
     normalized_root = root.resolve()
     candidates: list[Path] = []
     for path in normalized_root.rglob("*"):
-        if not path.is_file():
+        resolved = path.resolve()
+        if not resolved.is_relative_to(normalized_root):
+            raise AudioDiscoveryError(f"自动音频候选不能逃逸工程目录：{path}")
+        if not resolved.is_file():
             continue
-        if detect_audio_format(path) is None:
+        if detect_audio_format(resolved) is None:
             continue
-        candidates.append(path.resolve())
+        candidates.append(resolved)
     return tuple(
         sorted(
             candidates,

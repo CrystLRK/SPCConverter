@@ -1,0 +1,2907 @@
+{
+  "schema": "ifce.special-screen.1",
+  "gameAssemblySha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F",
+  "legacyRejected": [
+    "blur",
+    "crt",
+    "chromatic",
+    "glass",
+    "analogglitch",
+    "vignette",
+    "filmgrain",
+    "coloradjust",
+    "bloom"
+  ],
+  "families": [
+    {
+      "id": 3988,
+      "prefix": "chronophobia",
+      "assetKey": "Assets/SpecialSceneAssets/Chronophobia/ChronophobiaSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "ChronophobiaBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/Chronophobia/ChronophobiaBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap",
+            "_CellMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_CELL",
+            "USE_RUSH"
+          ]
+        },
+        "post": {
+          "name": "ChronophobiaPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/Chronophobia/ChronophobiaPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_CRASH"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "8f135e776bc6d0c908f1e663d1eace2b.bundle",
+          "bundleSha256": "B1E4EFBAA9CE85C0EDDD879C2B548A8E8B456CDD80401F041A1E759DA740ABA8"
+        },
+        {
+          "bundle": "9e063aeb30809f92c1dcbfe0c0df7016.bundle",
+          "bundleSha256": "B860DD8EC7FE25BAA7BDA71D8F8302236C7143BFA1876ACE216C10F7CC5D3204"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/Chronophobia/ChronophobiaBackgroundPrefab.prefab"
+    },
+    {
+      "id": 3994,
+      "prefix": "codeleviathan",
+      "assetKey": "Assets/SpecialSceneAssets/CodeLeviathan/CodeLeviathanSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "CodeLeviathanBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/CodeLeviathan/CodeLeviathanBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_AURA",
+            "USE_HMOVE"
+          ]
+        },
+        "post": {
+          "name": "CodeLeviathanPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/CodeLeviathan/CodeLeviathanPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_BLOCK_GLITCH",
+            "USE_CRASH"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "2fcb76433f748b21db48e88c81bd412d.bundle",
+          "bundleSha256": "A3EE9747BA6DC1E42E34D97EE0848A9EFCDC64F7011AB1180922249B2A2E9015"
+        },
+        {
+          "bundle": "72487e95a71b85fd287ddfde41f0b2ea.bundle",
+          "bundleSha256": "937CF18E02411A670A1D570D812A90CE2658AF2CCB90AE023435C4624BE12F9D"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/CodeLeviathan/CodeLeviathanBackgroundPrefab.prefab"
+    },
+    {
+      "id": 3998,
+      "prefix": "coldsea",
+      "assetKey": "Assets/SpecialSceneAssets/ColdSea/ColdSeaSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "ColdSeaBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/ColdSea/ColdSeaBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_EPHEMERAL",
+            "USE_FIRST_TRANSITION",
+            "USE_HNOISE",
+            "USE_IMPACT",
+            "USE_RED",
+            "USE_TRI_DISPLACE"
+          ]
+        },
+        "post": {
+          "name": "ColdSeaPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/ColdSea/ColdSeaPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_CHROMA_ZOOM",
+            "USE_CRASH",
+            "USE_DROP_KICK",
+            "USE_GLITCH",
+            "USE_WARP"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "afe1532ab934a15a92d2e4d4bc1ba08d.bundle",
+          "bundleSha256": "C4F8398ABA75D3A8CC96CFC3B12CC85B60B7A9E72DA0A23BF7D93DFEE256B4D8"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        },
+        {
+          "bundle": "f60c18d3c9b766c1b60f1a60af262b5e.bundle",
+          "bundleSha256": "5420C5912672E0DC1D2079E0FF678D8A4F5F1B78D35B27C5654442D5F2277E53"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/ColdSea/ColdSeaBackgroundPrefab.prefab"
+    },
+    {
+      "id": 4007,
+      "prefix": "enigma",
+      "assetKey": "Assets/SpecialSceneAssets/Enigma/EnigmaSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "EnigmaBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/Enigma/EnigmaBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_HNOISE",
+            "USE_IMPACT",
+            "USE_RIPPLE",
+            "USE_RUSH",
+            "USE_TRI_DISPLACE"
+          ]
+        },
+        "post": {
+          "name": "EnigmaPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/Enigma/EnigmaPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_BLOCK_GLITCH",
+            "USE_CHROMA_ZOOM",
+            "USE_CRASH"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "b12928b3d135d56817a0148594e3a333.bundle",
+          "bundleSha256": "32D261B9EBF9D51A5DC5C54AAA39207B7D4A09E3621336B217D17CCC99DF1C12"
+        },
+        {
+          "bundle": "b9d26f62e70d382a4e4dd7cd728ea11a.bundle",
+          "bundleSha256": "ABB78DFF943263B1EDCFF5C30AAB83520CFFCBDAD5BD06BCB4ACAD9CE5BF8FB1"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/Enigma/EnigmaBackgroundPrefab.prefab"
+    },
+    {
+      "id": 4017,
+      "prefix": "kiretsu",
+      "assetKey": "Assets/SpecialSceneAssets/Kiretsu/KiretsuSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "KiretsuBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/Kiretsu/KiretsuBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_ASANOHA_DISPLACE",
+            "USE_EGASUMI_DISPLACE",
+            "USE_EPHEMERAL",
+            "USE_IMPACT",
+            "USE_KIKKOU_DISPLACE",
+            "USE_SEIGAIHA_DISPLACE",
+            "USE_SHIPPOU_DISPLACE",
+            "USE_UROKO_DISPLACE",
+            "USE_YAGASURI_DISPLACE"
+          ]
+        },
+        "post": {
+          "name": "KiretsuPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/Kiretsu/KiretsuPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_CRASH",
+            "USE_MALFUNCTION"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "201818da97cb9367339eb9544701ff52.bundle",
+          "bundleSha256": "1E83320B5192B19F1C96F06BEAF765787246F8415248E78B80924FE84366AE86"
+        },
+        {
+          "bundle": "293467e0fa78fb05260f6cb552775a1a.bundle",
+          "bundleSha256": "EC06DC004EA802258DCF0A8744188D4F114DAE0A92A851A3EA5AC6A2E4A31E1A"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/Kiretsu/KiretsuBackgroundPrefab.prefab"
+    },
+    {
+      "id": 4021,
+      "prefix": "kuukaku",
+      "assetKey": "Assets/SpecialSceneAssets/Kuukaku/KuukakuSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "KuukakuBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/Kuukaku/KuukakuBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap",
+            "_VerticalFBMMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_EPHEMERAL",
+            "USE_IMPACT",
+            "USE_MUTE",
+            "USE_VERTICAL_CORRUPTION"
+          ]
+        },
+        "post": {
+          "name": "KuukakuPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/Kuukaku/KuukakuPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_CRASH",
+            "USE_GLITCH"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "1716ee7747a48e53f158b832855d5d9a.bundle",
+          "bundleSha256": "B8A1810687365FB4F14AFA998E5D6B4D148A718EFE609B8143F8DC626BF65B3B"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "bc7e6f472e4d2e316c23552d746df4b5.bundle",
+          "bundleSha256": "600FE13D27AB97792AF8EC684B8BD925FBA30EC3FB8CD621C6AEEEA235FFC124"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/Kuukaku/KuukakuBackgroundPrefab.prefab"
+    },
+    {
+      "id": 4025,
+      "prefix": "latentduality",
+      "assetKey": "Assets/SpecialSceneAssets/LatentDuality/LatentDualitySpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "LatentDualityBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/LatentDuality/LatentDualityBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap",
+            "_CellMap",
+            "_NetworkMap",
+            "_SpecialMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_BLUR",
+            "USE_HACKER_TRANSITION",
+            "USE_NETWORK"
+          ]
+        },
+        "post": {
+          "name": "LatentDualityPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/LatentDuality/LatentDualityPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_CRASH",
+            "USE_GLITCH",
+            "USE_SCANLINE"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "5d08e08ae314ffa485bb6772cadf335a.bundle",
+          "bundleSha256": "F311E2B2B186E3DE2595D27D03DA43D028F269FD29CD38CD902E034380A3900C"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "dde5924d4b4eaa54b47e7fa1171837c3.bundle",
+          "bundleSha256": "6655C65A88F15B05F1DAD531CAEA1AD01F1F049F75C37639FF14354F3492FE6C"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/LatentDuality/LatentDualityBackgroundPrefab.prefab"
+    },
+    {
+      "id": 4029,
+      "prefix": "memoire",
+      "assetKey": "Assets/SpecialSceneAssets/Memoire/MemoireSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "MemoireBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/Memoire/MemoireBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap",
+            "_BrightMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_EPHEMERAL",
+            "USE_RIPPLE"
+          ]
+        },
+        "post": {
+          "name": "MemoirePPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/Memoire/MemoirePPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_CRASH"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "0fcd12e257b2966febb1e4feac817ba6.bundle",
+          "bundleSha256": "EBFED7C9ABFDD96A6BED831571EF7F5C3A32968FE80A2AA31275637AEBF26B90"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "8e5fb7ee2b2b44c0c96a8e9f0a530f3e.bundle",
+          "bundleSha256": "D6BBE26FA8CAB9C5E4EC0CF86EACED74C47BCEA705BB14E922C78E4E696BC833"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/Memoire/MemoireBackgroundPrefab.prefab"
+    },
+    {
+      "id": 4038,
+      "prefix": "phylaxron",
+      "assetKey": "Assets/SpecialSceneAssets/Phylaxron/PhylaxronSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "PhylaxronBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/Phylaxron/PhylaxronBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap",
+            "_StaticNoiseMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_CHROMA_ZOOM",
+            "USE_EPHEMERAL",
+            "USE_FEEDBACK",
+            "USE_SLASH_DISPLACE",
+            "USE_STATIC_NOISE"
+          ]
+        },
+        "post": {
+          "name": "PhylaxronPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/Phylaxron/PhylaxronPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_CRASH",
+            "USE_GLITCH"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "215a57da6ef90e11ea7a8e270da299d8.bundle",
+          "bundleSha256": "B314EDA077AF06E3E9D06220A894E30F026967A552B423746389945A0E924545"
+        },
+        {
+          "bundle": "240605eb691784ebd2b404cff07e75ba.bundle",
+          "bundleSha256": "144E5E0AB3244A404BA45EAB368BFCA589C6DF00F29A2663CF763E20657E7493"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/Phylaxron/PhylaxronBackgroundPrefab.prefab"
+    },
+    {
+      "id": 4043,
+      "prefix": "tactom",
+      "assetKey": "Assets/SpecialSceneAssets/Tactom/TactomSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "TactomBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/Tactom/TactomBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap",
+            "_DisplaceCellMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_ALT_COLOR",
+            "USE_CHUG",
+            "USE_HNOISE",
+            "USE_RUSH"
+          ]
+        },
+        "post": {
+          "name": "TactomPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/Tactom/TactomPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_BLOCK_GLITCH",
+            "USE_CRASH"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "4bfb70ff75394ca7818e574a99f8156e.bundle",
+          "bundleSha256": "2A8E71E54FDDB810E6D6FCCB8DECA4D84113DAA5A8FB4E18768F8491D4F85CCC"
+        },
+        {
+          "bundle": "8402c2cfa51b0efb70c2daf4b51ce3ec.bundle",
+          "bundleSha256": "D5879D73D5DEA174589D04345BD5C30F34EEDB7BB9D6CE2EA10581680E54BCCD"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/Tactom/TactomBackgroundPrefab.prefab"
+    },
+    {
+      "id": 4047,
+      "prefix": "tokonagi",
+      "assetKey": "Assets/SpecialSceneAssets/Tokonagi/TokonagiSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "TokonagiBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/Tokonagi/TokonagiBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_ENTER_EFFECT",
+            "USE_EPHEMERAL",
+            "USE_NEURO",
+            "USE_TRI_DISPLACE"
+          ]
+        },
+        "post": {
+          "name": "TokonagiPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/Tokonagi/TokonagiPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_CHAOS",
+            "USE_CRASH",
+            "USE_EPHEMERAL",
+            "USE_GLITCH",
+            "USE_HNOISE",
+            "USE_WARP_ZOOM"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "3e437fa3851374c62eabe8aeed467bf9.bundle",
+          "bundleSha256": "A7D0D91E34A4F1269C761023B846F4C4314F6358EC9FFA49DAB10B07A1AD2F83"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "cd822be735711f4924ab5b7c701eb71b.bundle",
+          "bundleSha256": "4A389550F89A0702763F6D685BA02567B5636AB837B603EDEEA65750A333E0E8"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/Tokonagi/TokonagiBackgroundPrefab.prefab"
+    },
+    {
+      "id": 4051,
+      "prefix": "zetta",
+      "assetKey": "Assets/SpecialSceneAssets/Zetta/ZettaSpecialSceneAssets.asset",
+      "materials": {
+        "background": {
+          "name": "ZettaBGMaterial",
+          "member": "BGMaterial",
+          "shader": "Custom/Zetta/ZettaBGShader",
+          "textureProperties": [
+            "_BaseMap",
+            "_BlueNoiseMap",
+            "_CellMap"
+          ],
+          "baseMapPolicy": "current-chart",
+          "keywords": [
+            "USE_CELL",
+            "USE_RUSH"
+          ]
+        },
+        "post": {
+          "name": "ZettaPPMaterial",
+          "member": "PPMaterial",
+          "shader": "CustomEffects/Zetta/ZettaPPShader",
+          "textureProperties": [
+            "_BlueNoiseMap"
+          ],
+          "baseMapPolicy": "current-frame",
+          "keywords": [
+            "USE_CHROMA_ZOOM",
+            "USE_CRASH"
+          ]
+        }
+      },
+      "bundles": [
+        {
+          "bundle": "0b7a571124574b34eb482dec4f47c7b0.bundle",
+          "bundleSha256": "AE0113A0E3F7F2F0A4FA6180511C5B53AADBCB8278204D768B27CEDB05A72B27"
+        },
+        {
+          "bundle": "212219b855a0e373c08e6c237163e28c.bundle",
+          "bundleSha256": "AD9BA998D9FE69F72D4881695685358AA36401C2C5EB2AA2CE345119FD9D27C8"
+        },
+        {
+          "bundle": "735106e6aab308f4c15586cbfa85b3c5.bundle",
+          "bundleSha256": "38A7160F7245D340F28494ABEBA46046BB0CD0FE4F2294CE31C0C640AEFA4397"
+        },
+        {
+          "bundle": "8719fa86ae7f9dbe9b11654f9dc69197.bundle",
+          "bundleSha256": "BCCB8D367E702CA7544BC327BF9B6DF77B81435E48167BF1AA16FBE62A6BD297"
+        },
+        {
+          "bundle": "a262990adb45b1332fb39032a448ab87.bundle",
+          "bundleSha256": "733B746A6BAD4F6131D5FEB9BD6A94224C254B73FC94DA38421C6A15874A7836"
+        },
+        {
+          "bundle": "ece09e29973e7031807501470e5e313d.bundle",
+          "bundleSha256": "706919B9B08144E3E6E7D69350AE756CE19154BDA00702D9DE499CE5327FC70D"
+        }
+      ],
+      "backgroundPrefab": "Assets/SpecialSceneAssets/Zetta/ZettaBackgroundPrefab.prefab"
+    }
+  ],
+  "effects": [
+    {
+      "name": "chronophobia.cell",
+      "id": 1000,
+      "family": "chronophobia",
+      "familyId": 3988,
+      "channel": "background",
+      "keyword": "USE_CELL",
+      "parameters": [
+        {
+          "name": "CellAmount",
+          "property": "_CellAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Cell Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "chronophobia.rush",
+      "id": 1001,
+      "family": "chronophobia",
+      "familyId": 3988,
+      "channel": "background",
+      "keyword": "USE_RUSH",
+      "parameters": [
+        {
+          "name": "RushAmount",
+          "property": "_RushAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Rush Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "chronophobia.crash",
+      "id": 1002,
+      "family": "chronophobia",
+      "familyId": 3988,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "codeleviathan.aura",
+      "id": 1003,
+      "family": "codeleviathan",
+      "familyId": 3994,
+      "channel": "background",
+      "keyword": "USE_AURA",
+      "parameters": [
+        {
+          "name": "AuraAmount",
+          "property": "_AuraAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Aura Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "codeleviathan.hmove",
+      "id": 1004,
+      "family": "codeleviathan",
+      "familyId": 3994,
+      "channel": "background",
+      "keyword": "USE_HMOVE",
+      "parameters": [
+        {
+          "name": "HMoveAmount",
+          "property": "_HMoveAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "HMove Amount"
+        },
+        {
+          "name": "HMoveSeed",
+          "property": "_HMoveSeed",
+          "component": null,
+          "kind": "float",
+          "meaning": "HMove Seed"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "codeleviathan.block_glitch",
+      "id": 1005,
+      "family": "codeleviathan",
+      "familyId": 3994,
+      "channel": "post",
+      "keyword": "USE_BLOCK_GLITCH",
+      "parameters": [
+        {
+          "name": "BlockGlitchAmount",
+          "property": "_BlockGlitchAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Block Glitch Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "codeleviathan.crash",
+      "id": 1006,
+      "family": "codeleviathan",
+      "familyId": 3994,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [
+        "_CrashAmount"
+      ],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.ephemeral",
+      "id": 1007,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "background",
+      "keyword": "USE_EPHEMERAL",
+      "parameters": [
+        {
+          "name": "EphemeralAmount",
+          "property": "_EphemeralAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Ephemeral Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.first_transition",
+      "id": 1008,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "background",
+      "keyword": "USE_FIRST_TRANSITION",
+      "parameters": [
+        {
+          "name": "FirstTransitionPhase",
+          "property": "_FirstTransitionPhase",
+          "component": null,
+          "kind": "float",
+          "meaning": "First Transition Phase"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_RED",
+        "USE_TRI_DISPLACE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.hnoise",
+      "id": 1009,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "background",
+      "keyword": "USE_HNOISE",
+      "parameters": [
+        {
+          "name": "Hnoise",
+          "property": "_Hnoise",
+          "component": null,
+          "kind": "float",
+          "meaning": "Hnoise"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.impact",
+      "id": 1010,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "background",
+      "keyword": "USE_IMPACT",
+      "parameters": [
+        {
+          "name": "ImpactAmount",
+          "property": "_ImpactAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Impact Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.red",
+      "id": 1011,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "background",
+      "keyword": "USE_RED",
+      "parameters": [
+        {
+          "name": "RedAmount",
+          "property": "_RedAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Red Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_FIRST_TRANSITION",
+        "USE_TRI_DISPLACE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.tri_displace",
+      "id": 1012,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "background",
+      "keyword": "USE_TRI_DISPLACE",
+      "parameters": [
+        {
+          "name": "TriDisplaceAmount",
+          "property": "_TriDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Tri Displace Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_FIRST_TRANSITION",
+        "USE_RED"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.chroma_zoom",
+      "id": 1013,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "post",
+      "keyword": "USE_CHROMA_ZOOM",
+      "parameters": [
+        {
+          "name": "ChromaZoomAmount",
+          "property": "_ChromaZoomAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Chroma Zoom Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.crash",
+      "id": 1014,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.drop_kick",
+      "id": 1015,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "post",
+      "keyword": "USE_DROP_KICK",
+      "parameters": [
+        {
+          "name": "DropKickAmount",
+          "property": "_DropKickAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Drop Kick Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_GLITCH"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.glitch",
+      "id": 1016,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "post",
+      "keyword": "USE_GLITCH",
+      "parameters": [
+        {
+          "name": "GlitchAmount",
+          "property": "_GlitchAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Glitch Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_DROP_KICK"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "coldsea.warp",
+      "id": 1017,
+      "family": "coldsea",
+      "familyId": 3998,
+      "channel": "post",
+      "keyword": "USE_WARP",
+      "parameters": [
+        {
+          "name": "WarpAmount",
+          "property": "_WarpAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Warp Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "enigma.hnoise",
+      "id": 1018,
+      "family": "enigma",
+      "familyId": 4007,
+      "channel": "background",
+      "keyword": "USE_HNOISE",
+      "parameters": [
+        {
+          "name": "Hnoise",
+          "property": "_Hnoise",
+          "component": null,
+          "kind": "float",
+          "meaning": "Hnoise"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "enigma.impact",
+      "id": 1019,
+      "family": "enigma",
+      "familyId": 4007,
+      "channel": "background",
+      "keyword": "USE_IMPACT",
+      "parameters": [
+        {
+          "name": "ImpactAmount",
+          "property": "_ImpactAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Impact Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "enigma.ripple",
+      "id": 1020,
+      "family": "enigma",
+      "familyId": 4007,
+      "channel": "background",
+      "keyword": "USE_RIPPLE",
+      "parameters": [
+        {
+          "name": "RippleAmount",
+          "property": "_RippleAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Ripple Amount"
+        },
+        {
+          "name": "RippleBeat",
+          "property": "_RippleBeat",
+          "component": null,
+          "kind": "float",
+          "meaning": "Ripple Beat"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_TRI_DISPLACE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "enigma.rush",
+      "id": 1021,
+      "family": "enigma",
+      "familyId": 4007,
+      "channel": "background",
+      "keyword": "USE_RUSH",
+      "parameters": [
+        {
+          "name": "RushAmount",
+          "property": "_RushAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Rush Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "enigma.tri_displace",
+      "id": 1022,
+      "family": "enigma",
+      "familyId": 4007,
+      "channel": "background",
+      "keyword": "USE_TRI_DISPLACE",
+      "parameters": [
+        {
+          "name": "TriDisplaceAmount",
+          "property": "_TriDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Tri Displace Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_RIPPLE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "enigma.block_glitch",
+      "id": 1023,
+      "family": "enigma",
+      "familyId": 4007,
+      "channel": "post",
+      "keyword": "USE_BLOCK_GLITCH",
+      "parameters": [
+        {
+          "name": "BlockGlitchAmount",
+          "property": "_BlockGlitchAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Block Glitch Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "enigma.chroma_zoom",
+      "id": 1024,
+      "family": "enigma",
+      "familyId": 4007,
+      "channel": "post",
+      "keyword": "USE_CHROMA_ZOOM",
+      "parameters": [
+        {
+          "name": "ChromaZoomAmount",
+          "property": "_ChromaZoomAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Chroma Zoom Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "enigma.crash",
+      "id": 1025,
+      "family": "enigma",
+      "familyId": 4007,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.asanoha_displace",
+      "id": 1026,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "background",
+      "keyword": "USE_ASANOHA_DISPLACE",
+      "parameters": [
+        {
+          "name": "AsanohaDisplaceAmount",
+          "property": "_AsanohaDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Asanoha Displace Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.egasumi_displace",
+      "id": 1027,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "background",
+      "keyword": "USE_EGASUMI_DISPLACE",
+      "parameters": [
+        {
+          "name": "EgasumiDisplaceAmount",
+          "property": "_EgasumiDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Egasumi Displace Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_KIKKOU_DISPLACE",
+        "USE_SEIGAIHA_DISPLACE",
+        "USE_SHIPPOU_DISPLACE",
+        "USE_UROKO_DISPLACE",
+        "USE_YAGASURI_DISPLACE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.ephemeral",
+      "id": 1028,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "background",
+      "keyword": "USE_EPHEMERAL",
+      "parameters": [
+        {
+          "name": "EphemeralAmount",
+          "property": "_EphemeralAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Ephemeral Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.impact",
+      "id": 1029,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "background",
+      "keyword": "USE_IMPACT",
+      "parameters": [
+        {
+          "name": "ImpactAmount",
+          "property": "_ImpactAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Impact Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.kikkou_displace",
+      "id": 1030,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "background",
+      "keyword": "USE_KIKKOU_DISPLACE",
+      "parameters": [
+        {
+          "name": "KikkouDisplaceAmount",
+          "property": "_KikkouDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Kikkou Displace Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_EGASUMI_DISPLACE",
+        "USE_SEIGAIHA_DISPLACE",
+        "USE_SHIPPOU_DISPLACE",
+        "USE_UROKO_DISPLACE",
+        "USE_YAGASURI_DISPLACE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.seigaiha_displace",
+      "id": 1031,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "background",
+      "keyword": "USE_SEIGAIHA_DISPLACE",
+      "parameters": [
+        {
+          "name": "SeigaihaDisplaceAmount",
+          "property": "_SeigaihaDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Seigaiha Displace Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_EGASUMI_DISPLACE",
+        "USE_KIKKOU_DISPLACE",
+        "USE_SHIPPOU_DISPLACE",
+        "USE_UROKO_DISPLACE",
+        "USE_YAGASURI_DISPLACE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.shippou_displace",
+      "id": 1032,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "background",
+      "keyword": "USE_SHIPPOU_DISPLACE",
+      "parameters": [
+        {
+          "name": "ShippouDisplaceAmount",
+          "property": "_ShippouDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Shippou Displace Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_EGASUMI_DISPLACE",
+        "USE_KIKKOU_DISPLACE",
+        "USE_SEIGAIHA_DISPLACE",
+        "USE_UROKO_DISPLACE",
+        "USE_YAGASURI_DISPLACE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.uroko_displace",
+      "id": 1033,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "background",
+      "keyword": "USE_UROKO_DISPLACE",
+      "parameters": [
+        {
+          "name": "UrokoDisplaceAmount",
+          "property": "_UrokoDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Uroko Displace Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_EGASUMI_DISPLACE",
+        "USE_KIKKOU_DISPLACE",
+        "USE_SEIGAIHA_DISPLACE",
+        "USE_SHIPPOU_DISPLACE",
+        "USE_YAGASURI_DISPLACE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.yagasuri_displace",
+      "id": 1034,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "background",
+      "keyword": "USE_YAGASURI_DISPLACE",
+      "parameters": [
+        {
+          "name": "YagasuriDisplaceAmount",
+          "property": "_YagasuriDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Yagasuri Displace Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_EGASUMI_DISPLACE",
+        "USE_KIKKOU_DISPLACE",
+        "USE_SEIGAIHA_DISPLACE",
+        "USE_SHIPPOU_DISPLACE",
+        "USE_UROKO_DISPLACE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.crash",
+      "id": 1035,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kiretsu.malfunction",
+      "id": 1036,
+      "family": "kiretsu",
+      "familyId": 4017,
+      "channel": "post",
+      "keyword": "USE_MALFUNCTION",
+      "parameters": [
+        {
+          "name": "MalfunctionAmount",
+          "property": "_MalfunctionAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Malfunction Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kuukaku.ephemeral",
+      "id": 1037,
+      "family": "kuukaku",
+      "familyId": 4021,
+      "channel": "background",
+      "keyword": "USE_EPHEMERAL",
+      "parameters": [
+        {
+          "name": "EphemeralAmount",
+          "property": "_EphemeralAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Ephemeral Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kuukaku.impact",
+      "id": 1038,
+      "family": "kuukaku",
+      "familyId": 4021,
+      "channel": "background",
+      "keyword": "USE_IMPACT",
+      "parameters": [
+        {
+          "name": "ImpactAmount",
+          "property": "_ImpactAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Impact Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kuukaku.vertical_corruption",
+      "id": 1039,
+      "family": "kuukaku",
+      "familyId": 4021,
+      "channel": "background",
+      "keyword": "USE_VERTICAL_CORRUPTION",
+      "parameters": [
+        {
+          "name": "VerticalCorruptionAmount",
+          "property": "_VerticalCorruptionAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Vertical Corruption Amount"
+        },
+        {
+          "name": "x",
+          "property": "_VerticalCorruptionPosition",
+          "component": 0,
+          "kind": "vector2",
+          "meaning": "Corruption position x"
+        },
+        {
+          "name": "y",
+          "property": "_VerticalCorruptionPosition",
+          "component": 1,
+          "kind": "vector2",
+          "meaning": "Corruption position y"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kuukaku.red",
+      "id": 1040,
+      "family": "kuukaku",
+      "familyId": 4021,
+      "channel": "background",
+      "keyword": null,
+      "parameters": [
+        {
+          "name": "RedAmount",
+          "property": "_RedAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Red Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kuukaku.crash",
+      "id": 1041,
+      "family": "kuukaku",
+      "familyId": 4021,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "kuukaku.glitch",
+      "id": 1042,
+      "family": "kuukaku",
+      "familyId": 4021,
+      "channel": "post",
+      "keyword": "USE_GLITCH",
+      "parameters": [
+        {
+          "name": "GlitchAmount",
+          "property": "_GlitchAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Glitch Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "latentduality.blur",
+      "id": 1043,
+      "family": "latentduality",
+      "familyId": 4025,
+      "channel": "background",
+      "keyword": "USE_BLUR",
+      "parameters": [
+        {
+          "name": "BlurCell",
+          "property": "_BlurCell",
+          "component": null,
+          "kind": "float",
+          "meaning": "Blur Cell"
+        },
+        {
+          "name": "BlurDistort",
+          "property": "_BlurDistort",
+          "component": null,
+          "kind": "float",
+          "meaning": "Blur Distort"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_HACKER_TRANSITION",
+        "USE_NETWORK"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "latentduality.hacker_transition",
+      "id": 1044,
+      "family": "latentduality",
+      "familyId": 4025,
+      "channel": "background",
+      "keyword": "USE_HACKER_TRANSITION",
+      "parameters": [
+        {
+          "name": "HackerTransitionAmount",
+          "property": "_HackerTransitionAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Hacker Transition Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_BLUR",
+        "USE_NETWORK"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "latentduality.network",
+      "id": 1045,
+      "family": "latentduality",
+      "familyId": 4025,
+      "channel": "background",
+      "keyword": "USE_NETWORK",
+      "parameters": [
+        {
+          "name": "NetworkPhase",
+          "property": "_NetworkPhase",
+          "component": null,
+          "kind": "float",
+          "meaning": "Network Phase"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_BLUR",
+        "USE_HACKER_TRANSITION"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "latentduality.crash",
+      "id": 1046,
+      "family": "latentduality",
+      "familyId": 4025,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "latentduality.glitch",
+      "id": 1047,
+      "family": "latentduality",
+      "familyId": 4025,
+      "channel": "post",
+      "keyword": "USE_GLITCH",
+      "parameters": [
+        {
+          "name": "BlurGlitch",
+          "property": "_BlurGlitch",
+          "component": null,
+          "kind": "float",
+          "meaning": "Blur Glitch"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_SCANLINE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "latentduality.scanline",
+      "id": 1048,
+      "family": "latentduality",
+      "familyId": 4025,
+      "channel": "post",
+      "keyword": "USE_SCANLINE",
+      "parameters": [
+        {
+          "name": "ScanlineAmount",
+          "property": "_ScanlineAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Scanline Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_GLITCH"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "memoire.ephemeral",
+      "id": 1049,
+      "family": "memoire",
+      "familyId": 4029,
+      "channel": "background",
+      "keyword": "USE_EPHEMERAL",
+      "parameters": [
+        {
+          "name": "EphemeralAmount",
+          "property": "_EphemeralAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Ephemeral Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "memoire.ripple",
+      "id": 1050,
+      "family": "memoire",
+      "familyId": 4029,
+      "channel": "background",
+      "keyword": "USE_RIPPLE",
+      "parameters": [
+        {
+          "name": "RipplePhase",
+          "property": "_RipplePhase",
+          "component": null,
+          "kind": "float",
+          "meaning": "Ripple Phase"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "memoire.bright",
+      "id": 1051,
+      "family": "memoire",
+      "familyId": 4029,
+      "channel": "background",
+      "keyword": null,
+      "parameters": [
+        {
+          "name": "BrightAmount",
+          "property": "_BrightAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Bright Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "memoire.crash",
+      "id": 1052,
+      "family": "memoire",
+      "familyId": 4029,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "phylaxron.chroma_zoom",
+      "id": 1053,
+      "family": "phylaxron",
+      "familyId": 4038,
+      "channel": "background",
+      "keyword": "USE_CHROMA_ZOOM",
+      "parameters": [
+        {
+          "name": "ChromaZoomAmount",
+          "property": "_ChromaZoomAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Chroma Zoom Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_FEEDBACK",
+        "USE_SLASH_DISPLACE",
+        "USE_STATIC_NOISE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "phylaxron.ephemeral",
+      "id": 1054,
+      "family": "phylaxron",
+      "familyId": 4038,
+      "channel": "background",
+      "keyword": "USE_EPHEMERAL",
+      "parameters": [
+        {
+          "name": "EphemeralAmount",
+          "property": "_EphemeralAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Ephemeral Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "phylaxron.feedback",
+      "id": 1055,
+      "family": "phylaxron",
+      "familyId": 4038,
+      "channel": "background",
+      "keyword": "USE_FEEDBACK",
+      "parameters": [
+        {
+          "name": "FeedbackAmount",
+          "property": "_FeedbackAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Feedback Amount"
+        },
+        {
+          "name": "FeedbackRotation",
+          "property": "_FeedbackRotation",
+          "component": null,
+          "kind": "float",
+          "meaning": "Feedback Rotation"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_CHROMA_ZOOM",
+        "USE_SLASH_DISPLACE",
+        "USE_STATIC_NOISE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "phylaxron.slash_displace",
+      "id": 1056,
+      "family": "phylaxron",
+      "familyId": 4038,
+      "channel": "background",
+      "keyword": "USE_SLASH_DISPLACE",
+      "parameters": [
+        {
+          "name": "SlashDisplaceAmount",
+          "property": "_SlashDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Slash Displace Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_CHROMA_ZOOM",
+        "USE_FEEDBACK",
+        "USE_STATIC_NOISE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "phylaxron.static_noise",
+      "id": 1057,
+      "family": "phylaxron",
+      "familyId": 4038,
+      "channel": "background",
+      "keyword": "USE_STATIC_NOISE",
+      "parameters": [
+        {
+          "name": "StaticNoiseAmount",
+          "property": "_StaticNoiseAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Static Noise Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_CHROMA_ZOOM",
+        "USE_FEEDBACK",
+        "USE_SLASH_DISPLACE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "phylaxron.crash",
+      "id": 1058,
+      "family": "phylaxron",
+      "familyId": 4038,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "phylaxron.glitch",
+      "id": 1059,
+      "family": "phylaxron",
+      "familyId": 4038,
+      "channel": "post",
+      "keyword": "USE_GLITCH",
+      "parameters": [
+        {
+          "name": "GlitchAmount",
+          "property": "_GlitchAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Glitch Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tactom.alt_color",
+      "id": 1060,
+      "family": "tactom",
+      "familyId": 4043,
+      "channel": "background",
+      "keyword": "USE_ALT_COLOR",
+      "parameters": [
+        {
+          "name": "AltColorAmount",
+          "property": "_AltColorAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Alt Color Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tactom.chug",
+      "id": 1061,
+      "family": "tactom",
+      "familyId": 4043,
+      "channel": "background",
+      "keyword": "USE_CHUG",
+      "parameters": [
+        {
+          "name": "x",
+          "property": "_ChugAmount",
+          "component": 0,
+          "kind": "vector4",
+          "meaning": "Chug x component"
+        },
+        {
+          "name": "y",
+          "property": "_ChugAmount",
+          "component": 1,
+          "kind": "vector4",
+          "meaning": "Chug y component"
+        },
+        {
+          "name": "z",
+          "property": "_ChugAmount",
+          "component": 2,
+          "kind": "vector4",
+          "meaning": "Chug z component"
+        },
+        {
+          "name": "w",
+          "property": "_ChugAmount",
+          "component": 3,
+          "kind": "vector4",
+          "meaning": "Chug w component"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tactom.hnoise",
+      "id": 1062,
+      "family": "tactom",
+      "familyId": 4043,
+      "channel": "background",
+      "keyword": "USE_HNOISE",
+      "parameters": [
+        {
+          "name": "Hnoise",
+          "property": "_Hnoise",
+          "component": null,
+          "kind": "float",
+          "meaning": "Hnoise"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tactom.rush",
+      "id": 1063,
+      "family": "tactom",
+      "familyId": 4043,
+      "channel": "background",
+      "keyword": "USE_RUSH",
+      "parameters": [
+        {
+          "name": "RushAmount",
+          "property": "_RushAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Rush Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tactom.block_glitch",
+      "id": 1064,
+      "family": "tactom",
+      "familyId": 4043,
+      "channel": "post",
+      "keyword": "USE_BLOCK_GLITCH",
+      "parameters": [
+        {
+          "name": "BlockGlitchAmount",
+          "property": "_BlockGlitchAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Block Glitch Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tactom.crash",
+      "id": 1065,
+      "family": "tactom",
+      "familyId": 4043,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.enter_effect",
+      "id": 1066,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "background",
+      "keyword": "USE_ENTER_EFFECT",
+      "parameters": [
+        {
+          "name": "EnterEffectZOffset",
+          "property": "_EnterEffectZOffset",
+          "component": null,
+          "kind": "float",
+          "meaning": "Enter Effect Z Offset"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_NEURO"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.bg_ephemeral",
+      "id": 1067,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "background",
+      "keyword": "USE_EPHEMERAL",
+      "parameters": [
+        {
+          "name": "EphemeralAmount",
+          "property": "_EphemeralAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Ephemeral Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.neuro",
+      "id": 1068,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "background",
+      "keyword": "USE_NEURO",
+      "parameters": [
+        {
+          "name": "NeuroAmount",
+          "property": "_NeuroAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Neuro Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_ENTER_EFFECT"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.tri_displace",
+      "id": 1069,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "background",
+      "keyword": "USE_TRI_DISPLACE",
+      "parameters": [
+        {
+          "name": "TriDisplaceAmount",
+          "property": "_TriDisplaceAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Tri Displace Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.monochrome",
+      "id": 1070,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "background",
+      "keyword": null,
+      "parameters": [
+        {
+          "name": "Monochrome",
+          "property": "_Monochrome",
+          "component": null,
+          "kind": "float",
+          "meaning": "Monochrome"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.chaos",
+      "id": 1071,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "post",
+      "keyword": "USE_CHAOS",
+      "parameters": [
+        {
+          "name": "ChaosAmount",
+          "property": "_ChaosAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Chaos Amount"
+        },
+        {
+          "name": "ChaosPhase",
+          "property": "_ChaosPhase",
+          "component": null,
+          "kind": "float",
+          "meaning": "Chaos Phase"
+        },
+        {
+          "name": "ChaosKick",
+          "property": "_ChaosKick",
+          "component": null,
+          "kind": "float",
+          "meaning": "Chaos Kick"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.crash",
+      "id": 1072,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.pp_ephemeral",
+      "id": 1073,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "post",
+      "keyword": "USE_EPHEMERAL",
+      "parameters": [
+        {
+          "name": "EphemeralAmount",
+          "property": "_EphemeralAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Ephemeral Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.glitch",
+      "id": 1074,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "post",
+      "keyword": "USE_GLITCH",
+      "parameters": [
+        {
+          "name": "GlitchAmount",
+          "property": "_GlitchAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Glitch Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_HNOISE"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.hnoise",
+      "id": 1075,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "post",
+      "keyword": "USE_HNOISE",
+      "parameters": [
+        {
+          "name": "HnoiseAmount",
+          "property": "_HnoiseAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Hnoise Amount"
+        }
+      ],
+      "exclusiveWith": [
+        "USE_GLITCH"
+      ],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "tokonagi.warp_zoom",
+      "id": 1076,
+      "family": "tokonagi",
+      "familyId": 4047,
+      "channel": "post",
+      "keyword": "USE_WARP_ZOOM",
+      "parameters": [
+        {
+          "name": "WarpZoomAmount",
+          "property": "_WarpZoomAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Warp Zoom Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "zetta.cell",
+      "id": 1077,
+      "family": "zetta",
+      "familyId": 4051,
+      "channel": "background",
+      "keyword": "USE_CELL",
+      "parameters": [
+        {
+          "name": "CellAmount",
+          "property": "_CellAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Cell Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "zetta.rush",
+      "id": 1078,
+      "family": "zetta",
+      "familyId": 4051,
+      "channel": "background",
+      "keyword": "USE_RUSH",
+      "parameters": [
+        {
+          "name": "RushAmount",
+          "property": "_RushAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Rush Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "zetta.chroma_zoom",
+      "id": 1079,
+      "family": "zetta",
+      "familyId": 4051,
+      "channel": "post",
+      "keyword": "USE_CHROMA_ZOOM",
+      "parameters": [
+        {
+          "name": "ChromaZoomAmount",
+          "property": "_ChromaZoomAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Chroma Zoom Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "name": "zetta.crash",
+      "id": 1080,
+      "family": "zetta",
+      "familyId": 4051,
+      "channel": "post",
+      "keyword": "USE_CRASH",
+      "parameters": [
+        {
+          "name": "CrashAmount",
+          "property": "_CrashAmount",
+          "component": null,
+          "kind": "float",
+          "meaning": "Crash Amount"
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": [
+        "_CrashAmount"
+      ],
+      "status": "static-contract-runtime-pending"
+    },
+    {
+      "id": 2000,
+      "name": "common.vignette",
+      "family": "common",
+      "channel": "common",
+      "keyword": null,
+      "parameters": [
+        {
+          "property": "intensity",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "property": "smoothness",
+          "kind": "float",
+          "component": null,
+          "default": 0.2,
+          "min": 0.01,
+          "max": 1
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": []
+    },
+    {
+      "id": 2001,
+      "name": "common.vignette_color",
+      "family": "common",
+      "channel": "common",
+      "keyword": null,
+      "parameters": [
+        {
+          "property": "r",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "property": "g",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "property": "b",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": 0,
+          "max": 1
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": []
+    },
+    {
+      "id": 2002,
+      "name": "common.vignette_center",
+      "family": "common",
+      "channel": "common",
+      "keyword": null,
+      "parameters": [
+        {
+          "property": "x",
+          "kind": "float",
+          "component": null,
+          "default": 0.5,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "property": "y",
+          "kind": "float",
+          "component": null,
+          "default": 0.5,
+          "min": 0,
+          "max": 1
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": []
+    },
+    {
+      "id": 2003,
+      "name": "common.vignette_shape",
+      "family": "common",
+      "channel": "common",
+      "keyword": null,
+      "parameters": [
+        {
+          "property": "rounded",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": 0,
+          "max": 1,
+          "discrete": true
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": []
+    },
+    {
+      "id": 2004,
+      "name": "common.filmgrain",
+      "family": "common",
+      "channel": "common",
+      "keyword": null,
+      "parameters": [
+        {
+          "property": "intensity",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "property": "response",
+          "kind": "float",
+          "component": null,
+          "default": 0.8,
+          "min": 0,
+          "max": 1
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": []
+    },
+    {
+      "id": 2005,
+      "name": "common.filmgrain_type",
+      "family": "common",
+      "channel": "common",
+      "keyword": null,
+      "parameters": [
+        {
+          "property": "preset",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": 0,
+          "max": 10,
+          "discrete": true
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": []
+    },
+    {
+      "id": 2006,
+      "name": "common.coloradjust",
+      "family": "common",
+      "channel": "common",
+      "keyword": null,
+      "parameters": [
+        {
+          "property": "postExposure",
+          "kind": "float",
+          "component": null,
+          "default": 0
+        },
+        {
+          "property": "contrast",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": -100,
+          "max": 100
+        },
+        {
+          "property": "hueShift",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": -180,
+          "max": 180
+        },
+        {
+          "property": "saturation",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": -100,
+          "max": 100
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": []
+    },
+    {
+      "id": 2007,
+      "name": "common.coloradjust_filter",
+      "family": "common",
+      "channel": "common",
+      "keyword": null,
+      "parameters": [
+        {
+          "property": "r",
+          "kind": "float",
+          "component": null,
+          "default": 1,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "property": "g",
+          "kind": "float",
+          "component": null,
+          "default": 1,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "property": "b",
+          "kind": "float",
+          "component": null,
+          "default": 1,
+          "min": 0,
+          "max": 1
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": []
+    },
+    {
+      "id": 2008,
+      "name": "common.bloom",
+      "family": "common",
+      "channel": "common",
+      "keyword": null,
+      "parameters": [
+        {
+          "property": "intensity",
+          "kind": "float",
+          "component": null,
+          "default": 0,
+          "min": 0
+        },
+        {
+          "property": "threshold",
+          "kind": "float",
+          "component": null,
+          "default": 0.9,
+          "min": 0
+        },
+        {
+          "property": "scatter",
+          "kind": "float",
+          "component": null,
+          "default": 0.7,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "property": "clamp",
+          "kind": "float",
+          "component": null,
+          "default": 65472,
+          "min": 0
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": []
+    },
+    {
+      "id": 2009,
+      "name": "common.bloom_tint",
+      "family": "common",
+      "channel": "common",
+      "keyword": null,
+      "parameters": [
+        {
+          "property": "r",
+          "kind": "float",
+          "component": null,
+          "default": 1,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "property": "g",
+          "kind": "float",
+          "component": null,
+          "default": 1,
+          "min": 0,
+          "max": 1
+        },
+        {
+          "property": "b",
+          "kind": "float",
+          "component": null,
+          "default": 1,
+          "min": 0,
+          "max": 1
+        }
+      ],
+      "exclusiveWith": [],
+      "alsoBackgroundProperties": []
+    }
+  ],
+  "unsupported": [
+    {
+      "name": "kuukaku.mute",
+      "reason": "Original activation chain unresolved; shader resource only."
+    }
+  ],
+  "officialExamples": [
+    {
+      "name": "tokonagi.monochrome",
+      "parameters": [
+        0.8
+      ],
+      "evidence": "IDA 0x18065F950 VE+72; 0x18065F936 range 0..float32(0x3F4CCCCD); JYA 0x18065E69A",
+      "timeBasis": "author",
+      "sourceTimeMs": null
+    }
+  ],
+  "addressablesCatalogSha256": "9D86FF9C963A9A52A6CF415EBB504745FD361DE32D59780996FF5612BE46F7A1"
+}

@@ -50,6 +50,8 @@ ICP1 (`.spc`) 谱面解码器 / 转码器（Python 版）。
    一律"原样保留"而不是"重新推导"，这是保住官谱的关键。
 """
 
+from ascii_log import print_log
+
 import json
 import struct
 import sys
@@ -118,12 +120,15 @@ def seed_state(name: str, note_count: int) -> State:
         1 ^ 0x94D049BB133111EB,
         0,
     )
-    for index, ch in enumerate(name):
-        character = ((index & 0xFFFFFFFF) << 32) | (ord(ch) & 0xFFFFFFFF)
+    units = name.encode("utf-16-le", errors="surrogatepass")
+    for offset in range(0, len(units), 2):
+        index = offset // 2
+        code_unit = units[offset] | (units[offset + 1] << 8)
+        character = ((index & 0xFFFFFFFF) << 32) | code_unit
         mode_mixed = character ^ 1
         count_mixed = (character + note_count) & M64
         advance(s, character, count_mixed, mode_mixed)
-    advance(s, note_count, 1, len(name))
+    advance(s, note_count, 1, len(units) // 2)
     return s
 
 
@@ -349,7 +354,7 @@ def _print_summary(obj: dict) -> None:
     evt = {}
     for e in obj["events"]:
         evt[e["type"]] = evt.get(e["type"], 0) + 1
-    print(f"  notes={len(obj['notes'])} types={kinds} flag0x8000={bombs} events={len(obj['events'])} evtTypes={evt}")
+    print_log(f"  notes={len(obj['notes'])} types={kinds} flag0x8000={bombs} events={len(obj['events'])} evtTypes={evt}")
 
 
 def main() -> None:
@@ -363,7 +368,7 @@ def main() -> None:
         dst = Path(sys.argv[4]) if len(sys.argv) > 4 else src.with_suffix(".json")
         obj = decode(src.read_bytes(), key)
         dst.write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding="utf-8")
-        print(f"decoded {src.name} (key='{key}') -> {dst}")
+        print_log(f"decoded {src.name} (key='{key}') -> {dst}")
         _print_summary(obj)
     elif cmd == "encode":
         src = Path(sys.argv[2])
@@ -371,7 +376,7 @@ def main() -> None:
         dst = Path(sys.argv[4]) if len(sys.argv) > 4 else src.with_suffix(".spc")
         obj = json.loads(src.read_text(encoding="utf-8"))
         dst.write_bytes(encode(obj, key))
-        print(f"encoded {src.name} (key='{key}') -> {dst}")
+        print_log(f"encoded {src.name} (key='{key}') -> {dst}")
     elif cmd == "verify":
         src = Path(sys.argv[2])
         key = sys.argv[3]
@@ -380,7 +385,7 @@ def main() -> None:
         out = encode(obj, key)
         diffs = sum(1 for a, b in zip(data, out) if a != b) + abs(len(data) - len(out))
         first = next((i for i, (a, b) in enumerate(zip(data, out)) if a != b), -1)
-        print(f"verify {src.name} (key='{key}'): orig={len(data)} re-enc={len(out)} "
+        print_log(f"verify {src.name} (key='{key}'): orig={len(data)} re-enc={len(out)} "
               f"byteDiffs={diffs} firstDiff={first}")
         _print_summary(obj)
     else:
