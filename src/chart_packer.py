@@ -1,3 +1,5 @@
+
+from ascii_log import print_log
 import json
 import struct
 import sys
@@ -164,7 +166,7 @@ def pack_chart(chart_data_json: dict, chart_name: str) -> bytearray:
     except ChartValidationError as exc:
         raise ValueError(f"打包前输入域校验失败：{exc}") from exc
     if chart_data_json["format"] != "ICP1":
-        print("Invalid format!")
+        print_log("Invalid format!")
         sys.exit(1)
     else:
         chart_len = SPC_HEADER_SIZE + len(chart_data_json["notes"]) * SPC_NOTE_SIZE + len(chart_data_json["events"]) * SPC_EVENT_SIZE
@@ -203,7 +205,7 @@ def pack_chart(chart_data_json: dict, chart_name: str) -> bytearray:
                 fields[4], fields[5], scaled, plains, i,
             )
             if len(note_block) != SPC_NOTE_SIZE:
-                print(f"Note block size mismatch: expected {SPC_NOTE_SIZE}, got {len(note_block)}")
+                print_log(f"Note block size mismatch: expected {SPC_NOTE_SIZE}, got {len(note_block)}")
                 input()
             else:
                 icp1_chart_data[pointer_1:pointer_2] = note_block
@@ -213,9 +215,9 @@ def pack_chart(chart_data_json: dict, chart_name: str) -> bytearray:
             event = chart_data_json["events"][i]
             event_block = encode_event_block(event)
             if len(event_block) != SPC_EVENT_SIZE:
-                print(f"Event block size mismatch: expected {SPC_EVENT_SIZE}, got {len(event_block)}")
-                print(event_block)
-                print(pointer_1, pointer_2)
+                print_log(f"Event block size mismatch: expected {SPC_EVENT_SIZE}, got {len(event_block)}")
+                print_log(event_block)
+                print_log(pointer_1, pointer_2)
                 icp1_chart_data[pointer_1:pointer_2] = event_block
                 #input()
             else:
@@ -253,7 +255,7 @@ def main(argv: list[str] | None = None) -> int:
     output.parent.mkdir(parents=True, exist_ok=True)
     write_spc(output, final_data)
     mode_name = "--json2spcV1" if args.json_to_spc else "--spcV02spcV1"
-    print(f"[{mode_name}] {output} Packed")
+    print_log(f"[{mode_name}] {output} Packed")
     return 0
 
 if __name__ == '__main__':

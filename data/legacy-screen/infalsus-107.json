@@ -1,0 +1,1922 @@
+{
+  "schemaVersion": 1,
+  "kind": "legacyScreenSources",
+  "gameVersion": "1.0.7",
+  "requiredFiles": [
+    {
+      "path": "GameAssembly.dll",
+      "sha256": "0314ADAEDF482BB9C3D8D300B69E1FA47235AAF618033C03BD631ADE567AB98F"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/catalog.bin",
+      "sha256": "9D86FF9C963A9A52A6CF415EBB504745FD361DE32D59780996FF5612BE46F7A1"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/4732ed8d31855a2b35d4b2fb6129d2c3.bundle",
+      "sha256": "71D3B871D433E459226A833A8F82B341331725BEF1BF01BF08985F2993434324"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/b1f86989e43833d454cd6ae732005426.bundle",
+      "sha256": "4A4701AACDE0073723E8484A6E7D902C36C4DFBA5A31748CE0722A16E0487842"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/42ad2a8604859651242daa6b8636e6fe.bundle",
+      "sha256": "8B1E2542F732290066A19432E9868EF51EDAAC627C13B5ED45C7EBB72E4B0AC1"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/0e28e62ad8b8bb2f9b365caa3cb5c2ab.bundle",
+      "sha256": "B3B3C7585B9C4A1E579F1A7AEB7F898A8FA651EF1F59F38528D3965632E75AC3"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/dde5924d4b4eaa54b47e7fa1171837c3.bundle",
+      "sha256": "6655C65A88F15B05F1DAD531CAEA1AD01F1F049F75C37639FF14354F3492FE6C"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/b9d26f62e70d382a4e4dd7cd728ea11a.bundle",
+      "sha256": "ABB78DFF943263B1EDCFF5C30AAB83520CFFCBDAD5BD06BCB4ACAD9CE5BF8FB1"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/afe1532ab934a15a92d2e4d4bc1ba08d.bundle",
+      "sha256": "C4F8398ABA75D3A8CC96CFC3B12CC85B60B7A9E72DA0A23BF7D93DFEE256B4D8"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/9e063aeb30809f92c1dcbfe0c0df7016.bundle",
+      "sha256": "B860DD8EC7FE25BAA7BDA71D8F8302236C7143BFA1876ACE216C10F7CC5D3204"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/8e5fb7ee2b2b44c0c96a8e9f0a530f3e.bundle",
+      "sha256": "D6BBE26FA8CAB9C5E4EC0CF86EACED74C47BCEA705BB14E922C78E4E696BC833"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/4bfb70ff75394ca7818e574a99f8156e.bundle",
+      "sha256": "2A8E71E54FDDB810E6D6FCCB8DECA4D84113DAA5A8FB4E18768F8491D4F85CCC"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/3e437fa3851374c62eabe8aeed467bf9.bundle",
+      "sha256": "A7D0D91E34A4F1269C761023B846F4C4314F6358EC9FFA49DAB10B07A1AD2F83"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/2fcb76433f748b21db48e88c81bd412d.bundle",
+      "sha256": "A3EE9747BA6DC1E42E34D97EE0848A9EFCDC64F7011AB1180922249B2A2E9015"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/215a57da6ef90e11ea7a8e270da299d8.bundle",
+      "sha256": "B314EDA077AF06E3E9D06220A894E30F026967A552B423746389945A0E924545"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/212219b855a0e373c08e6c237163e28c.bundle",
+      "sha256": "AD9BA998D9FE69F72D4881695685358AA36401C2C5EB2AA2CE345119FD9D27C8"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/201818da97cb9367339eb9544701ff52.bundle",
+      "sha256": "1E83320B5192B19F1C96F06BEAF765787246F8415248E78B80924FE84366AE86"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/18da2d836aeb5f63e39a60436c3d413f.bundle",
+      "sha256": "06E9FDBAFF0C9DF2D7E722C89258F460B3837A8B2E65D4F40C25643A746B02C8"
+    },
+    {
+      "path": "infalsus_Data/StreamingAssets/aa/StandaloneWindows64/1716ee7747a48e53f158b832855d5d9a.bundle",
+      "sha256": "B8A1810687365FB4F14AFA998E5D6B4D148A718EFE609B8143F8DC626BF65B3B"
+    }
+  ],
+  "scripts": [
+    {
+      "path": "assets/scripts/common.spp",
+      "guid": "78229f3daec8c1543a564b6e2d17dd5d",
+      "sha256": "fa4b1b345bb3e5406bf13da363bfc6e3e3b3bef728bbc99afed2336558d18155"
+    },
+    {
+      "path": "assets/scripts/names.spp",
+      "guid": "16ce2f5a3b92b264294afa40e5d0ba45",
+      "sha256": "b816aad75764f3c3dfb89d95c06fd593e5dfdbcd0473a2afbc9073851690f02a"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27C-1_Xt.sps",
+      "guid": "e743c84b748bb0e43ac016948d85b24a",
+      "sha256": "c6810945273578e3c6c01a0806cc4cf18703c1e7e0ed42c683fd4e83aaa47ecc"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27D-1_Ir.sps",
+      "guid": "ae247ff33581d1a49bf70b8be6c6cc94",
+      "sha256": "97dbcc60e7a31b6754af076f87c35e18f83d75852e43be04d74baef954561ded"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27D-1_St.sps",
+      "guid": "75b7db167e8743e4f889e3a9ecdaa47a",
+      "sha256": "25a273d84e5822dd71087cbb6c2e3bb22094f45cec90b7793ea14c6e02b7e32c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27D-2_St.sps",
+      "guid": "ac06322ec0939fa47aa3d8fa44b257fa",
+      "sha256": "fe66efe6356edf2f8f91ace9a97d2ac9534589ff4ec4d371c35be54a2ef0d4e9"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27D-3_Ay.sps",
+      "guid": "e3bebbf673e79ca47908b345a51a7eb5",
+      "sha256": "eec62ed081875f36d7f7a268017b4d05858093a5f0aa8716e4bbcc03987f511a"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27D-3_Ni.sps",
+      "guid": "035ceec7aa875404eb0e6384f37b68bc",
+      "sha256": "05bcf5b310d5a3c2c303cb05197b33980869e9c71044a253f4d98895fff34135"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27D-3_St.sps",
+      "guid": "eac43ee396f44694ea0d04322e1de323",
+      "sha256": "59d0532a737b84fb6899941d0a3f2306e69b0665adf041eac21af1302f7b191d"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27D-4_Ir.sps",
+      "guid": "2ea2928580d8dc7458bca93d97eb9d9a",
+      "sha256": "eda2541c709f3fde6b7d7e8d748d5d6d65e6570cabf74f8f0739dd0ba13bfaa7"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27D-4_Me.sps",
+      "guid": "62e45b2ae8011754b8db05c8ac3a7745",
+      "sha256": "09e2eff9e580ea077ee3cb85831b8c56772c45f33afbce0e21351f506c9a5f46"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27E-1_Ay.sps",
+      "guid": "b7ff49333eb81804bbea8215f930168e",
+      "sha256": "4f534d25f5daeeb18187c3c89c2f44d306db6cd06b4e1d046744387af2863722"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27E-1_Ir.sps",
+      "guid": "79fb15889a8c67d458938b79ded092df",
+      "sha256": "b2cd74e6eca23af6e7be9ffd2c14fd5f18b19e197440836934f0de34ccf26d6c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27E-1_St.sps",
+      "guid": "4d6b9daad1187744793e94f06c5cdc13",
+      "sha256": "83318d931c18a09c6fe9385e1d7f2f19075809f5a439ede87c9188807875d655"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27E-2_Ni.sps",
+      "guid": "c2007007fcf008c47a66e81647a59b81",
+      "sha256": "5c132dbfdedb9a700e4af5181d6cb6c9af3cb5205e8f55245496d7eb835fb8ac"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27E-3_Ni.sps",
+      "guid": "0d340817e70c29241b5106be59932f0d",
+      "sha256": "0ccf17ee07296086e0b1128b1c91c140d70c4387bb50cc46fd1ddf4f65239aa5"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27E-4_Ni.sps",
+      "guid": "d092706464c4c09489f9a48c02122a75",
+      "sha256": "d03a84fd2d58ce2764a586a2288e36193828111311669c8bb6951096df49347c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27E-5_Ir.sps",
+      "guid": "634b5dc82b3a1c6429ffc74ccd402b1b",
+      "sha256": "5236c10d8edb451def0aa9dd96e52ac188a6bdabdc0f7e6b55eb7362b0f16435"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27E-5_Me.sps",
+      "guid": "d66cd64c023e60b479bb567e567debc0",
+      "sha256": "919ee8ab81d2a1bbe256bf7120316f050eb3d3a178c47dff37c89b6752eed94d"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-27F-1_Ni.sps",
+      "guid": "7cb9faf7645f68e47828cefb6aa2cfb4",
+      "sha256": "f80161809b0a5d15358c411b23aeca445f72fcb225fc274c163e66c7bdcbfd60"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28C-1_Ni.sps",
+      "guid": "48aa241000504344fbee70214a0ff308",
+      "sha256": "c94d618554a42ca26f006bef2fa4b00255bce5477893de6133f5511641fd2bd3"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28C-2_Ni.sps",
+      "guid": "e5f8c3cc962fabd43a44325a20404dff",
+      "sha256": "d5585d094b5a7d6cd6abccb495c570be2518a4a77e088564a18cbf7dfbb74a53"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ay.sps",
+      "guid": "0c98b6cbdd304324e825e206d700471c",
+      "sha256": "fd4b13a52815ac14c9da08710489619755e4c39a3e76adb7c53a73a5bca26ad2"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ni.sps",
+      "guid": "ae9ba792f48bd9b408331ceb35783780",
+      "sha256": "61d2b261550e1e60cad34a268974a91aca9b52e2763087fb003ff5a42deaba39"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28C-4_Ay.sps",
+      "guid": "5528904e0312f404bae3c1878e58bae9",
+      "sha256": "ce9adcb4d3a07a1273916962578a520f267786c35843f7780bf584a0a8e46592"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps",
+      "guid": "01fac0a4a415822449b7822470533581",
+      "sha256": "ddb3b94fb7fb960aa2c64d6b64a162d961d2603edbd2a83e82f445cb31baf842"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Me.sps",
+      "guid": "48313f8b02f53864f9b2b34a50b9e143",
+      "sha256": "8678e2caaf45e2da1044303c662622b8915317d404560d9d2f88d512c85f104f"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps",
+      "guid": "592cdd89c672ab142bb1d3861abad3cd",
+      "sha256": "61298fd4a1cef95dd7073d03e0acdd64600cc5068761d72f0806978a2f79b3af"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28D-2_Ir.sps",
+      "guid": "81e8b3982877b204b8bdc2621a6f1161",
+      "sha256": "76f5a3567774c5e290e1d0921a916ae8475d914858f9ee739148053965eedea0"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28H-1_Ni.sps",
+      "guid": "1928d9ba57023eb45a64f6a86b799b41",
+      "sha256": "f423b9358c6e239d3e4c036f93204c46e7139055ea0ab834a52fb252d71773d6"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28H-1_St.sps",
+      "guid": "567192a50a7b5234bb94dadf1aac0c38",
+      "sha256": "5a56c52d7d997133ab87815398424eff464388f9280ae6954bebbf0d36ec129e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-8-28H-2_St.sps",
+      "guid": "3d01e543457d8cf4bbd7ce8027bb46cf",
+      "sha256": "2dfb3b9a4d257670226dcbb4e49f56be99396fb38c44d00430c911d8a0e8c514"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-1E-1_Ay.sps",
+      "guid": "425fbb718b5caf84aaa4f89529470d3f",
+      "sha256": "43771e76574b35c892be17781d676a8c6a2c39c7e7ee370cd12c891519ae7fac"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-2C-1_Me.sps",
+      "guid": "2438518755a6fe34297f1fbee2b75044",
+      "sha256": "4d75ef784c4a37d25ea9a3bc237b206e74ab75d61d671ccfb41207a92df0fa02"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-2D-1_Ay.sps",
+      "guid": "a10b09553ed6c434c95059aa944ab6ad",
+      "sha256": "d5fd9cee89d6745ea5eb4f8f0ac9e649cbc41c576e40771a34b1d1b996a66f81"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-2E-1_Ir.sps",
+      "guid": "c1fc9d3d15149bb41a9d29c229491914",
+      "sha256": "69b13d5f3cdf8056c409cf9b074f523c2ce50f07f322ff2d3823442792a11bce"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-2E-2_Ay.sps",
+      "guid": "504b414f3cbf66a4eb2df2d327908ed6",
+      "sha256": "3b243e3b910c99139d3cc80f288efe46c3aef2b46ac214df53cf60ea62d183a2"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-2E-3_Ir.sps",
+      "guid": "ebf531231c618bd49a8d0ad9c27f08da",
+      "sha256": "732fbc2f67f6ee0b2d77b651f57adec555513107cd2984f563b4011e49452919"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-2F-1_Me.sps",
+      "guid": "98235d7287fe4294ea342ebb766ec969",
+      "sha256": "61f4ee0f980f94e12ed908345dcd4451a74c55c9cbb420fb5c8da2945924226e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-2F-2_Me.sps",
+      "guid": "00b3c4a94acdd6643a31cf2e72a6196f",
+      "sha256": "1ccdd74eb4e3dcc277ef7fe3841a547715df48d80eaac7af645a75ec8db71078"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-2F-3_Me.sps",
+      "guid": "9bc23f0c97e3cb14d84595a3ad9b31f1",
+      "sha256": "6837a0a4824bb6f683b82042c086de366a5f72ea6606bb5e42f8ba3b2dd54143"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-3C-1_Ir.sps",
+      "guid": "1c7b43cb0ded4b8449abf2381fffd29f",
+      "sha256": "f0e5a94800dcff2a8e1af14fb99d088cdd44851e0dc1310190e007a03bd744cc"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-3D-1_Ir.sps",
+      "guid": "2bf438426f0615b4a94edbbc421cc7bd",
+      "sha256": "ab7fe7053876f95a7a1a8a1e2ed17051216f8065b37f1a320b9c3ffb5f24cd33"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-3E-1_Ni.sps",
+      "guid": "ac9a6995829b7dd4c93c092c8cf82cc0",
+      "sha256": "1add5ad5b67731a02ce88c2108754943d59defc7ad2704b7364ebb5b2b726c4e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-3E-2_Ni.sps",
+      "guid": "dd5ab4b9e99d2c44d9069a5a1d1120a3",
+      "sha256": "14026e102b2d131f56cac1ae3275a6dd86f4110db5452998b7d66f1ea9590ad2"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-4E-1_Ni.sps",
+      "guid": "148c1a02e047a7a46bd4099c769b7e24",
+      "sha256": "aa103d74999ad27160638176cc12d43c519199e1aef8326ef37a41b7e6049527"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-4E-2_Ni.sps",
+      "guid": "0b706dc76396edf478e69bc52d9a8fe9",
+      "sha256": "c508a411ddd4ee6d00ea32777cc29d385917893802e93b63c5b8d06ff502aa04"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-4E-3_Ir.sps",
+      "guid": "bb73dac19cb2dcf498408da08090428c",
+      "sha256": "58a013e76d148783b1b053b573c14a687f2b08e95064b1b94c93f35368653d4c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-4E-4_Me.sps",
+      "guid": "7917bc2e4f2bce34d96f9c4cf4eeee72",
+      "sha256": "b359ccfa66f53a52529bd2dca04f5bd562c52ae14643db8b87aca430d5018129"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-4E-5_Me.sps",
+      "guid": "a85f68db474680a4588bb6c207c5be0d",
+      "sha256": "a4b38bb1635c26ebf6e75f16f107ace24c6ecc5bef65667c86440787c14909d6"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-4E-6_Me.sps",
+      "guid": "8b0fcd4b09b2f8d4fba4e526129a3692",
+      "sha256": "70f7ad79c31dfa5ceecc2ab6b900b4f4095e1bbe7a0bfc11cde26f7ea786c640"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-4F-1_Me.sps",
+      "guid": "7646a9c19b3de2840bab4e0a6d96d5b7",
+      "sha256": "0eb8991739c696414b5c528a2275ed5fd521b1182babeefe731d97c4198755fb"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-1/Y1-9-5E-1_Ni.sps",
+      "guid": "dfd36b88b0b16ef4c9b4ba5476d10b0f",
+      "sha256": "9ede03d4c41697704b695a54d6d97be9ebd37062c41b3877859c40dc2e802f0d"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-12G-1-O_Me.sps",
+      "guid": "e9cbd47df74dc764bbc68a4d26f629bf",
+      "sha256": "d7d47a8da61a3b8b38b599a664ab90594d09c05140401f26a4029c60684e40a6"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-13E-1-O_Me.sps",
+      "guid": "2b724a8775730e34e8e0ad0562d42ec5",
+      "sha256": "d488e8238e8f324923737f5315624a0b35858359c83b7b7c09e160bce884ef91"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-16E-1_Ay.sps",
+      "guid": "0e1a76993ac443a4491d52c478456a9d",
+      "sha256": "b419509a65007266f6a60ff2ba53ce91ce8257c23d3e0bb40652852014494444"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-16E-2_Ay.sps",
+      "guid": "618c67b011ae16f42b61a30b97689533",
+      "sha256": "5584722c7c43a92ada149c0edd8ba8d61571f4369366e0a572f375347dc50996"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-16E-2_St.sps",
+      "guid": "b4993ec339f60224db889305348674a4",
+      "sha256": "e5e4b16d0dceea0c370b31f03439ef241dc596eac52956ab81643590cdf216fc"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-16F-1_Ay.sps",
+      "guid": "3343f6f9d2ee85b4b90a09bfbbbeea22",
+      "sha256": "fba656d808c690e337c98b64b16df5ec78d9fe7b1b6e5b82bb073b60d7a7dee9"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-17F-1_St.sps",
+      "guid": "fedb8e682c545f34d8653069d1b410da",
+      "sha256": "4a68f47a4a046acac2be9e2ca3b780488bc567f78f2c1fe88bb897c20778e227"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-17F-2_Ir.sps",
+      "guid": "16bb6ef9123f705499f259e4a07d7a4d",
+      "sha256": "1db3da84951fe012d9c71a247470b6a8de120cc1aae3450d0bb7682716575751"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-18E-1_St.sps",
+      "guid": "2a1ede546a4aed04c84cff2b2651639c",
+      "sha256": "1a9192167729fcb186c5b6475763eab2129c017d57f7fa3b1d988e091d5dcd2f"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-18E-2_St.sps",
+      "guid": "d20c496a8daa99a4b825c54db54e78f3",
+      "sha256": "715819586337e46b08e89f877eff2516bcd25c389b49545c82b1942f48af76b3"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-19E-1_Ni.sps",
+      "guid": "edcc8eb2243fc5e4b8c22488a99c7beb",
+      "sha256": "3b4ab1d6d4dc703251cdf02e4f5ee3632acf20d974b9b15feaf1c4a0011124cb"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-19E-2_Ir.sps",
+      "guid": "1dfb602a771e2b946b57a00294108d26",
+      "sha256": "7b85d9c7d7480a726c6729450f04d112f28528aec0b14a4563ff2d5a9aceaf74"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-19E-2_Ni.sps",
+      "guid": "d89a9b4512a1b954cad3e357e763712b",
+      "sha256": "49514e40b6f9f66e8d6341cef173349b5a7dad9b00ef281da58a5fcff67b95a9"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-19E-3_Ay.sps",
+      "guid": "1ab72afee9c0a4349be0cfdc6adadfbd",
+      "sha256": "d2d9161eae9c58baf5f7f9860e22c4e6b952e3eca2f30eac942a7d0823b6edc7"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-19F-1_Me.sps",
+      "guid": "ab745a7f3c3bf5442a262c8e9f96065d",
+      "sha256": "f877590e794bef68a87d17db7287d040bbf89e0cdf0f4d614d7217c3f09dba48"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-19G-1_Ay.sps",
+      "guid": "7ddb3d243f5e9784caf5947482618ed5",
+      "sha256": "9bc1718436decf2b9bf653c42c1c3b94e1f8916e0982983ae4b898a1be95bb23"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-20C-1_Ay.sps",
+      "guid": "780a405e216147748946312cdba306d9",
+      "sha256": "7691e6ba9a9a593dab8f25976b86d81e96cebb5b4f9b3ca8cc2c828f68baea1b"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-20E-1_Ay.sps",
+      "guid": "74dcde091487a7440a5598450ebb60ba",
+      "sha256": "25b53109b3e05681b101953366bab982e1b1a606aac3197ed56b93f96570630c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-20E-2_Ay.sps",
+      "guid": "345b55ac2ba798648b8e8a3d9943e050",
+      "sha256": "7f64f9cb79f740cd6a8ca44d15cd10796f88bab65d90eae992c9ca58cbfa12e0"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-20E-2_Ni.sps",
+      "guid": "b43968a07d60b5a44a9f8a8da16c4d81",
+      "sha256": "7cf6135e16c9d747fc8e3945d668fd8531c985401b6cd0e9979f535a73b360bf"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-21B-1_Ir.sps",
+      "guid": "d65065dc9f9f7e6499febcbf51d59035",
+      "sha256": "ec0f1cc8981d8f82e7da985cb986c6912b214ee806d595bda94bcbc5b8c464e6"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-21B-2_Ir.sps",
+      "guid": "db6e239b4b528364dbb18c958e775d34",
+      "sha256": "deb87959a315e2f4b1dd2b72a7354aeac21625508b308294169858d4d9ce3a06"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-21B-3_Xt.sps",
+      "guid": "e953a98aad71fd54a84a0c63e1159b75",
+      "sha256": "f68d984a374c12222230955f2066a32cb33f1041fe19ece7d68fa5e86f4e8a7d"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-21B-4_Ir.sps",
+      "guid": "655aebacf9919f54eb082f263908e7e0",
+      "sha256": "c95493b9eab3f1e613c1263260ddca0ab8fafefc9eae9e547d7e5720e96bd460"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-21C-1_Ir.sps",
+      "guid": "6f5577c019b3ba44ab5cb41d1758aa5f",
+      "sha256": "fca8db0a10f84bb0195f4912b706c56fe184e213d1fe377cdc176cd50e9404e1"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-22C-1-O_Ir.sps",
+      "guid": "59eb0569be5a3374b941eb9a853e3b22",
+      "sha256": "04c784b63e74b8f466f9129f5265f8c82a6cbdd1c3db595449cd58c827826364"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-23E-1-O_Ir.sps",
+      "guid": "558e73e1fa461ac45bb6ac0f0c55918e",
+      "sha256": "f7a0561726927dde0cb80e13242244073ce7354c9b326865543d8c421d561781"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-26E-1_Me.sps",
+      "guid": "dac3fcc5199214a42bb83a9c66cd7cb2",
+      "sha256": "bbc2c34eb44fada45b2d8b9e8a04db51caca8c949a51b8abc586ae03c495cfa5"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-26E-2_Me.sps",
+      "guid": "9a99e12958806dc4fac384f92375bbc0",
+      "sha256": "e8fa9d16181629e47aca072233b3b89966f46379ae9e52265606eec86b1600d8"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-26E-3_Me.sps",
+      "guid": "9deb2ba177b6a5345812987496938914",
+      "sha256": "1afa366151df17eb5a2023ef5bcb34901c7190cf0992fb4b4e2c615d2374a2f5"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-6B-1_Ay.sps",
+      "guid": "721affc4ac509574bb0a4c22a8c18fed",
+      "sha256": "64b9f6cfb12c98b4f00303e16b7a52cc0ace08d1529305c153a1fe7d1de2f0f3"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9A-1_Me.sps",
+      "guid": "ea59740a2a0b6c24d83e65042f55c127",
+      "sha256": "19ae2300a8fdc15d8e9a806d20cf7427432602408fbcbef020051dc2f5458e92"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9B-1_St.sps",
+      "guid": "cbc1a988f5eae054ebda7dd2b6cf9f75",
+      "sha256": "ee6864644c87cee36659e017505622d5035e050f3dbcff0100f84948182e4ba7"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9C-1_Ir.sps",
+      "guid": "d6a1b7ca72dab2044b379a0b0677fff8",
+      "sha256": "317b9fab19f5a31e32e2203298a76f8105f4ef2c9dbf19a9a9b1bfbbd35a63bc"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9C-1_Ni.sps",
+      "guid": "b79038483d4684649b2a4216e530b54e",
+      "sha256": "0c3a5325476826d9f8ecbcddb41b5ddcd958dcca62464e222f675ff2d4e606fc"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps",
+      "guid": "6a6f4b227a59b3d4fa793a72054ece25",
+      "sha256": "36506da2c68889a894784867431583294e2cd4ab9da612ed109c6855569650c7"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps",
+      "guid": "1d1860f280b4973439323311e7a06614",
+      "sha256": "deda9413d987e5b1a23f57f0e98c1371b7a95312e8ce017c540a908b4ef89cdc"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9D-2_Ni.sps",
+      "guid": "9125ced8cdec5be43a90d9acbbb70aee",
+      "sha256": "18afbf33c54222e5c049c284cf51477fd67ea23f31e6bb48e0f64e17a7a86750"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9D-2_St.sps",
+      "guid": "78d09cff786ac8b4893b63a9560131be",
+      "sha256": "2760e22a7b6d7f0f0274416107c2c76965dc8a7a4eb907f14639be9df156b98c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9E-1_Ay.sps",
+      "guid": "4bd3704a2c31e1f4e904f5077eac28a8",
+      "sha256": "a1927deb42d5c77141f88925ad4f5e350c5f041f80e61189f70d2b612cc8365b"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9E-2_Ay.sps",
+      "guid": "6be1c4382b9fed743ba6d83f4fa0a3f8",
+      "sha256": "4e4a01389c7ff3ae5030f13da1d4dddb7cf1133229741e59b4ef96ea1a78c7ed"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9E-3_Ni.sps",
+      "guid": "beff922a4218fff4aa14e75395790442",
+      "sha256": "385279a29ec9abd743b932d251af3641856c1982f51eb8a621667562a2ddfdde"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9E-4_Me.sps",
+      "guid": "dc20f7bb058e9b545bfc148514faf2b5",
+      "sha256": "ee30c2fca38d5f109d24728fb36a13774845359fd8c6ac46affbef9f8145ec15"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9G-1-O_Ir.sps",
+      "guid": "8fd3625094b6c954d95ec81c254c5c3d",
+      "sha256": "e8f0ff978cdb39564994fd1866697f55e4cbd3bc2e20f6dd410774b400e9d0f9"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9G-1-O_Me.sps",
+      "guid": "644d4a28496430d4c90405e88576591f",
+      "sha256": "69d17f8f8966e0a87bb6843eed7fa91428e8f5aa271fd3e1750c4e324f4b5f81"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2/Y1-9-9I-1_Ir.sps",
+      "guid": "94f2f523debdcdb4b9f27821726e08cc",
+      "sha256": "e80865b5b45654c4f7b17f8f25f46e2d8382602cb14038a790bc03ad1cbf1780"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-11E-1-O_St.sps",
+      "guid": "1f177226a563518468aa25f756996212",
+      "sha256": "0aa8cf9382b2ee2f8e7c2090ac5cb14b3fe342d8f671e792a9a83a455f7e0f33"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-12F-1_Ni.sps",
+      "guid": "f34c0d8e7efe05249b305cdfcfb360bc",
+      "sha256": "48a7e7f3fa37a5f9c1a6589de6b91462294bd9484217867d76e455c16e127026"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-13E-1_Ni.sps",
+      "guid": "8c887f892238c504abef8cc48d742d03",
+      "sha256": "0a960b062aefc78e62ed05179a2ecb0c0a5beb1af0095dc4744dfd5fa32d5e98"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-13G-1_Ni.sps",
+      "guid": "d80941cbfbe6c3948b18319ac89cda3b",
+      "sha256": "8f0dec96f2fe4a7529a20a53c48845055121587f8fd3e0cce3c0630060d1a104"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-15D-1-O_Me.sps",
+      "guid": "8d0f959e34d5f63438e5e5974d6e6d7f",
+      "sha256": "85d70a8a3a23aefd3bc45cd2c01a3aa62614b4559ebaf55d794c6a7faa2e9bea"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-15G-1-O_Ni.sps",
+      "guid": "e57cd08449b516f428add937a5eba1ea",
+      "sha256": "047bc64e3655b27c8892cc8ac99a293dd2835ffef5ff8660f45f36918ac227ee"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-17C-1-O_St.sps",
+      "guid": "f96c751c7dbc4df4e87ba12d00773155",
+      "sha256": "778835735c7af69acb55040132f0add55ed5f4c03a013836d0ddfb049bb43507"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-17E-1-O_Ay.sps",
+      "guid": "f0664a3deb635e049a65d3f465853027",
+      "sha256": "f895b545265a67cd8116a42831ee862754f3cf9e4a30457778b32b7cf8a1607e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-18C-1_Ay.sps",
+      "guid": "8b8807db7b29862428186334119543a2",
+      "sha256": "a923425d36cc8e837ec5beb8fd2978ddc4842b14c4e5566892ee17b2ed168984"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-18E-1_Ay.sps",
+      "guid": "b88762e5938f42d46983e63fde101f09",
+      "sha256": "dfb20091bb4adaa2c6a6d359e429c9ed4027c7f1cdf8a4a7bab4fadf5d8cfe77"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-18F-1_Ay.sps",
+      "guid": "56700d94780f26f419209dccbd235166",
+      "sha256": "40528dbdcfc9ff3fc5b22d841fb7e4ad4826161370464236d42c4e4ae9d6865f"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-1D-1-O_Ni.sps",
+      "guid": "93ecd0c54026c404c9a143d57393dfea",
+      "sha256": "4e546012596adc02f2e6ce6253db9ffdaf1155e547759963e0b736669f11591e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-20C-1_Me.sps",
+      "guid": "757e56482cca71b4b9dcdf47678005ce",
+      "sha256": "2e0dba2de4fd5371a5aeb84ddcb09b94a1b3b8814d56ab8041e0b78b53e8eccb"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-23E-1_Ni.sps",
+      "guid": "cd6e0ff61ae7a144fbfc84cce90a2bfc",
+      "sha256": "58d5a67063aa5f8d1d22ed66ce2132ef8b2416967914a183205db8bfcf758d8c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-27G-1_Ni.sps",
+      "guid": "f76a477ee2cc2654094fbee021fd7315",
+      "sha256": "9cc23af38c214a1c2211fbd82626cd2bc0a13632c882f014769544bf5c8a99f8"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-27G-2_Ni.sps",
+      "guid": "5dbd3dc4b78d1e64095c930ed972264d",
+      "sha256": "ef5135ec45100cbae05c651dc45a5e6044a853c59471db158e650aef310e4134"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-2E-1_Ir.sps",
+      "guid": "fb5f70bf64c64b34bb70b7c923d695ec",
+      "sha256": "9748935cd6ab90649cc11b47f55af7707825c66853f163d15bf55fedc9e80f57"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-2E-2_Me.sps",
+      "guid": "3aeae189d2fc4e14fad7262f65e3dd7b",
+      "sha256": "30898280bfd38d04e8f583e252ec0b0466a1c7dc1c38de9d3b04e9fcad0fc131"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-3C-1-O_Ni.sps",
+      "guid": "96d266e1109b7d447a9ba8e9c0554dd3",
+      "sha256": "b2f5d07a5cfc99209da2875c52353118b541b1492fc7f733ae6a1d0c5e6815c2"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-6E-1_Ay.sps",
+      "guid": "632158e1e5396574abd979253ee1fc01",
+      "sha256": "873947930f502ef6a42b5d448bf9a25769fa6b28179cc50684ec3115687024a4"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-6F-1_Me.sps",
+      "guid": "7e4756cd91fa06b41a2f4918a1bc49f0",
+      "sha256": "237f96f22d119360f9dc86a751bdc7a3ae369c08aeed985154008bf73cedc867"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-6F-2_Me.sps",
+      "guid": "e5901028113c468409bfc5bbbd3c1d08",
+      "sha256": "d372d6a29a9bbcea1cb5350e7bfc6414138e26602bd96a185c7ea5293f42af11"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-9D-1_Me.sps",
+      "guid": "e30f2b7409c34de40a59948db65c3224",
+      "sha256": "1cb615d6dc9295cdb40d8bd9e2b679d4a3363027bf332fc66ce1a88cac7563e9"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-10-9E-1-O_Ni.sps",
+      "guid": "467f9a719cb12e64db338bdcca2f845d",
+      "sha256": "67e1e92a96f740e8d6e552cf6c932b2c8f07bd939a73be46f65806814a9f7f9f"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_Ir.sps",
+      "guid": "89850e8c56b6e114abaadf7bc457af83",
+      "sha256": "4d858a591595cd0122ce76ef893b3da3a220eed1f964829ecbe917859d245a0b"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_St.sps",
+      "guid": "5944b950daeadef42a9fde06469eec65",
+      "sha256": "ba9dce204de473c7bd438733403830cc67e25293e272ba14ba12f3f60c767f25"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-11-2E-2_Me.sps",
+      "guid": "da9c34070e85e0f499087e976af71338",
+      "sha256": "60d679bfc8e0dfe5524c44dfd769a8b172abe5f282d91aadfee413a0bd619778"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-11-2F-1_Me.sps",
+      "guid": "44e3e556e0c017c4ba47631d311b0b3a",
+      "sha256": "630e9050556f5e54d782b40843152bbb8c01a07b45d88cbdb9c625dcb62e1098"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-11-2H-1_Me.sps",
+      "guid": "1f9a4f1fdcf5ab347bd48c82b688c6b6",
+      "sha256": "6550ec61c13059743f67e6878a22f9695e65577b03704f10d37580f8034b6488"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-9-26G-1_Ni.sps",
+      "guid": "c9f02829edf5798419cbd325d284e7b5",
+      "sha256": "3cbfb1c9496a0107366e91490e8f20dda232a816d7e0deb91b3e2ec94b01b737"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-9-26I-1_Ni.sps",
+      "guid": "35981737c332b6542a860521c35e65f5",
+      "sha256": "26202c23d818a5571564eaaa16489e816f3434f134b47d930ae35cb733498f42"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-9-27C-1-O_Ni.sps",
+      "guid": "c78ea71dcda08ab48948e2e720f2adec",
+      "sha256": "87c204dc8e114cf610e065093e2a835bbb762fac4a47ccc6f7cb75e07c71196a"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-9-27D-1-O_St.sps",
+      "guid": "66244dd37bbb5314ab96c0dbc875e726",
+      "sha256": "49a234ca3651dad4a34aea717e07bdc47a90d8ad3ea978419ee5dc4791a65c39"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-9-27D-1_Ni.sps",
+      "guid": "584f5dd60e0339c44acce3ad805fdabf",
+      "sha256": "69cf73a0d48365ca2c6cbcae703f1d2f1d76cbc9677a63be02430845a39582c0"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-9-27E-1_St.sps",
+      "guid": "e8eaee229d0198d46a39a5f7a19f761e",
+      "sha256": "b39b052002c352e39c1c195ef1a1891e0cbbb075beabc695ad0581cfa30fdfa9"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-9-27E-2_Ir.sps",
+      "guid": "c5fffcc3f48da354cbd39f4b38788784",
+      "sha256": "50a5d0f1e87e62dc03c5ad4b4bb1a1dd401ce1763d4b1be15ad875b3dabd8ec4"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-2_5/Y1-9-28D-1_Ay.sps",
+      "guid": "57c06157f9daf904699361bef0deed1a",
+      "sha256": "b42d6e1226c217a3415bb430ca75c81ac06a85a4c9a5ca6ab650c774dcd448d3"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-2I-1_Ni.sps",
+      "guid": "be3f46f1e363bfb47bc538d16a306d39",
+      "sha256": "0e9a3e88955ac64e0e2b75bf24a9e17c11e59c9392078309807cf0328f804ebb"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3B-1_Ay.sps",
+      "guid": "3743c0ed7edae8841a77159d6fa10e0a",
+      "sha256": "7bcc815c286857d3f0c2477fe044bfc31fccfae3a47b362b339a898ce40e261c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3B-1_Me.sps",
+      "guid": "24494c46afaf7f249a6fb258fcbbd799",
+      "sha256": "9d1f1b8b593990a67772be7d6a1f2e5baaa6ee9623c1067fb57bdd2647875941"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3B-2_Me.sps",
+      "guid": "84d328b719da6eb42a0ae6763d9a73fb",
+      "sha256": "968806c038a8c3ee2c6adcacb1beee404b21a1bab9d695277e78b31b04434017"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3C-1_Ir.sps",
+      "guid": "879e7ba889072c94c98ffed945a3bc5c",
+      "sha256": "f13a2e09aee91fea34ad2bfe5c079343e6cbcc3205c5e690f1a3ab37d7e257fc"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3D-1_Me.sps",
+      "guid": "55c6fa3d99632bc4fa4d161cd82094c6",
+      "sha256": "47413e18b221bed114a5a2633099c11bc59527b42d9ac244852dfbd16322f65d"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3E-1_Ay.sps",
+      "guid": "84309c6b48e079543b1676cbf07836ec",
+      "sha256": "13ca1e1676b89cf909ea076df037a449041d4b96758b0af9b7837cd62b1c1041"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3E-2_St.sps",
+      "guid": "f3d79ed1b9afda245a18d3966f952df7",
+      "sha256": "5fd81f9ae9848d0a8f423b5c3f9bc1f6811917fafb290efe5cbee12df5fcad76"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3E-3_Ay.sps",
+      "guid": "5869d84bd11f11646aef5f8c1445266a",
+      "sha256": "bb51793c0e57056ec8020dbaf8127e250db908d8c3a6f73241a1c35626bfc184"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3E-4_Ir.sps",
+      "guid": "9bce167142929464f81d4b549b0514ed",
+      "sha256": "fc34a4ae751b548be4622043b834300e964e1ecef770538dbff46a968273ce50"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3F-1_Ay.sps",
+      "guid": "a622b9e3f4774cf45a6df496efd0b470",
+      "sha256": "ad587630c297517393c923965b27151bfd42f13c780b860e90de770f7564936e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3F-2_Me.sps",
+      "guid": "e9ec3645cdc502044b3c1e1105d1844a",
+      "sha256": "d7a81c18d952474e6d22d57ffe848762c83b083e9fe549fbed6b508b73ac7b82"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-3F-3_Me.sps",
+      "guid": "a4e98eb6253ede14a85f55c4d247facf",
+      "sha256": "022e44515233d0d1a3e019b7caa52b6610951592c2f265a98f043eb2ca81936a"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-4I-1_St.sps",
+      "guid": "a96455c9fa6cc4f4f9ca094ef64b4560",
+      "sha256": "9b9a098d7e9c525089af6065851126924f60d3101646fb1728e18018687d9b8f"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5D-1_Ay.sps",
+      "guid": "9cf5d9a1d843d7b429bfef159679f8a3",
+      "sha256": "8d680d81742bd040fd0182daeebfe1f47b3c0816fd3cf2263f5188b9d6d59e09"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5D-2_Ay.sps",
+      "guid": "c23a977ad8c24fe4092ff9b2639c098f",
+      "sha256": "0da2368e57ce4625e76bfe0c6cc4038ceb89f5a95fbf79ccf8a02d77c464310a"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5D-3_Ir.sps",
+      "guid": "0981b311fa87e4c4c83320ec49dcee45",
+      "sha256": "6f8672f305359034189e3f2548c85bf97dfb0c43c671fca8b0e4549b00337afe"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5D-4_Me.sps",
+      "guid": "b0724b9116519cd429ef2b1ef4b915e6",
+      "sha256": "d18c1816fce63a65cd05e6bfe6decf0c342161eae3d9a7db67e012aec70bd9f5"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5E-1_Ni.sps",
+      "guid": "614f8e6e13485f24cbde76208e5ce8d7",
+      "sha256": "b148243ec80af6f0a5a594707b3ef89a3991fe1199cd13f71890769115cc00a2"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5F-1_Ir.sps",
+      "guid": "e489c049c475aa14585bb09acad393be",
+      "sha256": "59900c22418758206d9f9026ae6d2b8606f3f338e3ae0641bff46c9902b2e8ab"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5F-1_St.sps",
+      "guid": "7373b1438b3761340ba4af1bfe24f23b",
+      "sha256": "effb23e30ae55c98c4b29e5dfafbf76467699d6215ae4666744c8ead31645b81"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5F-2_St.sps",
+      "guid": "86c6ec239bb6d2047aa6aee56773b8a7",
+      "sha256": "5b016c08579cc061bf4dff8471193779b01e72b2c31823909eca43c30cfe7d15"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5F-3_St.sps",
+      "guid": "2ada32e42534ff446b740d0fec877104",
+      "sha256": "7e44b749f663df78d42d89ee21c34d7f87e9adea26c815341f91b514389617bb"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5H-1_Ni.sps",
+      "guid": "1a66c360c0954d54cbc2a24ce48791bd",
+      "sha256": "741bc651e0695f5c8695648fe3d1e8ec1b242eb6baa538d9b7be8098fc3587a3"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-5H-1_St.sps",
+      "guid": "94b96a2cdbe60ed46a0fa566b347c3ae",
+      "sha256": "6fe45c67247b0d90c76a65b70c1fef25df198832c461887ad07deaadebc5603a"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6B-1_St.sps",
+      "guid": "b50b31b69558c1b4d8e9e63274103c70",
+      "sha256": "8823b6732f2bc83bdb9b800e45b3d21deeeed743145ab7ab0648a4c9f56e8320"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6C-1_Ni.sps",
+      "guid": "0e38a1fdf26617841983157116be0096",
+      "sha256": "33fae86a8b9fad2f9157f058598848e257dff94da124b2236fc12342d18c283c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-1_Ni.sps",
+      "guid": "6f1bf0fbad78ceb4db0e30efad39bc3a",
+      "sha256": "23bf73b178ed116a28f3c30dc477bed69a9ddcd62825dde0bab080128ef8748d"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-1_St.sps",
+      "guid": "7801856e1ffde234582dff45ac45818d",
+      "sha256": "63e7827d4dd8a5d0b52496e42cf3ecbae2130917ae9c686e276b1769de0a32ba"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-2_Ni.sps",
+      "guid": "86a5c49553204864a9473ec49ccc53a1",
+      "sha256": "b607414691eb7fb7b1d281d0e873e0f977017f097ebf37e81caf5f055ef5d9ba"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-3_Ni.sps",
+      "guid": "c39b032b10802a9448766eca76957016",
+      "sha256": "512b2972a8e8707704e3292dbef11162570160db63da072ab0f1827eb64b801b"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-4_Ni.sps",
+      "guid": "7e7540bca34270c41b04447d8fa9517d",
+      "sha256": "24d085e841b124fe9aa8fd1dad522a466be21af893db1f74adf0f7141805e870"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-5_Ni.sps",
+      "guid": "4aa1be8133dc50041b0390aa57ae8fde",
+      "sha256": "5352adb7964b6baecdbe019551cb0df98c57b3940572600409ed8f2761108b49"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-6_Ni.sps",
+      "guid": "7677901371b5bcb42a11b08c3ddaae42",
+      "sha256": "3aa26c611d5c7d53c4823e4f6f61ee2bb17b2b99a6911cb664e29012f9270093"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6E-7_Ni.sps",
+      "guid": "684efeb7fa7412343a590b125987e420",
+      "sha256": "46a74a684418d73e8d39a71f2bd84f8ddd755be834930f9e6d319a1eac6c8345"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6F-1_Ni.sps",
+      "guid": "9406aaf46025f9e44b9e33d57db88923",
+      "sha256": "7ad4cdcd07011aba3ee01c454454b2a91be98591d5bef284458d511c5683147d"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-3/Y1-11-6G-1_Ni.sps",
+      "guid": "f5653b24cb4cdee498ac3856b8b044b1",
+      "sha256": "0a84c6e7a3214f1f5fbb122d07b9f2fc651b9225d95da1f8c6048e535bbb69dd"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-10D-1_Ni.sps",
+      "guid": "b9d0a7b77dd7edc4e91f12ad19cc4fb6",
+      "sha256": "2c594b00ac54b79c9dac89a34a9933d32611dcf6f799c10d9066772a362a56b9"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-13F-1_St.sps",
+      "guid": "ea15859a7e552244e82f041eb4e90e47",
+      "sha256": "a8fa44c857e44df16165acec4f69ee0d8c4afe28a11f26952c3cf88360769a4e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-13G-1_St.sps",
+      "guid": "70fd8020c42c8d24fa16c27a914939a2",
+      "sha256": "600b4d0268679e4044d71843391ee9100e5fb31cf19a24f357fd2fa01d692b12"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-13G-2_St.sps",
+      "guid": "039563092eecfe84bafb95cf5eae9f58",
+      "sha256": "7c6dc73c8332e340feb5faeea1219e01bd7d7a29ea4579a9c0c8f9bd4c827127"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-13H-1_Ay.sps",
+      "guid": "b56521745d6889345a5a7a1594c96d2a",
+      "sha256": "252c31b77e63759227ea3bf2137fa315b71c647d12388c669e03a28fd437b58e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-13H-1_Ir.sps",
+      "guid": "c0cb6114694d1c640b7e39ef5ca716c7",
+      "sha256": "c0b26d00525738f38bc953b7971de75e3a33ff92e18f7af53f3e7f3b8303f809"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-13H-2_Ni.sps",
+      "guid": "53b0d844eaa9785468d52159038ec4da",
+      "sha256": "efe760fd382ae83a5ccdc631228a3c214bff20857ce637ab900291ec2db8861c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-13H-3_Ay.sps",
+      "guid": "8fb902dbe6a27004e9cffef0c1bb8e23",
+      "sha256": "802f9b9ecc0659e6da8c538f2da69e1418d71d80e23f70493920fd2e1e1be3ce"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-13I-1_Me.sps",
+      "guid": "71c06377befd9c14f99a39a6cf29e117",
+      "sha256": "c3eb66d6c5ddbb0a7b1d9066aba631ccf893bfa78145a11ebf66e61b3af65e91"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-13I-2_Ay.sps",
+      "guid": "46c683a4b0e93b44f9bcf8f1b8ce5894",
+      "sha256": "7e22e374f656fc1e84da96a74f479399c086a5bca43232d65cee753ae2e4da0b"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-18A-1_Ni.sps",
+      "guid": "e676632ae55bc9d41a4c578c48fbfe81",
+      "sha256": "7405bc81284067a59571052e872a42e8d2f205c7d8e02cf49cdbc5e98c2ea9d6"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-18E-1_Me.sps",
+      "guid": "c38a981033db52145a856b82fc6ca70b",
+      "sha256": "f1f8a27dedca4241c78d1e7e0e8618cab5cf1244a7aca2cd51f52d98a2521392"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-18E-2_Ni.sps",
+      "guid": "c6f28b5c68a18d34e96a1d84ea770820",
+      "sha256": "df7f356def36005f20880c7938d72894cf8e92fd0201053a225045a3cb142f7c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-20E-1_Ay.sps",
+      "guid": "10533f0829d4d0546a4df92b8dec9181",
+      "sha256": "68de923cf1edce84acb4bc6b97ad7c9ea5e4cbe4f3a9c2d4a336585374f22d95"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-26E-1_Ay.sps",
+      "guid": "caa8ab2f7bbc13546a2b1ae55412bd3b",
+      "sha256": "443ff8b1f556e4d4770e1f5e037bab61234edf647215aa3d0420accefa0ef936"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-26E-2_Ay.sps",
+      "guid": "43687a0c0b0e4ef4d92976714436d9e1",
+      "sha256": "6ced1acc72fa713bbfd9806343e6710e99c44229d0bd3d075cb9bd3409044e33"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-28B-1_Ni.sps",
+      "guid": "ba4c1d64485861b42844369ac212c00f",
+      "sha256": "6c8ccc9b50434106caffc94db1c684c174c5161752648f22c30d884db447cf60"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-28E-1_Ay.sps",
+      "guid": "13936894679bf734192f36775c173081",
+      "sha256": "80ec90aae70728e2f57e626032e4bba208471a0f3bef244bafba4ff84ed9674a"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-28E-2_Ay.sps",
+      "guid": "61c360b9a9f50b44aa9ca3fd6c11cfd8",
+      "sha256": "f85dce90915bd21bbef8bd51fb00681c303dfdc627abe0062c4f2f045fc1bd53"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-28E-3_Ay.sps",
+      "guid": "caf34cf7fc950354d90e7f82f9121525",
+      "sha256": "d70be9a2bb92512087c6dce61bdd488bcba3a38ec5de0132b40dde61e7b6df5f"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-6G-2_Ni.sps",
+      "guid": "beed034056d98ff409d72f5b89516a80",
+      "sha256": "f48f155d03c2c609e184f070b8932920daaa358ed365dc9c092b627d85809209"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-6G-3_Ni.sps",
+      "guid": "c7799916a2dff9946beed0c3b7e64f94",
+      "sha256": "f05261840ec5d5cf89437e53bfe1c658e6641cbfea687ef928d49eb696869050"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-9A-1_Ay.sps",
+      "guid": "3a2b5806ad9c1ba44b71399367681af4",
+      "sha256": "006e5f270ebf8321509afcda6a4e8ea72fc87608dbe9d5085e9823ba7ad34591"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-9A-1_Ir.sps",
+      "guid": "ac791c53f9c635047ad31de7b4bb7c2c",
+      "sha256": "9749a4b0aa0700817c9990d8208a8245553dbf9265a66c9f821f12abb5703120"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-9A-1_Ni.sps",
+      "guid": "1694593b3f204024ca1523e5621854f2",
+      "sha256": "5b1d177af54e74c7b1dec41e5ee3340be55546c30c2aa0c6ac33335a662c7bf4"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-9A-1_St.sps",
+      "guid": "a469c5403969ecd4cb3ba481ab54752f",
+      "sha256": "ced84ad538b0cf850bc941d2021811f0b2789672d9be29cc3e23debc92e03c83"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-9C-1_Ni.sps",
+      "guid": "94d5785475e30b14fba5db2350fc3881",
+      "sha256": "bc0d04a47f32be04a1f4521e22bd4dd208d4f61e7d94ca5c3f7d7e1677cb251c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-9D-1_Me.sps",
+      "guid": "71922d110d3b30e42abffe904154bc8a",
+      "sha256": "b247252b2f7a089db7081a70f499861b1c617b8981eb8366b5acfd6ce4b3bbb0"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-9E-1_St.sps",
+      "guid": "ee638b91d50294246a5187fb9b0d2b40",
+      "sha256": "bdcac501d59da8e698c94d080a6c1101b0028ae85d3674ef0151b2b34749f83b"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-9F-1_St.sps",
+      "guid": "8a3217ec33f3f0b4eaee4b4dff1fe6f4",
+      "sha256": "a7b68ef9f4904f2bd1ecec68f43f2abdfb0e6f53ff96748805860461e34fb39d"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-11-9G-1_Ay.sps",
+      "guid": "e605b43b6dbee6945bd770c835b2156b",
+      "sha256": "e61f855be0541f70f9f2615b0f635b1267756cbf427a20e61268e59ff7e8121c"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-13E-1_Ir.sps",
+      "guid": "82c0900187d3858468ace1eda4fbd7d7",
+      "sha256": "cbac2bd947e9668206131596f475203251465dc7438bd9e91051769e46f604e8"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Me.sps",
+      "guid": "43632368f5887f94d8e6861e06ef54b5",
+      "sha256": "7f1981186b71e930aef0dcbc5484d367b8e8fc122a1c7a34717283538bb6fdd2"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Ni.sps",
+      "guid": "37cbe15366d45d94bb8e182dbfcb7678",
+      "sha256": "7a8d7433901fc84f37022885a0aaa40038565882d989d22536ac8763b64a9828"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-14E-2_Ni.sps",
+      "guid": "d37160bb81c12bc4983cfb2e78a634fc",
+      "sha256": "ddedc3d4bd731c27412e3b94438080fe1cca82b12de44053fd5edd92f1f15171"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-14E-3_Ni.sps",
+      "guid": "3b0db6689cf580b40b6b9d545296952c",
+      "sha256": "f39091be4ab95d917b836d03ecbd576fc86c6f061873e57b0e53aa4a5eb16e30"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-16E-1_St.sps",
+      "guid": "1a83800bf23303447b8092f3f5f0d968",
+      "sha256": "561f39f8c0c2225cbc4b6667a13eaba9cc877c2ad4103211ff43a8271d9fc15a"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-28H-1_Ir.sps",
+      "guid": "69950cc274cc1d245a346d2cf7545b91",
+      "sha256": "45e4f744155277b11ccdc1031b6892f2270cc744094058b256463a71b79a2f48"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-28I-1_Ay.sps",
+      "guid": "af29c88661c851a4ea50363ef133d60d",
+      "sha256": "febff6dfdea61dfe6eea2d7d4bdd0b2912808f0a9e7c26cae41d01c02e3a87ab"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-28I-2_Ay.sps",
+      "guid": "573c38120bb47c54f9f55fad07320d65",
+      "sha256": "1e4b0c7d3e57a85486a45cdeb8dba523336e96411fcd59f44bd020d89127fd74"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-3F-1_St.sps",
+      "guid": "3c2e933bdf7e27c46a41ed0c7ab8d2ac",
+      "sha256": "562316039df9a6e2900e6db5d7e599a055cfc37378fcb90b4000cac513aa3aba"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-3F-2_St.sps",
+      "guid": "00249ea6baf7a6e45bed23e8c9879e02",
+      "sha256": "4cb37d689885d06471ba8102b240da540e46e7ca2dc18836c3c51df2c6c32794"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y1-12-7E-1_Ay.sps",
+      "guid": "bf14fe079b701d746a1667eabc514517",
+      "sha256": "e07075a30fe0ec02b2e66653129fbba41a19fb7baef52fe4ada737f544d21f3e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-1A-1_Xt.sps",
+      "guid": "b381aa24b64787b41a911984f2246162",
+      "sha256": "cfc49e7d5afd5c00f76295d898f51278ac04a96fefd2e32f6ed9b950a6276161"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-1A-2_Ni.sps",
+      "guid": "f1d1ad08597eee24785546916a0e1284",
+      "sha256": "660676d7e3aa7a0ed9d6991f71deb2e3e2d1d374df09612515df5de5477eab2a"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-1C-1_Me.sps",
+      "guid": "6354b647c43ff7a4790eb36e10a29f8a",
+      "sha256": "031df0b4d5533c4c817f2f363c177f98a789607721500ce14ac861a8b57d484b"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-1C-2_Me.sps",
+      "guid": "9cb07819576ddd94da9b89886a6fe097",
+      "sha256": "0c7f63a623184eef4303d88680c8087fb9ccc54d1e0f14e7ba95931fe29e8100"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-23E-1_Ir.sps",
+      "guid": "9cd986fa43c6b5e498bbed0abedea07a",
+      "sha256": "188b1cdf265412baa49659d7d3b43d0bd84264795d65973013cc5a5f54090d85"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-27E-1_Me.sps",
+      "guid": "7981c691359aada4c936d932ef11e42e",
+      "sha256": "dd74dce0b7fc6399fb55e7df78987d36da9dd395b4b9d16c4b37b7f531b13bbb"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6C-1_Xt.sps",
+      "guid": "45ed7a68e7f071d4981233d8cbe2aa02",
+      "sha256": "56b360dd7670c2fb5880a89db713f4c401898bcca567a45436d00546c47d5d2d"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6E-1_Xt.sps",
+      "guid": "fd2934181db75ba46b546d0b432978d7",
+      "sha256": "82b3fcdd8cbebca01c2e2410445eeeda6d7f982d9a3b634a2a01451e79ee8183"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6E-2_Ay.sps",
+      "guid": "6fb0bb64f3530c14885dd3cb0574353f",
+      "sha256": "09922b1453bc3af0bf4cfd644ea84e45ddae3df591ef573eb9da6251be68bb08"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6E-3_Ir.sps",
+      "guid": "35784f6db2457a949aff7cb07d914315",
+      "sha256": "0ef1fd66e17436fce12cc8e922cd6076929221d9eaefbd5cba1feb95a0dff1de"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6E-4_Ir.sps",
+      "guid": "b4607f82d7ca5e5439a4770c8a7e1941",
+      "sha256": "d45b5526338d2b7167e97a658fc666f124d1b8507019bf352c48cb020dd61e9f"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6E-5_Me.sps",
+      "guid": "374c78f1e5fcc2745bb8f21707b79234",
+      "sha256": "ead3d28048212e9ce429f905f7cd49a7e430900d12aafae34b4a376a07b9e7af"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6E-6_Ni.sps",
+      "guid": "e83dc19b1e8748f4eb1c78a81a221f28",
+      "sha256": "ac98b8e049095a73f793a6048c8eb28e0388be79e032d830ff62ae2db7753220"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6F-1_St.sps",
+      "guid": "076377477cbe1cb4d83c549ea882e1b1",
+      "sha256": "29ac147d8924b5f572242acb740acf2cdc557552dcf4671cea687efc9f9ddef5"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6F-2_Ni.sps",
+      "guid": "406c9fbc7e409954d969ba9952e83c58",
+      "sha256": "7858c1565ec4ee88fe09b8e12dce592b22a3f4ce3b4467e6f5f4f3ef3f7eb7b1"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6F-3_Me.sps",
+      "guid": "ad18bb46dc3acbb469fac6f4646e9f56",
+      "sha256": "ce4b5acc0c94cb9c2391053f1596096c48b58859c8339585cafa2d71db0b6b7e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6F-4_Ni.sps",
+      "guid": "5423e67d605b49c4ca13743bde546598",
+      "sha256": "b3dbbb95244ee0396c66b44f8b430643c3099df4a7698104eece6aa5f735ac63"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6F-5_Ni.sps",
+      "guid": "4c4195da860e1da419bd8480fc3661dd",
+      "sha256": "4dd5ca891e4dd20c4ae5362d91919aaae9df7616db266d5a2385923bdfc75acc"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6F-6_St.sps",
+      "guid": "3c8741d0a84cd5a46b1a7302669e1e40",
+      "sha256": "3abc1b3423cc310984903880a310577b37bc67c6bccc90ec1332d569ee5fa4b5"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6F-7_Me.sps",
+      "guid": "b9fdc094994f5924288e281796df82e0",
+      "sha256": "13e391412f1599fff3190dd40c756186f717f456bf72c4248335809b098e030a"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-1-6G-1_Xt.sps",
+      "guid": "438039e031a820e4993fb707d5d5592b",
+      "sha256": "8e44972f6c16d2051e564d2b4fe9750f9796f73eff244dbea7faa9dd613be44e"
+    },
+    {
+      "path": "scenario_wip/scenario_Y1-4/Y2-6-20F-1_Xt.sps",
+      "guid": "158d1dbf24a651845a780cb5f6e3d14c",
+      "sha256": "396a7e2c8e3c6798009f09efdb560388034f27ad6a44bb997684c5006a072211"
+    }
+  ],
+  "storyMappings": [
+    {
+      "songId": "zfc",
+      "storyU": 417402880,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-1/Y1-8-28C-2_Ni.sps"
+    },
+    {
+      "songId": "wonderroom",
+      "storyU": 417404944,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-1/Y1-8-28C-3_Ay.sps"
+    },
+    {
+      "songId": "newvision",
+      "storyU": 417433600,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ni.sps"
+    },
+    {
+      "songId": "deepintothevibe",
+      "storyU": 417433624,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-1/Y1-8-28D-1_Ir.sps"
+    },
+    {
+      "songId": "fochaos",
+      "storyU": 417564704,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-1/Y1-8-28H-1_St.sps"
+    },
+    {
+      "songId": "sunanokioku",
+      "storyU": 420646920,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-1/Y1-9-2F-2_Me.sps"
+    },
+    {
+      "songId": "alterededge",
+      "storyU": 421136384,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-1/Y1-9-3E-1_Ni.sps"
+    },
+    {
+      "songId": "transparency",
+      "storyU": 421660672,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-1/Y1-9-4E-1_Ni.sps"
+    },
+    {
+      "songId": "latentduality",
+      "storyU": 421668872,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-1/Y1-9-4E-5_Me.sps"
+    },
+    {
+      "songId": "withtruth",
+      "storyU": 424151048,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2/Y1-9-9A-1_Me.sps"
+    },
+    {
+      "songId": "greyscalecity",
+      "storyU": 424249344,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_Ni.sps"
+    },
+    {
+      "songId": "init",
+      "storyU": 424249376,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2/Y1-9-9D-1_St.sps"
+    },
+    {
+      "songId": "moondiver",
+      "storyU": 427952144,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2/Y1-9-16E-1_Ay.sps"
+    },
+    {
+      "songId": "minerva",
+      "storyU": 428509216,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2/Y1-9-17F-1_St.sps"
+    },
+    {
+      "songId": "sinutopia",
+      "storyU": 430049296,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2/Y1-9-20E-1_Ay.sps"
+    },
+    {
+      "songId": "enigma",
+      "storyU": 430477336,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-2/Y1-9-21B-2_Ir.sps"
+    },
+    {
+      "songId": "thingsitreasure",
+      "storyU": 433721368,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2_5/Y1-9-27E-2_Ir.sps"
+    },
+    {
+      "songId": "everything",
+      "storyU": 434210832,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2_5/Y1-9-28D-1_Ay.sps"
+    },
+    {
+      "songId": "memoire",
+      "storyU": 445810704,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-2_5/Y1-10-18F-1_Ay.sps"
+    },
+    {
+      "songId": "lightsout",
+      "storyU": 446760968,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2_5/Y1-10-20C-1_Me.sps"
+    },
+    {
+      "songId": "neonvision",
+      "storyU": 450562048,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2_5/Y1-10-27G-1_Ni.sps"
+    },
+    {
+      "songId": "cylin",
+      "storyU": 454166560,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-2_5/Y1-11-2E-1_St.sps"
+    },
+    {
+      "songId": "reconnect",
+      "storyU": 454725640,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-3/Y1-11-3F-2_Me.sps"
+    },
+    {
+      "songId": "reflection",
+      "storyU": 455706640,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-3/Y1-11-5D-1_Ay.sps"
+    },
+    {
+      "songId": "yggthrasir",
+      "storyU": 455710744,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-3/Y1-11-5D-3_Ir.sps"
+    },
+    {
+      "songId": "selfconfrontation",
+      "storyU": 455712776,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-3/Y1-11-5D-4_Me.sps"
+    },
+    {
+      "songId": "chaoticismlegacy",
+      "storyU": 455772184,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-3/Y1-11-5F-1_Ir.sps"
+    },
+    {
+      "songId": "vesper",
+      "storyU": 455774240,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-3/Y1-11-5F-2_St.sps"
+    },
+    {
+      "songId": "shouldhavebeen",
+      "storyU": 456265728,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-3/Y1-11-6E-2_Ni.sps"
+    },
+    {
+      "songId": "coldsea",
+      "storyU": 456267776,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-3/Y1-11-6E-3_Ni.sps"
+    },
+    {
+      "songId": "codeleviathan",
+      "storyU": 456271872,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-3/Y1-11-6E-5_Ni.sps"
+    },
+    {
+      "songId": "kuukaku",
+      "storyU": 459999264,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-4/Y1-11-13G-1_St.sps"
+    },
+    {
+      "songId": "shadowsofunknown",
+      "storyU": 460034048,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-4/Y1-11-13H-2_Ni.sps"
+    },
+    {
+      "songId": "falsequre",
+      "storyU": 467800080,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-4/Y1-11-28E-2_Ay.sps"
+    },
+    {
+      "songId": "noctidea",
+      "storyU": 471500832,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-4/Y1-12-3F-1_St.sps"
+    },
+    {
+      "songId": "outerjustice",
+      "storyU": 477235208,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-4/Y1-12-14E-1_Me.sps"
+    },
+    {
+      "songId": "toccatafunebre",
+      "storyU": 477237248,
+      "playType": 1,
+      "script": "scenario_wip/scenario_Y1-4/Y1-12-14E-2_Ni.sps"
+    },
+    {
+      "songId": "kiretsu",
+      "storyU": 484706320,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-4/Y1-12-28I-1_Ay.sps"
+    },
+    {
+      "songId": "moonsliders",
+      "storyU": 556927088,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-4/Y2-1-6E-1_Xt.sps"
+    },
+    {
+      "songId": "tactom",
+      "storyU": 556931096,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-4/Y2-1-6E-3_Ir.sps"
+    },
+    {
+      "songId": "zetta",
+      "storyU": 556935176,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-4/Y2-1-6E-5_Me.sps"
+    },
+    {
+      "songId": "chronophobia",
+      "storyU": 556959776,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-4/Y2-1-6F-1_St.sps"
+    },
+    {
+      "songId": "phylaxron",
+      "storyU": 556961792,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-4/Y2-1-6F-2_Ni.sps"
+    },
+    {
+      "songId": "tokonagi",
+      "storyU": 556967936,
+      "playType": 2,
+      "script": "scenario_wip/scenario_Y1-4/Y2-1-6F-5_Ni.sps"
+    }
+  ],
+  "unsupported": {
+    "legacy": [
+      {
+        "effect": "blur",
+        "reason": "语句可用，但原剧情高分辨率直接强度与旧Mod低分辨率×8不同；不承诺原样复现。"
+      },
+      {
+        "effect": "crt",
+        "eventFilter": "outOfRange",
+        "reason": "强度0..1以外会被旧Mod钳制；本列曲目关联剧情中实际有越界参数。"
+      },
+      {
+        "effect": "chromatic",
+        "eventFilter": "outOfRange",
+        "reason": "首个强度0..1以外会被旧Mod钳制；本列曲目关联剧情中实际有越界参数。"
+      },
+      {
+        "effect": "glass",
+        "reason": "旧Mod的Aux4缺项，且载荷与原生setter的参数映射未完整闭合。"
+      },
+      {
+        "effect": "analogglitch",
+        "reason": "旧Mod的Aux4缺项，且载荷与原生setter的参数映射未完整闭合。"
+      },
+      {
+        "effect": "vignette",
+        "label": "暗角",
+        "reason": "只有解析/编码枚举，当前运行时没有实际提交；本来源未确认原曲使用。"
+      },
+      {
+        "effect": "filmgrain",
+        "label": "胶片颗粒",
+        "reason": "只有解析/编码枚举，当前运行时没有实际提交；本来源未确认原曲使用。"
+      },
+      {
+        "effect": "coloradjust",
+        "label": "色彩调整",
+        "reason": "只有解析/编码枚举，当前运行时没有实际提交；本来源未确认原曲使用。"
+      },
+      {
+        "effect": "bloom",
+        "label": "高亮泛光",
+        "reason": "只有解析/编码枚举，当前运行时没有实际提交；本来源未确认原曲使用。"
+      }
+    ],
+    "specialMaterials": [
+      {
+        "songId": "chronophobia",
+        "controller": "_Be",
+        "asset": "ChronophobiaSpecialSceneAssets",
+        "frameAddress": "0x1805fe3a0",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_R2",
+          "_CurrentTime",
+          "_Aspect",
+          "_RushAmount",
+          "_CellAmount",
+          "_CrashAmount",
+          "_VignetteColor"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": "codeleviathan",
+        "controller": "_de",
+        "asset": "CodeLeviathanSpecialSceneAssets",
+        "frameAddress": "0x180605080",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_CurrentTime",
+          "_R2",
+          "_Aspect",
+          "_BlockGlitchAmount",
+          "_AuraAmount",
+          "_HMoveAmount",
+          "_HMoveSeed",
+          "_CrashAmount",
+          "_VignetteColor"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": "coldsea",
+        "controller": "_Fe",
+        "asset": "ColdSeaSpecialSceneAssets",
+        "frameAddress": "0x180610570",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_CurrentTime",
+          "_R2",
+          "_Aspect",
+          "_FirstTransitionPhase",
+          "_ImpactAmount",
+          "_EphemeralAmount",
+          "_TriDisplaceAmount",
+          "_RedAmount",
+          "_Hnoise",
+          "_WarpAmount",
+          "_ChromaZoomAmount",
+          "_DropKickAmount",
+          "_GlitchAmount",
+          "_CrashAmount",
+          "_VignetteColor"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": "enigma",
+        "controller": "_ke",
+        "asset": "EnigmaSpecialSceneAssets",
+        "frameAddress": "0x180618820",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_CurrentTime",
+          "_R2",
+          "_Aspect",
+          "_RushAmount",
+          "_TriDisplaceAmount",
+          "_RippleAmount",
+          "_ImpactAmount",
+          "_ChromaZoomAmount",
+          "_BlockGlitchAmount",
+          "_CrashAmount",
+          "_VignetteColor",
+          "_RippleBeat",
+          "_Hnoise"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": "kiretsu",
+        "controller": "_pe",
+        "asset": "KiretsuSpecialSceneAssets",
+        "frameAddress": "0x180621750",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_CurrentTime",
+          "_R2",
+          "_Aspect",
+          "_ImpactAmount",
+          "_MalfunctionAmount",
+          "_AsanohaDisplaceAmount",
+          "_SeigaihaDisplaceAmount",
+          "_KikkouDisplaceAmount",
+          "_ShippouDisplaceAmount",
+          "_EgasumiDisplaceAmount",
+          "_UrokoDisplaceAmount",
+          "_YagasuriDisplaceAmount",
+          "_EphemeralAmount",
+          "_CrashAmount",
+          "_VignetteColor"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": null,
+        "controller": "_Qe",
+        "asset": "KuukakuSpecialSceneAssets",
+        "frameAddress": "0x18064a5a0",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_CurrentTime",
+          "_R2",
+          "_Aspect",
+          "_ImpactAmount",
+          "_VerticalCorruptionAmount",
+          "_VerticalCorruptionPosition",
+          "_EphemeralAmount",
+          "_RedAmount",
+          "_MuteAmount",
+          "_CrashAmount",
+          "_GlitchAmount",
+          "_VignetteColor"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": "latentduality",
+        "controller": "_se",
+        "asset": "LatentDualitySpecialSceneAssets",
+        "frameAddress": "0x1806527b0",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_CurrentTime",
+          "_R2",
+          "_Aspect",
+          "_HackerTransitionAmount",
+          "_ScanlineAmount",
+          "_VignetteColor",
+          "_NetworkPhase",
+          "_BlurCell",
+          "_BlurDistort",
+          "_BlurGlitch",
+          "_CrashAmount"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": "memoire",
+        "controller": "_Te",
+        "asset": "MemoireSpecialSceneAssets",
+        "frameAddress": "0x18064d160",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_R2",
+          "_CurrentTime",
+          "_Aspect",
+          "_BrightAmount",
+          "_EphemeralAmount",
+          "_RipplePhase",
+          "_CrashAmount",
+          "_VignetteColor"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": "phylaxron",
+        "controller": "_Xe",
+        "asset": "PhylaxronSpecialSceneAssets",
+        "frameAddress": "0x1806579e0",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_CurrentTime",
+          "_Aspect",
+          "_ChromaZoomAmount",
+          "_EphemeralAmount",
+          "_SlashDisplaceAmount",
+          "_StaticNoiseAmount",
+          "_R2",
+          "_FeedbackAmount",
+          "_FeedbackRotation",
+          "_GlitchAmount",
+          "_CrashAmount",
+          "_VignetteColor"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": "tactom",
+        "controller": "_ze",
+        "asset": "TactomSpecialSceneAssets",
+        "frameAddress": "0x180667750",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_CurrentTime",
+          "_R2",
+          "_Aspect",
+          "_RushAmount",
+          "_ChugAmount",
+          "_AltColorAmount",
+          "_BlockGlitchAmount",
+          "_CrashAmount",
+          "_VignetteColor",
+          "_Hnoise"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": "tokonagi",
+        "controller": "_bE",
+        "asset": "TokonagiSpecialSceneAssets",
+        "frameAddress": "0x18065e480",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_CurrentTime",
+          "_R2",
+          "_Aspect",
+          "_Monochrome",
+          "_EphemeralAmount",
+          "_TriDisplaceAmount",
+          "_EnterEffectZOffset",
+          "_CrashAmount",
+          "_GlitchAmount",
+          "_NeuroAmount",
+          "_ChaosAmount",
+          "_ChaosPhase",
+          "_ChaosKick",
+          "_WarpZoomAmount",
+          "_HnoiseAmount",
+          "_VignetteColor"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      },
+      {
+        "songId": "zetta",
+        "controller": "_CE",
+        "asset": "ZettaSpecialSceneAssets",
+        "frameAddress": "0x18067ada0",
+        "properties": [
+          "_BaseColor",
+          "_FrameCount",
+          "_CurrentTime",
+          "_Aspect",
+          "_R2",
+          "_RushAmount",
+          "_CellAmount",
+          "_ChromaZoomAmount",
+          "_CrashAmount",
+          "_VignetteColor"
+        ],
+        "evidence": "当前IDA完整帧入口与资源材质属性；不是新screen支持"
+      }
+    ],
+    "songVideos": [
+      {
+        "songId": "codeleviathan",
+        "file": "codeleviathan_bga.mp4",
+        "guid": "d14b278ac8a2ebe46a87294ab5a84afb",
+        "phase": "transitionEntryNotProvenGameplay"
+      },
+      {
+        "songId": "enigma",
+        "file": "enigma_bga.mp4",
+        "guid": "3ef35c377a4d36648b5016bda13ed64e",
+        "phase": "transitionEntryNotProvenGameplay"
+      },
+      {
+        "songId": "kiretsu",
+        "file": "kiretsu_bga.mp4",
+        "guid": "4fac7dacec30c464f803bc9c073683d1",
+        "phase": "transitionEntryNotProvenGameplay"
+      },
+      {
+        "songId": "kuukaku",
+        "file": "kuukaku_bga.mp4",
+        "guid": "16a3ef2b9f07836408250d4339d993a7",
+        "phase": "transitionEntryNotProvenGameplay"
+      },
+      {
+        "songId": "latentduality",
+        "file": "latentduality_bga.mp4",
+        "guid": "faadc1a65f483d54f8b740aa0f4c67b8",
+        "phase": "transitionEntryNotProvenGameplay"
+      },
+      {
+        "songId": "memoire",
+        "file": "memoire_bga.mp4",
+        "guid": "eea2c2c0d13955a4fba197ad02d7aea8",
+        "phase": "transitionEntryNotProvenGameplay"
+      },
+      {
+        "songId": "phylaxron",
+        "file": "phylaxron_bga.mp4",
+        "guid": "65f6730462cd57f41be25993f672ce45",
+        "phase": "transitionEntryNotProvenGameplay"
+      },
+      {
+        "songId": "tactom",
+        "file": "tactom_bga.mp4",
+        "guid": "faa05cb4372722349aa21126b5363f74",
+        "phase": "transitionEntryNotProvenGameplay"
+      },
+      {
+        "songId": "tokonagi",
+        "file": "tokonagi_bga.mp4",
+        "guid": "3a4538a287e52994ab0f0863ad3e5804",
+        "phase": "transitionEntryNotProvenGameplay"
+      },
+      {
+        "songId": "zetta",
+        "file": "zetta_bga.mp4",
+        "guid": "17f24d3c5f24c9443a0614f011116e2e",
+        "phase": "transitionEntryNotProvenGameplay"
+      }
+    ],
+    "otherVideoResourceCount": 38,
+    "noCameraTimelineEvidence": true,
+    "unknownSongTime": true
+  }
+}

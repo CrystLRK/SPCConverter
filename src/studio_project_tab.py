@@ -53,6 +53,7 @@ class StudioProjectTab(SongPackageTab):
         )
         self.studio_project: StudioProject | None = None
         self._source_session = None
+        self._ui_destroyed = False
         self._action_buttons: list[ttk.Button] = []
         super().__init__(master)
         self.bind("<Destroy>", self._on_destroy, add="+")
@@ -443,6 +444,7 @@ class StudioProjectTab(SongPackageTab):
 
     def _on_destroy(self, event: tk.Event) -> None:
         if event.widget is self:
+            self._ui_destroyed = True
             self._replace_source_session(None)
 
     def load_project(self) -> None:
@@ -461,14 +463,14 @@ class StudioProjectTab(SongPackageTab):
             self.studio_project = None
             self._replace_source_session(None)
             self.project_status.set(f"加载失败：{exc}")
-            self.log(f"[失败] {self.project_kind} 工程加载失败：{exc}")
+            self.log(f'[ERROR] {self.project_kind} project load failed: {exc}')
             messagebox.showerror(
                 f"{self.project_kind} 工程加载失败",
                 str(exc),
                 parent=self,
             )
             return
-        self.log(f"[完成] 已读取 {self.project_kind} 工程：{project.manifest}")
+        self.log(f'[OK] Loaded {self.project_kind} project: {project.manifest}')
 
     def _apply_project(self, project: StudioProject) -> None:
         self.studio_project = project
@@ -517,18 +519,21 @@ class StudioProjectTab(SongPackageTab):
                     else "note_count=0"
                 )
                 self.log(
-                    f"[警告] {SLOT_LABEL[item.index]} {reason}，"
-                    f"按空难度处理：{item.chart or '(未提供路径)'}"
+                    f"[WARN] {SLOT_LABEL[item.index]} {reason}; treating this as an empty difficulty: {item.chart or '(未提供路径)'}"
                 )
         if not self.vars["internal_code"].get().strip():
             self.log(
-                "[提示] 歌曲名包含非 ASCII 字母/数字字符，"
-                "请手动填写内部代号。"
+                '[INFO] Song name contains non-ASCII letters/digits; enter the internal ID manually.'
             )
         self._update_code_hint()
 
     def _update_code_hint(self) -> None:
-        text = self.vars["internal_code"].get().strip()
+        variable = self.vars["internal_code"]
+        raw = variable.get()
+        lowered = raw.lower()
+        if raw != lowered:
+            variable.set(lowered)
+        text = lowered.strip()
         if not text:
             self.code_hint.configure(text="必须填写内部代号")
             return
@@ -680,7 +685,7 @@ class StudioProjectTab(SongPackageTab):
                     if (target_folder / f"{spec.chart_id}{slot}.spc").is_file()
                 ]
         except Exception as exc:
-            self.log(f"[失败] {exc}")
+            self.log(f'[ERROR] {exc}')
             messagebox.showerror("无法开始导出", str(exc), parent=self)
             return
 
@@ -692,7 +697,7 @@ class StudioProjectTab(SongPackageTab):
                 overwrite_conflicts,
             ):
                 self.log(
-                    f"[取消] 已取消导入，内部代号：{spec.chart_id}"
+                    f'[CANCELLED] Import cancelled for internal ID: {spec.chart_id}'
                 )
                 return
             actual_pack = self._pack_for_export()
@@ -707,21 +712,45 @@ class StudioProjectTab(SongPackageTab):
         for button in self._action_buttons:
             button.configure(state="disabled")
         self.log(
-            "[信息] 正在导入到游戏曲包…"
-            if mode == "game"
-            else "[信息] 正在导出独立歌曲文件夹…"
+            '[INFO] Importing into the game pack...' if mode == 'game' else '[INFO] Exporting a standalone song folder...'
         )
+
+        session = self._source_session
+        result_queue = self.result_queue
+        if session is not None:
+            session.retain()
 
         def worker() -> None:
             try:
-                self.result_queue.put((True, exporter(spec)))
+                value = exporter(spec)
+                ok = True
             except Exception as exc:
-                self.result_queue.put((False, exc))
+                value = exc
+                ok = False
+            if session is not None:
+                try:
+                    session.release()
+                except Exception as cleanup_error:
+                    note = f"工程临时目录清理失败，保留现场：{cleanup_error}"
+                    if ok:
+                        value.warnings.append(note)
+                    else:
+                        value = ConversionError(f"{value}; {note}")
+            result_queue.put((ok, value))
 
-        threading.Thread(target=worker, daemon=True).start()
+        try:
+            threading.Thread(target=worker, daemon=True).start()
+        except Exception:
+            if session is not None:
+                session.release()
+            for button in self._action_buttons:
+                button.configure(state="normal")
+            raise
         self.after(100, self._poll_export)
 
     def _poll_export(self) -> None:
+        if self._ui_destroyed:
+            return
         try:
             ok, value = self.result_queue.get_nowait()
         except queue.Empty:
@@ -730,15 +759,15 @@ class StudioProjectTab(SongPackageTab):
         for button in self._action_buttons:
             button.configure(state="normal")
         if not ok:
-            self.log(f"[失败] {value}")
+            self.log(f'[ERROR] {value}')
             messagebox.showerror("导出失败", str(value), parent=self)
             return
         result = value
         for warning in getattr(result, "warnings", []):
-            self.log(f"[警告] {warning}")
-        self.log(f"[完成] 歌曲文件夹：{result.folder}")
-        self.log(f"        config：{result.config}")
-        self.log(f"        谱面：{[path.name for path in result.charts]}")
+            self.log(f'[WARN] {warning}')
+        self.log(f'[OK] Song folder: {result.folder}')
+        self.log(f'        config: {result.config}')
+        self.log(f'        charts: {[path.name for path in result.charts]}')
         if self.open_after.get():
             os.startfile(result.folder)  # type: ignore[attr-defined]
 

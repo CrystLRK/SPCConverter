@@ -18,6 +18,7 @@ from spc_converter import read_source
 from studio_project import (
     StudioDifficulty,
     StudioProject,
+    StudioProjectSession,
     _bounded_int,
 )
 
@@ -29,13 +30,9 @@ MAX_FALSUM_UNCOMPRESSED = 512 * 1024 * 1024
 
 
 @dataclass
-class FalsumSession:
-    source: Path
-    project: StudioProject
-    _temporary: tempfile.TemporaryDirectory[str]
-
-    def close(self) -> None:
-        self._temporary.cleanup()
+class FalsumSession(StudioProjectSession):
+    """Same retained temporary-source ownership as ZIP/Studio imports."""
+    pass
 
 
 def locate_falsum(path: Path) -> Path:

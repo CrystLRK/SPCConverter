@@ -1,4 +1,5 @@
 from __future__ import annotations
+from special_screen import serialize_payload as serialize_special_screen
 
 from fractions import Fraction
 import math
@@ -6,6 +7,9 @@ import struct
 from typing import Any
 
 from chart_validation import validate_standard_chart
+from scene_program import (TABLES as SCENE_TABLES, canonical_bytes, editable_source,
+                           is_marker as is_scene_marker, serialize_action,
+                           source_from_program, validate_action, validate_chart_scene)
 
 
 MASK32 = 0xFFFFFFFF
@@ -26,8 +30,40 @@ SHOWTEXT_MAGIC = 0x545854
 AUDIOOFFSET_MAGIC = 0x414F46
 SCENECONTROL_MAGIC = 0x53434E
 SETCOLOR_MAGIC = 0x434F4C
+LINE_MAGIC = 0x4C494E
+ARC_MAGIC = 0x415243
+FLICK3D_MAGIC = 0x464C33
+BOMBAREA_MAGIC = 0x424D41
+TIMINGGROUP_ANGLE_MAGIC = 0x544741
+ARC_NATIVE_FLAG = 0x02000000
+FLICK3D_NATIVE_FLAG = 0x01000000
 SCENE_TRACKDISPLAY = 1
 SCENE_HIDEGROUP = 2
+SCENE_SCREEN = 3
+SCREEN_EFFECTS = {
+    1: "blur",
+    2: "crt",
+    3: "chromatic",
+    4: "glass",
+    5: "analogglitch",
+    6: "vignette",
+    7: "filmgrain",
+    8: "coloradjust",
+    9: "bloom",
+    10: "clear",
+}
+SCREEN_EFFECT_PARAMETER_COUNT = {
+    1: 1,
+    2: 1,
+    3: 4,
+    4: 5,
+    5: 5,
+    6: 2,
+    7: 2,
+    8: 4,
+    9: 3,
+    10: 0,
+}
 
 
 def _num(value: Any) -> str:
@@ -111,11 +147,14 @@ def _note_semantic(note: dict[str, Any]) -> tuple:
         # ground low32 is opaque and has no V0 representation
         low = 0
     elif note_type == 3:
-        # type3 carries marker data in line; it never uses timinggroup high bits
-        timing_group = 0
-        noinput_group = False
-        noclip_group = False
-        low = raw_group
+        magic = (flags >> 8) & 0xFFFFFF
+        if magic in (LINE_MAGIC, ARC_MAGIC, FLICK3D_MAGIC):
+            low, timing_group, noinput_group, noclip_group = _split_group(raw_group)
+        else:
+            timing_group = 0
+            noinput_group = False
+            noclip_group = False
+            low = raw_group
     elif note_type != 5:
         raise ValueError(f"不支持的 note type：{note_type}")
 
@@ -166,61 +205,42 @@ def _float32(value: Any) -> float:
 
 
 def _group_timelines(events: list[dict[str, Any]]) -> dict[int, tuple]:
-    pending: dict[int, list[tuple[int, float]]] = {}
-    for index, event in enumerate(events):
+    """Canonical speed/BPM states; stable same-time order is significant."""
+    pending: dict[int, list[tuple[int, float, float]]] = {}
+    for event in events:
         if int(event["type"]) != 5:
             continue
-        if "speed" not in event:
-            raise ValueError("type5 event 缺少 speed 字段")
-        group = int(round(float(event["speed"])))
-        if group <= 0 or group > TIMING_GROUP_MASK:
-            raise ValueError(f"timinggroup id 越界：{group}")
+        group = int(event["speed"])
+        if group <= 0 or group > TIMING_GROUP_MASK or float(event["speed"]) != group:
+            raise ValueError(f"timinggroup id 越界或不是整数：{event['speed']}")
         value = float(event["value"])
-        if not math.isfinite(value):
-            raise ValueError("type5 event 含非有限速度")
-        pending.setdefault(group, []).append((int(event["timeMs"]), value))
+        try:
+            bpm = _float32(event.get("groupBpm", 0.0))
+        except (ValueError, OverflowError, struct.error) as exc:
+            raise ValueError(f"timinggroup {group} groupBpm 无法表示为float32") from exc
+        if not math.isfinite(value) or not math.isfinite(bpm):
+            raise ValueError(f"timinggroup {group} 含非有限速度/BPM")
+        time_ms = int(event["timeMs"])
+        if time_ms < 0:
+            raise ValueError("type5 event 时间不能为负数")
+        pending.setdefault(group, []).append((time_ms, value, bpm))
 
     result: dict[int, tuple] = {}
     for group, values in pending.items():
-        values.sort(key=lambda item: item[0])
-        by_time: dict[int, float] = {}
-        for time_ms, value in values:
-            if time_ms < 0:
-                raise ValueError("type5 event 时间不能为负数")
-            by_time[time_ms] = value
-        collapsed: list[tuple[int, float]] = [
-            (0, by_time.get(0, 1.0))
-        ]
-        collapsed.extend(
-            (time_ms, value)
-            for time_ms, value in sorted(by_time.items())
-            if time_ms != 0
-        )
+        values.sort(key=lambda item: item[0])  # Python stable: original same-time order.
+        collapsed = [(0, 1.0, 0.0)]
+        for index, state in enumerate(values):
+            if index == 0 and state[0] == 0:
+                collapsed[0] = state
+            elif state[1:] != collapsed[-1][1:]:
+                collapsed.append(state)
         result[group] = tuple(collapsed)
     return result
 
 
-def _group_speed_series(
-        events: list[dict[str, Any]]) -> dict[int, list[tuple[int, float]]]:
-    """Collapse V1 type5 events to the effective per-group speed timeline."""
-    by_group: dict[int, dict[int, float]] = {}
-    for event in events:
-        if int(event["type"]) != 5:
-            continue
-        group = int(round(float(event["speed"])))
-        if group <= 0 or group > TIMING_GROUP_MASK:
-            raise ValueError(f"timinggroup id 越界：{group}")
-        value = float(event["value"])
-        if not math.isfinite(value):
-            raise ValueError("type5 event 含非有限速度")
-        time_ms = int(event["timeMs"])
-        if time_ms < 0:
-            raise ValueError("type5 event 时间不能为负数")
-        by_group.setdefault(group, {})[time_ms] = value
-    return {
-        group: sorted(values.items())
-        for group, values in by_group.items()
-    }
+def _group_speed_series(events: list[dict[str, Any]]) -> dict[int, tuple]:
+    """Both independent type5 fields, not just visually equivalent speeds."""
+    return _group_timelines(events)
 
 
 def semantic_digest(obj: dict[str, Any]) -> tuple:
@@ -238,15 +258,28 @@ def semantic_digest(obj: dict[str, Any]) -> tuple:
     timelines = _group_timelines(obj.get("events", []))
     for note in notes:
         if note[6] > 0:
-            timelines.setdefault(note[6], ((0, 1.0),))
+            timelines.setdefault(note[6], ((0, 1.0, 0.0),))
 
-    return (
+    result = (
         round(float(obj.get("bpm", 0.0)), 12),
         round(float(obj.get("meter", 0.0)), 12),
         tuple(notes),
         tuple(events),
         tuple(sorted(timelines.items())),
     )
+    scene = validate_chart_scene(obj)
+    if scene is not None:
+        source = editable_source(scene) if scene["kind"] == "source" else source_from_program(scene)
+        definitions = {table: source[table] for table in SCENE_TABLES}
+        for source_order, rule in enumerate(definitions["rules"].values()):
+            rule["sourceOrder"] = source_order
+        # Compiled identity checks do not create another editable timeline.
+        for resource in definitions["resources"].values():
+            resource.pop("expectedIdentity", None)
+        actions = [validate_action(a) for a in scene.get("actions", scene.get("compiledActions", []))]
+        result += (canonical_bytes({"target": source["target"], "definitions": definitions,
+                                    "actions": actions}),)
+    return result
 
 
 def _v0_note_lines(note: dict[str, Any]) -> list[str]:
@@ -282,8 +315,11 @@ def _v0_note_lines(note: dict[str, Any]) -> list[str]:
         le = {0x04: 0, 0x08: 1, 0x10: 2}.get(flags & 0x1C, 0)
         re = {0x20: 0, 0x40: 1, 0x80: 2}.get(flags & 0xE0, 0)
         group = _split_group(note.get("line", 0))[0]
+        note_name = (
+            "bombarea" if note.get("bombArea")
+            else "skyarea")
         lines = [
-            f"skyarea({time_ms},{sc},{sden},{sw},{ec},{eden},{ew},"
+            f"{note_name}({time_ms},{sc},{sden},{sw},{ec},{eden},{ew},"
             f"{le},{re},{int(note['endMs']) - time_ms},{group})"
         ]
         if flags & NOINPUT_NOTE_FLAG:
@@ -301,10 +337,76 @@ def _v0_note_lines(note: dict[str, Any]) -> list[str]:
         rgba = int(note["endMs"]) & MASK32
         color = f"#{rgba:08X}" if rgba & 0xFF != 0xFF else f"#{rgba >> 8:06X}"
         edge = int(fractions[0][0]) != 0
+        mode = flags & 0xFF
+        mode_text = ",line" if mode == 1 else ""
+        edge_text = "" if edge else ",0"
         return [
             f"setcolor({time_ms},{int(note['line'])},{color}"
-            + ("" if edge else ",0")
+            + edge_text
+            + mode_text
             + ")"
+        ]
+    if magic == LINE_MAGIC:
+        start_x = int(fractions[0][0])
+        start_y = int(fractions[1][0])
+        start_x_den = int(fractions[0][1])
+        start_y_den = int(fractions[1][1])
+        end_x = int(fractions[2][0])
+        end_y = int(fractions[3][0])
+        end_x_den = int(fractions[2][1])
+        end_y_den = int(fractions[3][1])
+        ease_names = (
+            "s", "si", "so", "sisi", "siso", "sosi", "soso", "b"
+        )
+        ease = flags & 0xFF
+        if ease >= len(ease_names):
+            raise ValueError(f"line ease 非法：{ease}")
+        return [
+            f"line({time_ms},{start_x},{start_y},"
+            f"{start_x_den},{start_y_den},"
+            f"{end_x},{end_y},{end_x_den},{end_y_den},"
+            f"{ease_names[ease]},{int(note['endMs']) - time_ms},"
+            f"{int(note['line']) & MASK32})"
+        ]
+    if magic == ARC_MAGIC:
+        start_x = int(fractions[0][0])
+        start_y = int(fractions[1][0])
+        start_x_den = int(fractions[0][1])
+        start_y_den = int(fractions[1][1])
+        end_x = int(fractions[2][0])
+        end_y = int(fractions[3][0])
+        end_x_den = int(fractions[2][1])
+        end_y_den = int(fractions[3][1])
+        ease_names = (
+            "s", "si", "so", "sisi", "siso", "sosi", "soso", "b"
+        )
+        ease = flags & 0xFF
+        if ease >= len(ease_names):
+            raise ValueError(f"arc ease 非法：{ease}")
+        return [
+            f"arc({time_ms},{start_x},{start_y},"
+            f"{start_x_den},{start_y_den},"
+            f"{end_x},{end_y},{end_x_den},{end_y_den},"
+            f"{ease_names[ease]},{int(note['endMs']) - time_ms},"
+            f"{int(note['line']) & MASK32})"
+        ]
+    if magic == FLICK3D_MAGIC:
+        center = int(fractions[0][0])
+        denominator = int(fractions[0][1])
+        width = int(fractions[1][0])
+        y = int(fractions[2][0])
+        y_denominator = int(fractions[2][1])
+        direction = flags & 0xFF
+        return [
+            f"flick({time_ms},{center},{denominator},{width},"
+            f"{direction},{y},{y_denominator})"
+        ]
+    if magic == BOMBAREA_MAGIC:
+        return []
+    if magic == TIMINGGROUP_ANGLE_MAGIC:
+        return [
+            f"timinggroupangles({int(note['line'])},"
+            f"{int(fractions[0][0])},{int(fractions[1][0])})"
         ]
     if magic == SCENECONTROL_MAGIC:
         mode = flags & 0xFF
@@ -319,6 +421,10 @@ def _v0_note_lines(note: dict[str, Any]) -> list[str]:
                 f"scenecontrol({time_ms},hidegroup,"
                 f"{int(note['line'])},{int(note['endMs'])})"
             ]
+        if mode == SCENE_SCREEN:
+            values = [float(pair[0]) / float(pair[1]) for pair in fractions]
+            return [serialize_special_screen(
+                time_ms, int(note.get("line", 0)), note["endMs"], values, _num)]
         raise ValueError(f"不支持的 scenecontrol mode：{mode}")
     if magic == TRACKMOVE_MAGIC:
         x = float(fractions[0][0]) / float(fractions[0][1])
@@ -339,18 +445,47 @@ def _v0_note_lines(note: dict[str, Any]) -> list[str]:
 def serialize_v0_semantic(obj: dict[str, Any]) -> str:
     """Serialize a standard chart to canonical V0 while preserving timing groups."""
     validate_standard_chart(obj)
-    lines: list[str] = [f"chart({_num(obj['bpm'])},{_num(obj['meter'])})"]
-    notes = list(obj.get("notes", []))
+    scene = validate_chart_scene(obj)
+    all_notes = [n for n in obj.get("notes", []) if not is_scene_marker(n)]
+    needs_config = False
+    notes: list[dict[str, Any]] = []
+    for note in all_notes:
+        note_type = int(note["type"])
+        flags = int(note.get("flags", 0))
+        if note_type == 3:
+            magic = (flags >> 8) & 0xFFFFFF
+            if magic in (ARC_MAGIC, FLICK3D_MAGIC):
+                needs_config = True
+        if (note_type == 4 and flags & FLICK3D_NATIVE_FLAG) or (
+                note_type == 5 and flags & ARC_NATIVE_FLAG):
+            continue
+        notes.append(note)
+    lines: list[str] = []
+    if needs_config:
+        lines.append("#config enable_3d_skynote TRUE")
+    lines.append(f"chart({_num(obj['bpm'])},{_num(obj['meter'])})")
     events = list(obj.get("events", []))
 
     groups: dict[int, list[dict[str, Any]]] = {}
     group_modes: dict[int, tuple[bool, bool]] = {}
+    group_angles: dict[int, tuple[int, int]] = {}
     global_notes: list[dict[str, Any]] = []
     for note in notes:
         note_type = int(note["type"])
         if note_type == 3:
-            global_notes.append(note)
-            continue
+            flags = int(note.get("flags", 0))
+            magic = (flags >> 8) & 0xFFFFFF
+            if magic == TIMINGGROUP_ANGLE_MAGIC:
+                group = int(note["line"])
+                group_angles[group] = (
+                    int(note["fractions"][0][0]),
+                    int(note["fractions"][1][0]),
+                )
+                continue
+            if magic not in (
+                    LINE_MAGIC, ARC_MAGIC, FLICK3D_MAGIC):
+                global_notes.append(note)
+                continue
         low, group, noinput, noclip = _split_group(note.get("line", 0))
         if group == 0:
             global_notes.append(note)
@@ -379,9 +514,25 @@ def serialize_v0_semantic(obj: dict[str, Any]) -> str:
             option = ",noclip=true"
         elif noinput:
             option = ",noinput=true"
+        angle_x, angle_y = group_angles.get(group, (0, 0))
+        if angle_x:
+            option += f",anglex({angle_x})"
+        if angle_y:
+            option += f",angley({angle_y})"
         lines.append(f"timinggroup({group}{option}) {{")
-        for time_ms, value in group_speeds.get(group, []):
-            lines.append(f"    track({time_ms},{_num(value)})")
+        previous_time = None
+        previous_bpm = 0.0
+        previous_speed = None
+        for time_ms, value, bpm in group_speeds.get(group, ((0, 1.0, 0.0),)):
+            if time_ms == previous_time:
+                raise ValueError(f"timinggroup {group} 在 {time_ms}ms 有不同的同刻状态，现有明文无法无损表达")
+            if bpm != previous_bpm:
+                if bpm == 0.0:
+                    raise ValueError(f"timinggroup {group} 在 {time_ms}ms 将BPM重置为0，现有明文无法无损表达")
+                lines.append(f"    bpm({time_ms},{_num(bpm)})")
+            if previous_speed is None or value != previous_speed:
+                lines.append(f"    track({time_ms},{_num(value)})")
+            previous_time, previous_speed, previous_bpm = time_ms, value, bpm
         for note in sorted(groups.get(group, []), key=note_key):
             for note_line in _v0_note_lines(note):
                 lines.append("    " + note_line)
@@ -412,4 +563,8 @@ def serialize_v0_semantic(obj: dict[str, Any]) -> str:
             continue
         else:
             raise ValueError(f"不支持的 event type：{event_type}")
+    if scene is not None:
+        actions = scene.get("actions", scene.get("compiledActions", []))
+        for action in sorted(actions, key=lambda a: a["sourceOrder"]):
+            lines.append(serialize_action(action))
     return "\n".join(lines) + "\n"

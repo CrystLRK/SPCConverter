@@ -8,7 +8,7 @@ import struct
 import tempfile
 import time
 import zlib
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
@@ -124,6 +124,18 @@ def _safe_folder(value: str, fallback: str = "Custom Song") -> str:
     value = re.sub(r'[<>:"/\\|?*\x00-\x1f]', "_", value)
     value = re.sub(r"\s+", " ", value).strip(" .")
     return value or fallback
+
+
+def _normalized_song_spec(spec: SongPackageSpec) -> SongPackageSpec:
+    """Snapshot lowercase output identity without changing source paths."""
+    folder = _safe_folder(spec.folder_name or spec.chart_id, "custom_song").lower()
+    chart_id = _safe_stem(spec.chart_id or folder, "custom_song").lower()
+    return replace(
+        spec,
+        folder_name=folder,
+        chart_id=chart_id,
+        base_name=_safe_stem(spec.base_name or chart_id, "custom_song").lower(),
+    )
 
 
 def _unique_backup(path: Path) -> Path:
@@ -553,6 +565,7 @@ def build_config(
     preview_end: float,
     profile: ProfileDefinition | None = None,
 ) -> dict[str, Any]:
+    spec = _normalized_song_spec(spec)
     if profile is None:
         profiles = load_profiles(spec.profile_config)
         profile = profiles.get(spec.profile)
@@ -632,6 +645,7 @@ def _validate_export_spec(
 
 
 def export_song_folder(spec: SongPackageSpec) -> ExportResult:
+    spec = _normalized_song_spec(spec)
     selected, profile, warnings = _validate_export_spec(spec)
     output_root = spec.output_root.resolve()
     output_root.mkdir(parents=True, exist_ok=True)
@@ -652,6 +666,7 @@ def export_song_folder(spec: SongPackageSpec) -> ExportResult:
 
 
 def export_song_package(spec: SongPackageSpec) -> ExportResult:
+    spec = _normalized_song_spec(spec)
     selected, profile, warnings = _validate_export_spec(spec)
     pack_folder_name = _safe_folder(
         spec.pack_folder_name or "User Charts",
@@ -692,12 +707,21 @@ def _export_song(
     warnings: list[str],
 ) -> ExportResult:
     config_file = _config_file_name(profile.config_file)
+    existing = [
+        p for p in target.parent.iterdir()
+        if p.name.casefold() == target.name.casefold()
+    ]
+    if len(existing) > 1:
+        raise ConversionError("歌曲目录存在仅大小写不同的身份冲突：" + target.name)
+    old_target = existing[0] if existing else target
     folder_name = _safe_folder(
         spec.folder_name or spec.chart_id,
         "Custom Song",
     )
     temp = Path(tempfile.mkdtemp(prefix=".spc-package-", dir=output_root))
     backup: Path | None = None
+    merge_stage: Path | None = None
+    preserve_recovery = False
     try:
         audio_name = "audio" + _audio_suffix(spec.audio)
         shutil.copy2(spec.audio, temp / audio_name)
@@ -737,6 +761,8 @@ def _export_song(
                 copy_sidecars=True,
             )
             validate_showtext_sidecar(stem_path, stem_path.name)
+            # Validate every generated chart, not only charts with scene data.
+            read_source(stem_path, source_key=stem_path.name)
             chart_stems[item.slot] = stem
             chart_paths.append(stem_path)
             if item.background is not None:
@@ -765,8 +791,7 @@ def _export_song(
         )
 
         publish_source = temp
-        merge_stage: Path | None = None
-        if target.exists() and pack_folder is not None:
+        if old_target.exists() and pack_folder is not None:
             merge_stage = Path(
                 tempfile.mkdtemp(
                     prefix=".spc-merge-",
@@ -774,7 +799,7 @@ def _export_song(
                 )
             )
             shutil.copytree(
-                target,
+                old_target,
                 merge_stage,
                 dirs_exist_ok=True,
             )
@@ -798,6 +823,10 @@ def _export_song(
                 incoming_config,
                 {item.slot for item in selected},
             )
+            _prepare_lowercase_merge(
+                merge_stage, old_config, incoming_config,
+                {item.slot for item in selected}, chart_stems,
+            )
             shutil.copytree(
                 temp,
                 merge_stage,
@@ -813,26 +842,42 @@ def _export_song(
             )
             publish_source = merge_stage
 
-        if target.exists():
+        _validate_song_publication(publish_source, chart_stems, config_file)
+
+        if old_target.exists():
             if pack_folder is None and not spec.overwrite:
                 raise ConversionError(
                     f"输出歌曲文件夹已存在：{target}（勾选覆盖后会先备份）"
                 )
             backup = _unique_backup(target)
-            os.replace(target, backup)
+            os.replace(old_target, backup)
         try:
             os.replace(publish_source, target)
+            _validate_song_publication(target, chart_stems, config_file)
+            actual_name = next(
+                p.name for p in target.parent.iterdir()
+                if p.name.casefold() == target.name.casefold()
+            )
+            if actual_name != target.name:
+                raise ConversionError("发布后歌曲目录名未保持小写：" + actual_name)
         except Exception as exc:
             restore_error: Exception | None = None
+            if target.exists():
+                # Keep the failed new publication separate from the old backup.
+                try:
+                    os.replace(target, publish_source)
+                except Exception as recovery_exc:
+                    restore_error = recovery_exc
             if backup is not None and not target.exists():
                 try:
-                    os.replace(backup, target)
+                    os.replace(backup, old_target)
                 except Exception as recovery_exc:
                     restore_error = recovery_exc
             backup_hint = (
                 f"；备份位于 {backup}" if backup is not None else ""
             )
             if restore_error is not None:
+                preserve_recovery = True
                 raise ConversionError(
                     "发布歌曲文件夹失败，且自动恢复旧目录失败"
                     + backup_hint
@@ -848,6 +893,14 @@ def _export_song(
         if merge_stage is not None:
             shutil.rmtree(merge_stage, ignore_errors=True)
             merge_stage = None
+
+        # A merge publishes merge_stage, leaving the conversion source temp.
+        # Both are private, but failed recovery materials must be retained.
+        if temp.exists():
+            try:
+                shutil.rmtree(temp)
+            except OSError as exc:
+                warnings.append(f"歌曲已发布，但本次转换临时目录清理失败：{temp}：{exc}")
 
         return ExportResult(
             pack_folder=pack_folder,
@@ -866,10 +919,122 @@ def _export_song(
             warnings=warnings,
         )
     except Exception:
-        shutil.rmtree(temp, ignore_errors=True)
-        if "merge_stage" in locals() and merge_stage is not None:
-            shutil.rmtree(merge_stage, ignore_errors=True)
+        if not preserve_recovery:
+            shutil.rmtree(temp, ignore_errors=True)
+            if merge_stage is not None:
+                shutil.rmtree(merge_stage, ignore_errors=True)
         raise
+
+
+def _prepare_lowercase_merge(
+    stage: Path, old: Any, incoming: Any, selected: set[int],
+    chart_stems: dict[int, str],
+) -> None:
+    """Remove only replaced chart-owned outputs inside the private staging tree."""
+    if isinstance(old, dict) and isinstance(incoming, dict):
+        for key in ("id", "song_id", "chart_id"):
+            previous, current = old.get(key), incoming.get(key)
+            if isinstance(previous, str) and isinstance(current, str) and previous != current:
+                raise ConversionError(
+                    f"现有内部代号 {previous!r} 与目标 {current!r} 不一致；"
+                    "为避免身份冲突或成绩关联变化，未发布，请先确认迁移。"
+                )
+    stems = set(chart_stems.values())
+    retained_stems: set[str] = set()
+    if isinstance(old, dict):
+        charts = old.get("chart")
+        if isinstance(charts, list) and len(charts) == 4:
+            retained_stems.update(
+                Path(name).stem.casefold()
+                for slot, name in enumerate(charts)
+                if slot not in selected and isinstance(name, str) and name
+            )
+            for slot in selected:
+                if isinstance(charts[slot], str) and charts[slot]:
+                    name = charts[slot]
+                    if Path(name).name != name or "\\" in name:
+                        raise ConversionError("既有谱面路径无法安全规范化：" + name)
+                    stems.add(Path(name).stem)
+        difficulties = old.get("difficulties")
+        if isinstance(difficulties, dict):
+            for slot, (_, label) in enumerate(DIFFICULTY_SLOTS):
+                item = difficulties.get(label)
+                name = item.get("externalChartId") if isinstance(item, dict) else None
+                if slot not in selected and isinstance(name, str) and name:
+                    retained_stems.add((name[:-4] if name.lower().endswith(".spc") else name).casefold())
+            for slot in selected:
+                entry = difficulties.get(DIFFICULTY_SLOTS[slot][1])
+                name = entry.get("externalChartId") if isinstance(entry, dict) else None
+                if isinstance(name, str) and name:
+                    if Path(name).name != name or "\\" in name:
+                        raise ConversionError("既有谱面路径无法安全规范化：" + name)
+                    stems.add(name[:-4] if name.lower().endswith(".spc") else name)
+    if retained_stems.intersection(stem.casefold() for stem in stems):
+        raise ConversionError("选中与未选难度共用输出文件，请一并从源谱重新导入，未发布。")
+    suffixes = (".spc", ".text.json", ".spc.text.json", ".scene.json",
+                ".screen.json", ".screen-assets")
+    owned = {(stem + suffix).casefold() for stem in stems for suffix in suffixes}
+    entries = list(stage.iterdir())
+    folded: set[str] = set()
+    for entry in entries:
+        if entry.name.casefold() in folded:
+            raise ConversionError("既有目录包含仅大小写不同的重名项：" + entry.name)
+        folded.add(entry.name.casefold())
+    for entry in entries:
+        if entry.name.casefold() not in owned:
+            continue
+        if not entry.resolve().is_relative_to(stage.resolve()) or entry.is_symlink():
+            raise ConversionError("暂存文件归属不明确，未发布：" + entry.name)
+        if entry.is_dir():
+            shutil.rmtree(entry)
+        else:
+            entry.unlink()
+
+
+def _validate_song_publication(
+    folder: Path, chart_stems: dict[int, str], config_file: str,
+) -> None:
+    """Verify physical chart names and decoding before accepting a publication."""
+    for entry in folder.iterdir():
+        if entry.name.lower().endswith((".text.json", ".scene.json", ".screen.json", ".screen-assets")):
+            if entry.name != entry.name.lower():
+                raise ConversionError("既有谱面伴随文件名未规范化，请从源谱重新导入：" + entry.name)
+        if entry.suffix.lower() != ".spc":
+            continue
+        if entry.name != entry.name.lower():
+            raise ConversionError(
+                "存在未规范化的旧难度：" + entry.name
+                + "；请同时选择该难度从明文源谱重新导入，未发布。"
+            )
+        if not entry.is_file():
+            raise ConversionError("谱面目标不是文件：" + entry.name)
+        read_source(entry, source_key=entry.name)
+        validate_showtext_sidecar(entry, entry.name)
+    config = json.loads((folder / config_file).read_text(encoding="utf-8"))
+    references: list[str] = []
+    if isinstance(config, dict):
+        for key in ("id", "song_id", "chart_id"):
+            value = config.get(key)
+            if isinstance(value, str) and value != value.lower():
+                raise ConversionError("配置内部代号未保持小写：" + value)
+        charts = config.get("chart")
+        if isinstance(charts, list):
+            references.extend(p for p in charts if isinstance(p, str) and p)
+        difficulties = config.get("difficulties")
+        if isinstance(difficulties, dict):
+            for item in difficulties.values():
+                name = item.get("externalChartId") if isinstance(item, dict) else None
+                if isinstance(name, str) and name:
+                    references.append(name if name.lower().endswith(".spc") else name + ".spc")
+    for name in references:
+        if name != name.lower() or Path(name).name != name or "\\" in name:
+            raise ConversionError("既有难度引用未规范化，请从源谱重新导入：" + name)
+        if not (folder / name).is_file():
+            raise ConversionError("配置引用的谱面不存在：" + name)
+    for stem in chart_stems.values():
+        name = stem + ".spc"
+        if not (folder / name).is_file():
+            raise ConversionError("发布缺少生成谱面：" + name)
 
 
 _DIFFICULTY_ARRAY_KEYS = {

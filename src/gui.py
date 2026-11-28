@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from ascii_log import ascii_text
+
 import os
 import queue
 import re
@@ -40,6 +42,7 @@ from song_package import (
 )
 from spc_converter import (
     FORMAT_NAMES,
+    VERSION,
     batch_convert,
     collect_inputs,
     default_output_dir,
@@ -101,6 +104,12 @@ class SongPackageTab(ttk.Frame):
     def _var(self, key: str, value: str = "") -> tk.StringVar:
         var = tk.StringVar(value=value)
         self.vars[key] = var
+        if key in {"folder_name", "chart_id", "base_name"}:
+            def lowercase_identity(*_args: object) -> None:
+                text = var.get()
+                if text != text.lower():
+                    var.set(text.lower())
+            var.trace_add("write", lowercase_identity)
         return var
 
     def _build(self) -> None:
@@ -359,7 +368,7 @@ class SongPackageTab(ttk.Frame):
         self.game_combo.configure(values=labels)
         if not installs:
             self.game_label.set("未检测到 Steam 正式版")
-            self.log("[信息] 未检测到 Steam 正式版，使用手动输出目录。")
+            self.log('[INFO] Steam release not found; using the selected output directory.')
             return
 
         preferred = load_preferred_game_root()
@@ -382,7 +391,7 @@ class SongPackageTab(ttk.Frame):
         try:
             save_preferred_game_root(install.install_dir)
         except Exception as exc:
-            self.log(f"[警告] 无法保存上次游戏目录：{exc}")
+            self.log(f'[WARN] Failed to save the game directory: {exc}')
         self.refresh_pack_list(show_errors=False)
 
     def refresh_pack_list(
@@ -400,7 +409,7 @@ class SongPackageTab(ttk.Frame):
         except Exception as exc:
             if show_errors:
                 messagebox.showerror("曲包扫描失败", str(exc), parent=self)
-            self.log(f"[失败] 曲包扫描失败：{exc}")
+            self.log(f'[ERROR] Pack scan failed: {exc}')
             return
 
         previous = self.pack_by_label.get(self.pack_label.get())
@@ -426,11 +435,11 @@ class SongPackageTab(ttk.Frame):
         self.pack_label.set(selected_label)
 
         for item in scan.invalid:
-            self.log(f"[警告] 曲包不可用：{item.folder}：{item.reason}")
+            self.log(f'[WARN] Pack unavailable: {item.folder}: {item.reason}')
         if labels:
-            self.log(f"[信息] 检测到 {len(labels)} 个可用曲包。")
+            self.log(f'[INFO] Found {len(labels)} available pack(s).')
         else:
-            self.log("[信息] 当前输出目录下没有可用曲包。")
+            self.log('[INFO] No available packs in the selected output directory.')
         if scan.invalid and show_errors:
             details = "\n".join(
                 f"{item.folder.name}: {item.reason}"
@@ -458,7 +467,7 @@ class SongPackageTab(ttk.Frame):
         try:
             scan = scan_pack_directories(root)
         except Exception as exc:
-            self.log(f"[失败] 曲包扫描失败：{exc}")
+            self.log(f'[ERROR] Pack scan failed: {exc}')
             messagebox.showerror("曲包扫描失败", str(exc), parent=self)
             raise
         if scan.packs:
@@ -469,7 +478,7 @@ class SongPackageTab(ttk.Frame):
             "未检测到曲包，将创建默认曲包。",
             parent=self,
         )
-        self.log("[信息] 未检测到曲包，创建默认曲包 User Charts。")
+        self.log('[INFO] No packs found; creating the default User Charts pack.')
         try:
             pack, _created = ensure_default_pack(root)
         except Exception as exc:
@@ -504,14 +513,14 @@ class SongPackageTab(ttk.Frame):
                 jacket=Path(jacket_text) if jacket_text else None,
             )
         except Exception as exc:
-            self.log(f"[失败] 创建曲包失败：{exc}")
+            self.log(f'[ERROR] Failed to create pack: {exc}')
             messagebox.showerror("创建曲包失败", str(exc), parent=self)
             return
         self.refresh_pack_list(
             show_errors=True,
             preferred_folder=pack.folder.name,
         )
-        self.log(f"[完成] 已创建曲包：{pack.folder}")
+        self.log(f'[OK] Created pack: {pack.folder}')
         messagebox.showinfo(
             "曲包已创建",
             f"曲包文件夹：{pack.folder}",
@@ -537,14 +546,14 @@ class SongPackageTab(ttk.Frame):
         self.profile_label.set(selected)
         self._profile_changed()
         if error:
-            self.log(f"[失败] 配置映射加载失败：{error}")
+            self.log(f'[ERROR] Failed to load config mapping: {error}')
             messagebox.showerror(
                 "配置映射无效",
                 error + "\n\n已回退到内置模板。",
                 parent=self,
             )
         elif not initial:
-            self.log("[信息] 配置映射已重新加载。")
+            self.log('[INFO] Config mapping reloaded.')
 
     def _profile_changed(self) -> None:
         if self.profile_description is None:
@@ -733,13 +742,13 @@ class SongPackageTab(ttk.Frame):
         try:
             spec = self._make_spec()
         except Exception as exc:
-            self.log(f"[失败] {exc}")
+            self.log(f'[ERROR] {exc}')
             messagebox.showerror("参数错误", str(exc), parent=self)
             return
         try:
             pack = self._pack_for_export()
         except Exception as exc:
-            self.log(f"[失败] 无法准备曲包：{exc}")
+            self.log(f'[ERROR] Failed to prepare pack: {exc}')
             return
         spec.output_root = Path(
             self.vars["output_root"].get().strip()
@@ -753,7 +762,7 @@ class SongPackageTab(ttk.Frame):
         spec.style_pack_slug = pack.style_pack_slug
         spec.pack_sort_order = pack.sort_order
         self.export_button.configure(state="disabled")
-        self.log("开始导出游戏歌曲文件夹…")
+        self.log('Exporting game song folder...')
 
         def worker() -> None:
             try:
@@ -773,14 +782,14 @@ class SongPackageTab(ttk.Frame):
             return
         self.export_button.configure(state="normal")
         if not ok:
-            self.log(f"[失败] {value}")
+            self.log(f'[ERROR] {value}')
             messagebox.showerror("导出失败", str(value), parent=self)
             return
         result = value
-        self.log(f"[完成] 歌曲文件夹：{result.folder}")
-        self.log(f"        config：{result.config}")
-        self.log(f"        配置结构：{result.profile}")
-        self.log(f"        谱面：{[p.name for p in result.charts]}")
+        self.log(f'[OK] Song folder: {result.folder}')
+        self.log(f'        config: {result.config}')
+        self.log(f'        config schema: {result.profile}')
+        self.log(f'        charts: {[p.name for p in result.charts]}')
         if self.open_after.get():
             os.startfile(result.folder)  # type: ignore[attr-defined]
 
@@ -790,7 +799,7 @@ class SongPackageTab(ttk.Frame):
         os.startfile(path)  # type: ignore[attr-defined]
 
     def log(self, message: str) -> None:
-        self.log_text.insert("end", message + "\n")
+        self.log_text.insert("end", ascii_text(message) + "\n")
         self.log_text.see("end")
 
 
@@ -887,26 +896,30 @@ class ConverterTab(ttk.Frame):
         try:
             inputs = collect_inputs([str(p) for p in self.paths])
         except Exception as exc:
-            self.log(f"[失败] {exc}")
+            self.log(f'[ERROR] {exc}')
             return
         self.convert_button.configure(state="disabled")
-        self.log(f"开始转换 {len(inputs)} 个文件…")
+        self.log(f'Converting {len(inputs)} file(s)...')
+
+        # Tk variables are read only here, on the UI thread.
+        target = self.target.get()
+        output_dir = Path(self.output_dir.get().strip() or default_output_dir())
+        source_key = self.source_key.get().strip() or None
+        target_key = self.target_key.get().strip() or None
+        overwrite = self.overwrite.get()
+        copy_sidecars = self.sidecars.get()
+        result_queue = self.result_queue
 
         def worker() -> None:
             try:
                 results = batch_convert(
-                    inputs,
-                    self.target.get(),
-                    Path(self.output_dir.get().strip() or default_output_dir()),
-                    source_key=self.source_key.get().strip() or None,
-                    target_key=self.target_key.get().strip() or None,
-                    overwrite=self.overwrite.get(),
-                    copy_sidecars=self.sidecars.get(),
-                    unique_names=not self.overwrite.get(),
+                    inputs, target, output_dir, source_key=source_key,
+                    target_key=target_key, overwrite=overwrite,
+                    copy_sidecars=copy_sidecars, unique_names=not overwrite,
                 )
-                self.result_queue.put((True, results))
+                result_queue.put((True, results))
             except Exception as exc:
-                self.result_queue.put((False, exc))
+                result_queue.put((False, exc))
 
         threading.Thread(target=worker, daemon=True).start()
         self.after(100, self._poll)
@@ -919,15 +932,13 @@ class ConverterTab(ttk.Frame):
             return
         self.convert_button.configure(state="normal")
         if not ok:
-            self.log(f"[失败] {value}")
+            self.log(f'[ERROR] {value}')
             return
         for result in value:
             self.log(
-                f"[完成] {result.source.name} → {result.output.name}  "
-                f"({FORMAT_NAMES[result.source_format]} → {FORMAT_NAMES[result.target_format]}, "
-                f"notes={result.notes}, events={result.events})"
+                f'[OK] {result.source.name} -> {result.output.name}  ({FORMAT_NAMES[result.source_format]} -> {FORMAT_NAMES[result.target_format]}, notes={result.notes}, events={result.events})'
             )
-        self.log("全部转换完成。")
+        self.log('All conversions completed.')
 
     def verify(self) -> None:
         try:
@@ -936,10 +947,10 @@ class ConverterTab(ttk.Frame):
             for path in collect_inputs([str(p) for p in self.paths]):
                 self.log(verify_path(path, self.source_key.get().strip() or None))
         except Exception as exc:
-            self.log(f"[失败] {exc}")
+            self.log(f'[ERROR] {exc}')
 
     def log(self, message: str) -> None:
-        self.log_text.insert("end", message + "\n")
+        self.log_text.insert("end", ascii_text(message) + "\n")
         self.log_text.see("end")
 
 
@@ -955,7 +966,7 @@ def launch_gui(startup_paths: list[str] | None = None) -> None:
     from studio_project_tab import StudioProjectTab
 
     root = tk.Tk()
-    root.title("SPC Converter - In Falsus 歌曲打包")
+    root.title(f"SPC Converter {VERSION} - In Falsus 歌曲打包")
     root.geometry("1180x900")
     root.minsize(900, 650)
 

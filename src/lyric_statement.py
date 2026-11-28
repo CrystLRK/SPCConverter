@@ -291,9 +291,9 @@ def build_showtext_styles(source: Path) -> list[dict[str, Any]]:
     """
     statements = extract_from_file(source)
     styles: list[dict[str, Any]] = []
-    for index, statement in enumerate(statements):
+    for statement in statements:
         style: dict[str, Any] = {
-            "id": TEXT_SHOWTEXT_ID_BASE + index,
+            "id": TEXT_SHOWTEXT_ID_BASE + statement.order,
             "text": statement.text,
             "duration": max(
                 0.0,

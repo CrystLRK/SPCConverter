@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+from scene_program import SceneError, validate_chart_scene
+from special_screen import validate_payload as validate_special_screen
+
 from fractions import Fraction
 import math
 from typing import Any, Mapping
@@ -16,13 +19,25 @@ TRACKMOVE_MAGIC = 0x54524B
 SHOWTEXT_MAGIC = 0x545854
 AUDIOOFFSET_MAGIC = 0x414F46
 SCENECONTROL_MAGIC = 0x53434E
+SCENE_SCREEN = 3
+SCREEN_EFFECT_IDS = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 SETCOLOR_MAGIC = 0x434F4C
+LINE_MAGIC = 0x4C494E
+ARC_MAGIC = 0x415243
+FLICK3D_MAGIC = 0x464C33
+BOMBAREA_MAGIC = 0x424D41
+TIMINGGROUP_ANGLE_MAGIC = 0x544741
 SUPPORTED_MARKERS = {
     TRACKMOVE_MAGIC,
     SHOWTEXT_MAGIC,
     AUDIOOFFSET_MAGIC,
     SCENECONTROL_MAGIC,
     SETCOLOR_MAGIC,
+    LINE_MAGIC,
+    ARC_MAGIC,
+    FLICK3D_MAGIC,
+    BOMBAREA_MAGIC,
+    TIMINGGROUP_ANGLE_MAGIC,
 }
 
 
@@ -39,20 +54,19 @@ def _integer(value: Any, path: str) -> int:
         _fail(path, "必须是整数")
     try:
         number = int(value)
-    except (TypeError, ValueError):
-        _fail(path, f"必须是整数，得到 {value!r}")
-    try:
-        if float(value) != number:
-            _fail(path, f"必须是整数值，得到 {value!r}")
     except (TypeError, ValueError, OverflowError):
-        pass
+        _fail(path, f"必须是整数，得到 {value!r}")
+    # Do not route our own rejection through an exception handler. Comparing
+    # exact numeric values also keeps large int/Fraction/Decimal precision.
+    if not isinstance(value, (int, str)) and value != number:
+        _fail(path, f"必须是整数值，得到 {value!r}")
     return number
 
 
 def _finite(value: Any, path: str) -> float:
     try:
         number = float(value)
-    except (TypeError, ValueError) as exc:
+    except (TypeError, ValueError, OverflowError) as exc:
         raise ChartValidationError(f"{path}: 必须是数值，得到 {value!r}") from exc
     if not math.isfinite(number):
         _fail(path, f"必须是有限数值，得到 {value!r}")
@@ -151,6 +165,69 @@ def _validate_note(note: Any, index: int) -> None:
             ease = flags & 0xFF
             if ease not in (0, 1, 2, 3):
                 _fail(f"{path}.flags", "trackmove ease 必须在 0..3")
+        elif magic == SCENECONTROL_MAGIC:
+            mode = flags & 0xFF
+            if mode not in (1, 2, SCENE_SCREEN, 4):
+                _fail(f"{path}.flags", "不支持的 scenecontrol mode")
+            if mode == SCENE_SCREEN:
+                try:
+                    validate_special_screen(
+                        int(note.get("line", 0)), end_ms,
+                        [float(v[0]) / float(v[1]) for v in note["fractions"]])
+                except ValueError as exc:
+                    _fail(path, str(exc))
+        elif magic == SETCOLOR_MAGIC:
+            mode = flags & 0xFF
+            if mode not in (0, 1):
+                _fail(f"{path}.flags", "setcolor mode 必须是 0 或 1")
+        elif magic == LINE_MAGIC:
+            ease = flags & 0xFF
+            if ease not in (0, 1, 2, 3, 4, 5, 6, 7):
+                _fail(f"{path}.flags", "line ease 必须在 0..7")
+            if end_ms < start_ms:
+                _fail(f"{path}.endMs", "line duration 不能为负数")
+            for pair_index, name in enumerate(
+                    ("startX", "startY", "endX", "endY")):
+                if not math.isfinite(float(fractions[pair_index])):
+                    _fail(
+                        f"{path}.fractions[{pair_index}]",
+                        f"line {name} 必须是有限数值",
+                    )
+        elif magic == ARC_MAGIC:
+            ease = flags & 0xFF
+            if ease not in (0, 1, 2, 3, 4, 5, 6, 7):
+                _fail(f"{path}.flags", "arc ease 必须在 0..7")
+            if end_ms < start_ms:
+                _fail(f"{path}.endMs", "arc duration 不能为负数")
+            for pair_index, name in enumerate(
+                    ("startX", "startY", "endX", "endY")):
+                if not math.isfinite(float(fractions[pair_index])):
+                    _fail(
+                        f"{path}.fractions[{pair_index}]",
+                        f"arc {name} 必须是有限数值",
+                    )
+        elif magic == FLICK3D_MAGIC:
+            direction = flags & 0xFF
+            if direction not in (4, 16):
+                _fail(f"{path}.flags", "3D flick direction 只能是 4 或 16")
+            if not math.isfinite(float(fractions[2])):
+                _fail(f"{path}.fractions[2]", "3D flick y 必须是有限数值")
+        elif magic == BOMBAREA_MAGIC:
+            target = _integer(note.get("line"), f"{path}.line")
+            if target < 0:
+                _fail(f"{path}.line", "bombarea 目标 note id 不能为负数")
+        elif magic == TIMINGGROUP_ANGLE_MAGIC:
+            group = _integer(note.get("line"), f"{path}.line")
+            if not 1 <= group <= TIMING_GROUP_MASK:
+                _fail(f"{path}.line", "timinggroup angle group 必须在 1..掩码范围")
+            if note.get("timeMs") != 0 or note.get("endMs") != 0:
+                _fail(path, "timinggroup angle 元数据时间必须为 0")
+            for pair_index, name in enumerate(("anglex", "angley")):
+                if fractions[pair_index].denominator != 1:
+                    _fail(
+                        f"{path}.fractions[{pair_index}]",
+                        f"{name} 必须是整数",
+                    )
 
     if note_type != 3:
         _group_flags(line, f"{path}.line")
@@ -188,6 +265,9 @@ def _validate_event(event: Any, index: int) -> None:
                 f"{TIMING_GROUP_FLOAT_EXACT_MAX}，否则 float 编码会丢整数",
             )
         _finite(event.get("value"), f"{path}.value")
+        group_bpm = _finite(event.get("groupBpm", 0.0), f"{path}.groupBpm")
+        if abs(group_bpm) > 3.4028234663852886e38:
+            _fail(f"{path}.groupBpm", "超出有限 binary32 范围")
     else:
         _fail(f"{path}.type", f"不支持的 event type {event_type}")
 
@@ -244,3 +324,7 @@ def validate_standard_chart(
         _fail("bpm", "必须大于 0")
     if meter <= 0:
         _fail("meter", "必须大于 0")
+    try:
+        validate_chart_scene(obj)
+    except SceneError as exc:
+        raise ChartValidationError(str(exc)) from exc
